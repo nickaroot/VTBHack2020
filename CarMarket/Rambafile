@@ -2,22 +2,22 @@
 company: RxProject
 
 ### Xcode project settings
-project_name: VTBHack2020
-xcodeproj_path: ./CarMarket/CarMarket.xcodeproj
+project_name: CarMarket
+xcodeproj_path: CarMarket.xcodeproj
 
 ### Code generation settings section
 # The main project target name
 project_target: CarMarket
 
 # The file path for new modules
-project_file_path: ./CarMarket/Modules
+project_file_path: Modules
 
 # The Xcode group path to new modules
-project_group_path: ./CarMarket/Modules
+project_group_path: Modules
 
 ### Dependencies settings section
 
-cartfile_path: Cartfile
+cartfile_path: ../Cartfile
 
 ### Templates
 templates:
