@@ -29,7 +29,7 @@ class TabBarModuleRouter {
         presenter.view = viewController
         
         let viewControllers = [MainTabRouter.setupModuleWithNib()]
-        let titles = ["Main"]
+        let titles = ["MainTabTitle".localized()]
         let images = [#imageLiteral(resourceName: "MainTab")]
     
         let controllersToAdd = viewControllers.enumerated().map { (index, vc) -> UINavigationController in
