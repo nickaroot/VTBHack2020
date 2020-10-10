@@ -76,21 +76,21 @@ class CalculatorSwitcherCell: UITableViewCell, CalculatorBaseCell {
                 formatter.numberStyle = .currency
                 formatter.locale = Locale(identifier: "ru-Ru")
                 formatter.currencySymbol = Locale(identifier: "ru-Ru").currencySymbol
-                additionalLabel.text = formatter.string(from: NSNumber(integerLiteral: datasource.additionalSum ?? 0)) ?? "\(datasource.additionalSum ?? 666_666)"
+                additionalLabel?.text = formatter.string(from: NSNumber(integerLiteral: datasource.additionalSum ?? 0)) ?? "\(datasource.additionalSum ?? 666_666)"
                 
             case .card:
                 titleLabel.text = "Карта Автолюбитель"
                 labelBackup = additionalLabel
-                additionalLabel.removeFromSuperview()
+                additionalLabel?.removeFromSuperview()
                 
             case .insurance:
                 titleLabel.text = "Зарплата на ВТБ"
                 labelBackup = additionalLabel
-                additionalLabel.removeFromSuperview()
+                additionalLabel?.removeFromSuperview()
             case .salaryClient:
                 titleLabel.text = "Страхование жизни"
                 labelBackup = additionalLabel
-                additionalLabel.removeFromSuperview()
+                additionalLabel?.removeFromSuperview()
             default:
                 break
             }
