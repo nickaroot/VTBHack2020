@@ -12,3 +12,6 @@
 
 "common_error_unknown" = "Неизвестная ошибка";
 "common_error_error" = "Ошибка";
+
+"calculator_calculateButton_title" = "Рассчитать";
+"calculator_applyForLoanButton_title" = "Оформить заявку";
