@@ -23,7 +23,7 @@ class MainTabViewController: UIViewController {
     let featureNib = UINib(nibName: "FeatureCell", bundle: nil)
     let storyReuseId = "FeatureCellID"
     
-//    let videoNib
+    let videoNib = UINib(nibName: "VideoCell", bundle: nil)
     let videoReuseId = "VideoCellID"
     
     
@@ -31,7 +31,7 @@ class MainTabViewController: UIViewController {
     
     var articles: [PhotoTextCardDatasource] = []
     var stories: [FeatureCellDatasource] = []
-//    var videos: [VideoCellDatasource] = []
+    var videos: [VideoCellDatasource] = []
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -63,6 +63,7 @@ class MainTabViewController: UIViewController {
     
     private func prepareCollections() {
         storiesCarousel.register(featureNib, forCellWithReuseIdentifier: storyReuseId)
+        videosCarousel.register(videoNib, forCellWithReuseIdentifier: videoReuseId)
         
         storiesCarousel.dataSource = self
         storiesCarousel.delegate = self
@@ -93,6 +94,11 @@ class MainTabViewController: UIViewController {
 }
 
 extension MainTabViewController: MainTabViewProtocol {
+    func updateVideos(with videos: [VideoCellDatasource]) {
+        self.videos = videos
+        videosCarousel.reloadData()
+    }
+    
     func updateArticles(with articles: [PhotoTextCardDatasource]) {
         self.articles = articles
         articlesCarousel.reloadData()
@@ -130,7 +136,7 @@ extension MainTabViewController: DazzleCarouselViewDelegate {
 
 extension MainTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView.tag == 0 ? stories.count : 0 // TODO: insert videos.count
+        return collectionView.tag == 0 ? stories.count : videos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -155,13 +161,14 @@ extension MainTabViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             cell.datasource = stories[indexPath.row]
+            
             return cell
             
         default:
-            // TODO
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoReuseId, for: indexPath) as? FeatureCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoReuseId, for: indexPath) as? VideoCell else {
                 return UICollectionViewCell()
             }
+            cell.datasource = videos[indexPath.row]
             
             return cell
         }

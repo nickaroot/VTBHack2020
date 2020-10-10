@@ -11,6 +11,10 @@ class MainTabPresenter {
 }
 
 extension MainTabPresenter: MainTabPresenterProtocol {
+    func videosFetched(_ videos: [VideoCellDatasource]) {
+        view?.updateVideos(with: videos)
+    }
+    
     func articlesFetched(_ articles: [PhotoTextCardDatasource]) {
         view?.updateArticles(with: articles)
     }

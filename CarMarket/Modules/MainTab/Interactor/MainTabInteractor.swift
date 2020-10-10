@@ -31,6 +31,17 @@ class MainTabInteractor {
                 self.router?.showErrorAlert(with: "common_error_unknown".localized())
             }
         }
+        
+        MainTabWorker.fetchVideos { data, error in
+            if let data = data {
+                self.presenter?.videosFetched(data)
+            } else if let error = error {
+                self.router?.showErrorAlert(with: error)
+            } else {
+                self.router?.showErrorAlert(with: "common_error_unknown".localized())
+            }
+            
+        }
     }
 }
 

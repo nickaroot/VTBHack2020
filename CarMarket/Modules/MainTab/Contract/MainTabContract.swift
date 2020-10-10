@@ -11,6 +11,7 @@ import Foundation
 protocol MainTabViewProtocol: class {
     func updateArticles(with articles: [PhotoTextCardDatasource])
     func updateFeatures(with features: [FeatureCellDatasource])
+    func updateVideos(with videos: [VideoCellDatasource])
 }
 
 protocol MainTabInteractorProtocol: class {
@@ -24,6 +25,7 @@ protocol MainTabInteractorProtocol: class {
 protocol MainTabPresenterProtocol: class {
     func articlesFetched(_ articles: [PhotoTextCardDatasource])
     func featuresFetched(_ features: [FeatureCellDatasource])
+    func videosFetched(_ videos: [VideoCellDatasource])
 }
 
 protocol MainTabRouterProtocol: class {
