@@ -11,5 +11,15 @@ class CalculatorPresenter {
 }
 
 extension CalculatorPresenter: CalculatorPresenterProtocol {
-
+    func updateStarted() {
+        view?.dimView()
+    }
+    
+    func updateFinished() {
+        view?.undimView()
+    }
+    
+    func updateView() {
+        view?.update()
+    }
 }

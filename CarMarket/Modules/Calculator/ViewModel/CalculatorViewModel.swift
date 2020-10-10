@@ -11,17 +11,27 @@ enum CalculatorCellType {
     case slider(_ type: CalculatorPropertyType)
     case switcher(_ type: CalculatorPropertyType)
     case separator
+    case info(_ type: CalculatorPropertyType)
     case empty
 }
 
+// Можно разнести на 3 разных enum, но не до того
 enum CalculatorPropertyType {
+    // Sliders
     case price
     case income
     case length
+    
+    // Switchers
     case kasko
     case card
     case insurance
     case salaryClient
+    
+    // Info
+    case monthlyPayment
+    case interestRate
+    case loanSum
 }
 
 protocol CalculatorCellDatasource {
@@ -39,10 +49,11 @@ class CalculatorViewModel {
         .init(nibName: "CalculatorSliderCell", bundle: nil): "sliderCellID",
         .init(nibName: "CalculatorSeparatorCell", bundle: nil): "separatorCellID",
         .init(nibName: "CalculatorSwitcherCell", bundle: nil): "CalculatorSwitcherCellId",
-        .init(nibName: "CalculatorEmptyCell", bundle: nil): "CalculatorEmptyCellID"
+        .init(nibName: "CalculatorEmptyCell", bundle: nil): "CalculatorEmptyCellID",
+        .init(nibName: "CalculatorInfoCell", bundle: nil): "CalculatorInfoCellID"
     ]
     
-    let cellDatasources: [CalculatorCellDatasource] = [
+    var cellDatasources: [CalculatorCellDatasource] = [
         CalculatorSliderCellDatasource(type: .slider(.price), minValue: 10_000, maxValue: 3_000_000, currentValue: 1_500_000),
         CalculatorSliderCellDatasource(type: .slider(.income), minValue: 10_000, maxValue: 1_000_000, currentValue: 500_000),
         CalculatorSliderCellDatasource(type: .slider(.length), minValue: 6, maxValue: 120, currentValue: 60),
@@ -65,4 +76,12 @@ class CalculatorViewModel {
     var hasKasko = true
     var hasCard = true
     var hasInsurance = true
+    
+    func update(with calculationResults: (Int, Int, Int)) {
+        cellDatasources = [
+            CalculatorInfoCellDatasource(type: .info(.monthlyPayment), value: calculationResults.0),
+            CalculatorInfoCellDatasource(type: .info(.interestRate), value: calculationResults.1),
+            CalculatorInfoCellDatasource(type: .info(.loanSum), value: calculationResults.2)
+        ]
+    }
 }
