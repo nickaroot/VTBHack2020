@@ -39,7 +39,8 @@ class CalculatorSliderCell: UITableViewCell, CalculatorBaseCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        slider.thumbTintColor = .clear
+        slider.setThumbImage(#imageLiteral(resourceName: "SliderThumb"), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
