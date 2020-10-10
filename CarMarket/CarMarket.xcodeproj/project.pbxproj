@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9148B3B1B3BF0FB6CF72BD /* TabBarModuleContract.swift */; };
+		657EA069C54925BF535260F9 /* TabBarModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A79B3712B5F42FE792978 /* TabBarModuleInteractor.swift */; };
+		78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D430FAAF52C882FDD94E0E /* TabBarModuleViewController.xib */; };
+		8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */; };
+		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
 		F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940425306EB3009FC2B7 /* SceneDelegate.swift */; };
 		F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C5940B25306EB4009FC2B7 /* Assets.xcassets */; };
 		F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C5940D25306EB4009FC2B7 /* LaunchScreen.storyboard */; };
+		FF7A26F7F5C88E1A47425032 /* TabBarModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50497B6A20F8868230B0FBC4 /* TabBarModulePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0A79B3712B5F42FE792978 /* TabBarModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleInteractor.swift; sourceTree = "<group>"; };
+		50497B6A20F8868230B0FBC4 /* TabBarModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModulePresenter.swift; sourceTree = "<group>"; };
+		82D430FAAF52C882FDD94E0E /* TabBarModuleViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TabBarModuleViewController.xib; sourceTree = "<group>"; };
+		84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleViewController.swift; sourceTree = "<group>"; };
+		C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleRouter.swift; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +33,7 @@
 		F8C5940B25306EB4009FC2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C5940E25306EB4009FC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C5941025306EB4009FC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9148B3B1B3BF0FB6CF72BD /* TabBarModuleContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,11 +47,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16DEDD9704C2EE4D832A0FAB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50497B6A20F8868230B0FBC4 /* TabBarModulePresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6C9DA8F5DA746B2A27EC3256 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */,
+				82D430FAAF52C882FDD94E0E /* TabBarModuleViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		89385EBD328B89718B288C6C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0F0A79B3712B5F42FE792978 /* TabBarModuleInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8D4FD1996524EFB51239CAA0 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FC9148B3B1B3BF0FB6CF72BD /* TabBarModuleContract.swift */,
+			);
+			name = Contract;
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		9B6B0A60354497021C69862D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D9845C17DD14A60052205C69 /* TabBarModule */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		D9845C17DD14A60052205C69 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				6C9DA8F5DA746B2A27EC3256 /* View */,
+				16DEDD9704C2EE4D832A0FAB /* Presenter */,
+				89385EBD328B89718B288C6C /* Interactor */,
+				E67A078CD2B185053B30E8D3 /* Router */,
+				8D4FD1996524EFB51239CAA0 /* Contract */,
+			);
+			name = TabBarModule;
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		E67A078CD2B185053B30E8D3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F8A21696253078480002ED02 /* Services */ = {
@@ -139,6 +211,7 @@
 			files = (
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
+				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +225,11 @@
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
+				F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */,
+				FF7A26F7F5C88E1A47425032 /* TabBarModulePresenter.swift in Sources */,
+				657EA069C54925BF535260F9 /* TabBarModuleInteractor.swift in Sources */,
+				8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */,
+				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
