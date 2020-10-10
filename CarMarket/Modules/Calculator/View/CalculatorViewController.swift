@@ -92,6 +92,10 @@ extension CalculatorViewController: CalculatorViewProtocol {
     }
     
     func update() {
+        if isCalculated {
+            calculateButton.setTitle("Оформить заявку", for: .normal)
+        }
+        
         calculatorTableView.reloadSections(IndexSet(integersIn: 0 ..< calculatorTableView.numberOfSections), with: .automatic)
     }
 }
