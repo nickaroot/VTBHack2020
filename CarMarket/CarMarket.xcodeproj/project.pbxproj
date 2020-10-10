@@ -43,6 +43,8 @@
 		F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */; };
 		F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */; };
 		F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DB12531F09D005F5220 /* Kingfisher.framework */; };
+		F87B607A253236D000EB9536 /* CalculatorSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */; };
+		F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */; };
 		F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F68253204E4006C0995 /* UIViewExtension.swift */; };
 		F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6A253206FE006C0995 /* VideoCell.swift */; };
 		F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F6B253206FE006C0995 /* VideoCell.xib */; };
@@ -112,6 +114,8 @@
 		F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
 		F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueWorker.swift; sourceTree = "<group>"; };
 		F84F7DB12531F09D005F5220 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSeparatorCell.swift; sourceTree = "<group>"; };
+		F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSeparatorCell.xib; sourceTree = "<group>"; };
 		F88E1F68253204E4006C0995 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F88E1F6A253206FE006C0995 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		F88E1F6B253206FE006C0995 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
@@ -425,6 +429,8 @@
 			children = (
 				F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */,
 				F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */,
+				F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */,
+				F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
 				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
+				F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */,
 				FD6340B61F0F9B569F008CCD /* CatalogueTabViewController.xib in Resources */,
 				E5D5E0524CC3ABE071237469 /* CalculatorViewController.xib in Resources */,
 			);
@@ -608,6 +615,7 @@
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,
 				7EA3FD0A191DBA71AA9B8384 /* MainTabContract.swift in Sources */,
 				F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */,
+				F87B607A253236D000EB9536 /* CalculatorSeparatorCell.swift in Sources */,
 				75402D9B16E9A2E27060A34B /* CatalogueTabViewController.swift in Sources */,
 				36F7044695186651F2C0DA83 /* CatalogueTabPresenter.swift in Sources */,
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,

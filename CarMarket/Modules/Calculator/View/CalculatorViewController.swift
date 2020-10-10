@@ -15,7 +15,6 @@ class CalculatorViewController: UIViewController {
     // MARK: Properties
     var interactor: CalculatorInteractorProtocol!
     let datasource = CalculatorViewModel()
-    let cellId = "CalculatorCellID"
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -44,11 +43,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func configureTableView() {
-        let nibs: [UINib: String] = [
-            .init(nibName: "CalculatorSliderCell", bundle: nil): cellId
-        ]
-        
-        nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
+        datasource.nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
         
         
         calculatorTableView.dataSource = self
@@ -66,12 +61,13 @@ extension CalculatorViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CalculatorBaseCell else {
+        let cellDatasource = datasource.cellDatasources[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellDatasource.cellId, for: indexPath) as? CalculatorBaseCell else {
             return UITableViewCell()
         }
         
         cell.selectionStyle = .none
-        cell.datasource = datasource.cellDatasources[indexPath.row]
+        cell.datasource = cellDatasource
         
         return cell
     }

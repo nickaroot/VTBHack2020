@@ -8,6 +8,7 @@
 import UIKit
 
 struct CalculatorSliderCellDatasource: CalculatorCellDatasource {
+    var cellId: String = "sliderCellID"
     var type: CalculatorCellType
     let minValue: Int
     let maxValue: Int
