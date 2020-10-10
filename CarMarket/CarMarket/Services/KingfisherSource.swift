@@ -6,9 +6,9 @@
 //
 //
 
-import Kingfisher
-import ImageSlideshow
 import UIKit
+import ImageSlideshow
+import Kingfisher
 
 /// Input Source to image using Kingfisher
 public class KingfisherSource: NSObject, InputSource {
@@ -17,7 +17,7 @@ public class KingfisherSource: NSObject, InputSource {
 
     /// placeholder used before image is loaded
     public var placeholder: UIImage?
-    
+
     /// options for displaying, ie. [.transition(.fade(0.2))]
     public var options: KingfisherOptionsInfo?
 
@@ -46,7 +46,7 @@ public class KingfisherSource: NSObject, InputSource {
             return nil
         }
     }
-    
+
     /// Load an image to an UIImageView
     ///
     /// - Parameters:
@@ -59,11 +59,11 @@ public class KingfisherSource: NSObject, InputSource {
             case .success(let image):
                 callback(image.image)
             case .failure:
-                callback(nil)
+                callback(self.placeholder)
             }
         }
     }
-    
+
     /// Cancel an image download task
     ///
     /// - Parameter imageView: UIImage view with the download task that should be canceled

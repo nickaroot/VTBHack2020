@@ -66,11 +66,20 @@ extension CatalogueTabViewController: UITableViewDataSource {
         
         cell.datasource = cars[indexPath.row]
         
+        let selectionView = UIView()
+        selectionView.backgroundColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
+        
+        cell.selectedBackgroundView = selectionView
+        
         return cell
     }
 }
 
 extension CatalogueTabViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 280
     }

@@ -56,6 +56,7 @@ class CarCell: UITableViewCell {
         loanPayLabel.text = datasource.loanPayment
         
         let imageSources: [KingfisherSource] = datasource.carPhotoURLs.map { url in
+            print(url)
             return KingfisherSource(urlString: url)
         }.compactMap { $0 }
         
