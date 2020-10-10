@@ -47,7 +47,10 @@ extension MainTabRouter: MainTabRouterProtocol {
     }
     
     func showCalculator() {
-        // TODO
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let module = CalculatorRouter.setupModuleWithNib()
+        transitionHandler.present(module, animated: true, completion: nil)
     }
     
     func showArticle(_ id: String) {
