@@ -22,9 +22,10 @@ class MainTabWorker {
     
     static func fetchFeatures(completion: @escaping (_ features: [FeatureCellDatasource]?, _ error: String?) -> Void) {
         let fakeData: [FeatureCellDatasource] = [
-            FeatureCellDatasource(id: .calc, backgroundColor: .systemPink, image: #imageLiteral(resourceName: "CalculatorFeature"), text: "Кредитный калькулятор"),
-            FeatureCellDatasource(id: .vr, backgroundColor: .systemBlue, image: #imageLiteral(resourceName: "VRFeature"), text: "VR каталог"),
-            FeatureCellDatasource(id: .bot, backgroundColor: .systemOrange, image: #imageLiteral(resourceName: "BotFeature"), text: "Телеграм-бот")
+            FeatureCellDatasource(id: .telegram, backgroundColor: .systemPink, image: #imageLiteral(resourceName: "TelegramStory"), text: "Телеграм-бот"),
+            FeatureCellDatasource(id: .firstAuto, backgroundColor: .systemBlue, image: #imageLiteral(resourceName: "FirstAutoStory"), text: "Первое авто"),
+            FeatureCellDatasource(id: .newAuto, backgroundColor: .systemOrange, image: #imageLiteral(resourceName: "NewStory"), text: "Новинки сезона"),
+            FeatureCellDatasource(id: .bank, backgroundColor: .systemOrange, image: #imageLiteral(resourceName: "BankStory"), text: "Предложения банка")
         ]
         Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in
             completion(fakeData, nil)
