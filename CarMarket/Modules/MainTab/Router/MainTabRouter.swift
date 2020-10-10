@@ -71,11 +71,27 @@ extension MainTabRouter: MainTabRouterProtocol {
     }
     
     func showParameterSearch() {
-        // TODO: - ...
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Поиск по параметрам", message: "ААААААААА", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
     }
     
     func showPhotoSearch() {
-        // TODO: - ...
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Поиск по фото", message: "ААААААААА", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
     }
     
 
