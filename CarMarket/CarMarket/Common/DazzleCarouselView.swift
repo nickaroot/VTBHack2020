@@ -62,7 +62,7 @@ class DazzleCarouselView: UIView {
         let itemsCount = datasource.numberOfViewsToShow()
         
         var startX: CGFloat = spaceBetweenViews
-        let viewWidth = bounds.width - (spaceBetweenViews * 2)
+        let viewWidth = bounds.width - (spaceBetweenViews * 2) - 4 // Магическая четвёрка
         for index in 0 ..< itemsCount {
             let view = datasource.view(at: index)
             items.append(view)
@@ -72,7 +72,7 @@ class DazzleCarouselView: UIView {
             view.frame = CGRect(origin: viewOrigin, size: viewSize)
             
             scrollView.addSubview(view)
-            startX += viewSize.width - 10 // MARK: - Грязный хак для хакатона
+            startX += viewSize.width + spaceBetweenViews / 2
             
             view.setNeedsLayout()
             view.layoutIfNeeded()
@@ -90,7 +90,7 @@ class DazzleCarouselView: UIView {
     func scrollToPage(with index: Int) {
         let view = items[index]
         if view == nil { return }
-        let targetX = view.frame.minX - spaceBetweenViews
+        let targetX = view.frame.minX - spaceBetweenViews / 2
         let targetY = scrollView.contentOffset.y
         scrollView.setContentOffset(CGPoint(x: targetX, y: targetY), animated: true)
         currentViewIndex = index

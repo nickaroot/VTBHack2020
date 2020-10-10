@@ -45,11 +45,14 @@ class PhotoTextCard: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        view.layer.cornerRadius = 8
+        photoView.clipsToBounds = false
+        view.layer.cornerRadius = 16
     }
     
     private func reloadData(with datasource: PhotoTextCardDatasource) {
         photoView.image = datasource.photo
+        photoView.contentMode = .scaleAspectFill
+        
         if let text = datasource.text {
             textLabel.text = text
         } else {
