@@ -16,6 +16,12 @@ class TabBarModuleViewController: UITabBarController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+    }
+    
+    private func configureUI() {
+        tabBar.barTintColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
     }
 }
 
