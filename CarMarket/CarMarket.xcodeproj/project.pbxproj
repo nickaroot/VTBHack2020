@@ -10,8 +10,6 @@
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
 		F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940425306EB3009FC2B7 /* SceneDelegate.swift */; };
-		F8C5940725306EB3009FC2B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940625306EB3009FC2B7 /* ViewController.swift */; };
-		F8C5940A25306EB3009FC2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C5940825306EB3009FC2B7 /* Main.storyboard */; };
 		F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C5940B25306EB4009FC2B7 /* Assets.xcassets */; };
 		F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C5940D25306EB4009FC2B7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,8 +19,6 @@
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8C5940425306EB3009FC2B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8C5940625306EB3009FC2B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F8C5940925306EB3009FC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C5940B25306EB4009FC2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C5940E25306EB4009FC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C5941025306EB4009FC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,8 +73,6 @@
 				F8A21696253078480002ED02 /* Services */,
 				F8C5940225306EB3009FC2B7 /* AppDelegate.swift */,
 				F8C5940425306EB3009FC2B7 /* SceneDelegate.swift */,
-				F8C5940625306EB3009FC2B7 /* ViewController.swift */,
-				F8C5940825306EB3009FC2B7 /* Main.storyboard */,
 				F8C5940B25306EB4009FC2B7 /* Assets.xcassets */,
 				F8C5940D25306EB4009FC2B7 /* LaunchScreen.storyboard */,
 				F8C5941025306EB4009FC2B7 /* Info.plist */,
@@ -145,7 +139,6 @@
 			files = (
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
-				F8C5940A25306EB3009FC2B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C5940725306EB3009FC2B7 /* ViewController.swift in Sources */,
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
@@ -166,14 +158,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F8C5940825306EB3009FC2B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8C5940925306EB3009FC2B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F8C5940D25306EB4009FC2B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
