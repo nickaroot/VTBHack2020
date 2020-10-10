@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabViewController" customModule="CarMarket" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="6Ua-KN-Ct1" id="3Tk-av-4Qc"/>
+                <outlet property="parameterSearchView" destination="hdR-hb-Oaz" id="8Ch-20-bDr"/>
+                <outlet property="photoSearchView" destination="hpH-bF-fC8" id="X3Q-Vl-1Sy"/>
+                <outlet property="scrollView" destination="dUh-gh-e0C" id="T8c-Ib-LIe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t7R-D4-61u"/>
             </connections>
         </placeholder>
@@ -23,7 +27,99 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ua-KN-Ct1" userLabel="contentView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ВТБ" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-rm-0jy">
+                                    <rect key="frame" x="16" y="13" width="80" height="28"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="АВТО" translatesAutoresizingMaskIntoConstraints="NO" id="o5E-bR-PIQ">
+                                    <rect key="frame" x="104" y="18.5" width="72" height="23"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-L1-Qca">
+                                    <rect key="frame" x="291" y="18" width="63" height="24"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls1-7h-kyu">
+                                            <rect key="frame" x="0.0" y="0.0" width="21" height="24"/>
+                                            <state key="normal" image="Headphones"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwa-mx-boa">
+                                            <rect key="frame" x="42" y="0.0" width="21" height="24"/>
+                                            <state key="normal" image="Ringbell"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TdB-lI-DJv" userLabel="separatorView">
+                                    <rect key="frame" x="16" y="137.5" width="343" height="1"/>
+                                    <color key="backgroundColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="ZNw-Vi-ygt"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-hb-Oaz">
+                                    <rect key="frame" x="0.0" y="74" width="375" height="63.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск авто по параметрам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3b-bf-Qke">
+                                            <rect key="frame" x="20" y="22" width="210.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Parameters" translatesAutoresizingMaskIntoConstraints="NO" id="o5e-1c-LNh">
+                                            <rect key="frame" x="331" y="20" width="24" height="24"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="i3b-bf-Qke" secondAttribute="bottom" constant="22" id="5tM-h8-sxU"/>
+                                        <constraint firstItem="i3b-bf-Qke" firstAttribute="top" secondItem="hdR-hb-Oaz" secondAttribute="top" constant="22" id="KG6-4a-Sb9"/>
+                                        <constraint firstItem="i3b-bf-Qke" firstAttribute="leading" secondItem="hdR-hb-Oaz" secondAttribute="leading" constant="20" id="NTL-4k-DDZ"/>
+                                        <constraint firstItem="o5e-1c-LNh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i3b-bf-Qke" secondAttribute="trailing" constant="16" id="WZw-IE-hkV"/>
+                                        <constraint firstItem="o5e-1c-LNh" firstAttribute="centerY" secondItem="i3b-bf-Qke" secondAttribute="centerY" id="Wb8-Pa-aPZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="o5e-1c-LNh" secondAttribute="trailing" constant="20" id="XCM-5o-2wb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-bF-fC8">
+                                    <rect key="frame" x="0.0" y="138.5" width="375" height="63.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск авто по фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V23-w2-x0W">
+                                            <rect key="frame" x="20" y="22" width="152" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="KV0-px-yAs">
+                                            <rect key="frame" x="337" y="24" width="18" height="16"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KV0-px-yAs" firstAttribute="centerY" secondItem="V23-w2-x0W" secondAttribute="centerY" id="3Ei-mO-g3d"/>
+                                        <constraint firstItem="V23-w2-x0W" firstAttribute="top" secondItem="hpH-bF-fC8" secondAttribute="top" constant="22" id="6XU-dE-XH0"/>
+                                        <constraint firstItem="V23-w2-x0W" firstAttribute="leading" secondItem="hpH-bF-fC8" secondAttribute="leading" constant="20" id="8a1-ny-1pN"/>
+                                        <constraint firstItem="KV0-px-yAs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V23-w2-x0W" secondAttribute="trailing" constant="16" id="94Q-e7-gIO"/>
+                                        <constraint firstAttribute="trailing" secondItem="KV0-px-yAs" secondAttribute="trailing" constant="20" id="KWl-6y-gob"/>
+                                        <constraint firstAttribute="bottom" secondItem="V23-w2-x0W" secondAttribute="bottom" constant="22" id="iZn-G5-tcn"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="TdB-lI-DJv" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" constant="16" id="4iR-Ny-eui"/>
+                                <constraint firstItem="hpH-bF-fC8" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" id="B1D-09-x3G"/>
+                                <constraint firstAttribute="trailing" secondItem="ghp-L1-Qca" secondAttribute="trailing" constant="21" id="DMg-M3-oCs"/>
+                                <constraint firstItem="o5E-bR-PIQ" firstAttribute="centerY" secondItem="eIB-rm-0jy" secondAttribute="centerY" constant="3" id="ElR-IP-QAW"/>
+                                <constraint firstItem="ghp-L1-Qca" firstAttribute="centerY" secondItem="o5E-bR-PIQ" secondAttribute="centerY" id="Iul-Xe-KEt"/>
+                                <constraint firstItem="hpH-bF-fC8" firstAttribute="top" secondItem="TdB-lI-DJv" secondAttribute="bottom" id="NJH-oq-3EA"/>
+                                <constraint firstAttribute="trailing" secondItem="hpH-bF-fC8" secondAttribute="trailing" id="UKc-3S-tcg"/>
+                                <constraint firstItem="o5E-bR-PIQ" firstAttribute="leading" secondItem="eIB-rm-0jy" secondAttribute="trailing" constant="8" id="UrZ-Yi-8fE"/>
+                                <constraint firstItem="eIB-rm-0jy" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" constant="16" id="Yim-0R-IfO"/>
+                                <constraint firstAttribute="trailing" secondItem="TdB-lI-DJv" secondAttribute="trailing" constant="16" id="g7B-cZ-8WA"/>
+                                <constraint firstItem="eIB-rm-0jy" firstAttribute="top" secondItem="6Ua-KN-Ct1" secondAttribute="top" constant="13" id="htN-iu-Maq"/>
+                                <constraint firstAttribute="trailing" secondItem="hdR-hb-Oaz" secondAttribute="trailing" id="jS2-pq-L71"/>
+                                <constraint firstItem="ghp-L1-Qca" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o5E-bR-PIQ" secondAttribute="trailing" constant="16" id="rx5-vo-Qg2"/>
+                                <constraint firstItem="hdR-hb-Oaz" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" id="vJG-CE-RvM"/>
+                                <constraint firstItem="TdB-lI-DJv" firstAttribute="top" secondItem="hdR-hb-Oaz" secondAttribute="bottom" id="vyi-xb-7Dk"/>
+                                <constraint firstItem="hdR-hb-Oaz" firstAttribute="top" secondItem="ghp-L1-Qca" secondAttribute="bottom" constant="32" id="wL8-f3-xUD"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
@@ -51,6 +147,12 @@
         </view>
     </objects>
     <resources>
+        <image name="Camera" width="18" height="16"/>
+        <image name="Headphones" width="21" height="20"/>
+        <image name="Parameters" width="24" height="24"/>
+        <image name="Ringbell" width="20" height="24"/>
+        <image name="АВТО" width="72" height="23"/>
+        <image name="ВТБ" width="80" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
