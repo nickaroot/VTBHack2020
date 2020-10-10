@@ -43,7 +43,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func configureTableView() {
-        datasource.nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
+        _ = datasource.nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
         
         
         calculatorTableView.dataSource = self
