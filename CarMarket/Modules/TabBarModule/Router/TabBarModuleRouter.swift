@@ -30,9 +30,10 @@ class TabBarModuleRouter {
         
         let viewControllers = [MainTabRouter.setupModuleWithNib()]
         let titles = ["Main"]
+        let images = [#imageLiteral(resourceName: "MainTab")]
     
         let controllersToAdd = viewControllers.enumerated().map { (index, vc) -> UINavigationController in
-            let tabBarItem = UITabBarItem(title: titles[index], image: UIImage(), tag: index)
+            let tabBarItem = UITabBarItem(title: titles[index], image: images[index], tag: index)
             let navigation = UINavigationController.init(rootViewController: vc)
             navigation.tabBarItem = tabBarItem
 
