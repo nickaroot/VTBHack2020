@@ -45,7 +45,7 @@ class CalculatorViewController: UIViewController {
     
     private func configureTableView() {
         let nibs: [UINib: String] = [
-            .init(nibName: "CalculatorSeparatorCell", bundle: nil): cellId
+            .init(nibName: "CalculatorSliderCell", bundle: nil): cellId
         ]
         
         nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }

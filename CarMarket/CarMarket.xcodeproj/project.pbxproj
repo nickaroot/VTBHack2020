@@ -48,8 +48,8 @@
 		F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F6B253206FE006C0995 /* VideoCell.xib */; };
 		F88E1F6F25322489006C0995 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6E25322489006C0995 /* UIColorExtension.swift */; };
 		F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F712532261D006C0995 /* CalculatorViewModel.swift */; };
-		F88E1F76253229C7006C0995 /* CalculatorSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F74253229C7006C0995 /* CalculatorSeparatorCell.swift */; };
-		F88E1F77253229C7006C0995 /* CalculatorSeparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F75253229C7006C0995 /* CalculatorSeparatorCell.xib */; };
+		F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */; };
+		F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -117,8 +117,8 @@
 		F88E1F6B253206FE006C0995 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		F88E1F6E25322489006C0995 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F88E1F712532261D006C0995 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
-		F88E1F74253229C7006C0995 /* CalculatorSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSeparatorCell.swift; sourceTree = "<group>"; };
-		F88E1F75253229C7006C0995 /* CalculatorSeparatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSeparatorCell.xib; sourceTree = "<group>"; };
+		F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSliderCell.swift; sourceTree = "<group>"; };
+		F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSliderCell.xib; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -423,8 +423,8 @@
 		F88E1F73253229B2006C0995 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F88E1F74253229C7006C0995 /* CalculatorSeparatorCell.swift */,
-				F88E1F75253229C7006C0995 /* CalculatorSeparatorCell.xib */,
+				F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */,
+				F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
-				F88E1F77253229C7006C0995 /* CalculatorSeparatorCell.xib in Resources */,
+				F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
 				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
@@ -619,7 +619,7 @@
 				6D111D06C2C661C523534D08 /* CalculatorInteractor.swift in Sources */,
 				776F72553AD0904E5677620F /* CalculatorRouter.swift in Sources */,
 				D869E581998363D62079F981 /* CalculatorContract.swift in Sources */,
-				F88E1F76253229C7006C0995 /* CalculatorSeparatorCell.swift in Sources */,
+				F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
