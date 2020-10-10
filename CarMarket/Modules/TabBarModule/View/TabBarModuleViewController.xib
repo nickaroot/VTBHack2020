@@ -17,7 +17,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             </tabBar>
             <viewControllers>
-                <viewController id="jjO-1A-lNi">
+                <viewController id="jjO-1A-lNi" customClass="MainTabViewController" customModule="CarMarket" customModuleProvider="target">
                     <view key="view" contentMode="scaleToFill" id="y27-eb-NJR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,15 +25,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Sp3-3z-EUe"/>
-                </viewController>
-                <viewController id="HKU-6U-BtM">
-                    <view key="view" contentMode="scaleToFill" id="AYa-p0-FtQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bNH-fg-QsL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4Sf-0z-gyF"/>
                 </viewController>
             </viewControllers>
             <point key="canvasLocation" x="-388" y="139"/>
