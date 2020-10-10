@@ -34,6 +34,42 @@ class MainTabRouter {
 
 
 extension MainTabRouter: MainTabRouterProtocol {
+    func showArticle(_ id: String) {
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Статья", message: id, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
+    }
+    
+    func showFeature(_ feature: FeatureIdentifier) {
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Фича", message: feature.rawValue, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
+    }
+    
+    func showErrorAlert(with message: String) {
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
+    }
+    
     func showParameterSearch() {
         // TODO: - ...
     }
