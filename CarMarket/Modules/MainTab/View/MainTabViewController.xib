@@ -184,6 +184,13 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="Hze-O3-1VV"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="nQa-gs-mHu"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-BC-gRK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="kS9-L4-LTP"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0V-Hr-8Sz">
                     <rect key="frame" x="299" y="919" width="60" height="60"/>
                     <state key="normal" image="CalculatorButton"/>
@@ -196,8 +203,11 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Q0V-Hr-8Sz" secondAttribute="bottom" constant="32" id="3R3-aj-lKN"/>
-                <constraint firstItem="dUh-gh-e0C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4hP-Q8-Iil"/>
+                <constraint firstItem="dUh-gh-e0C" firstAttribute="top" secondItem="PSF-BC-gRK" secondAttribute="bottom" id="4hP-Q8-Iil"/>
+                <constraint firstItem="PSF-BC-gRK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8br-ts-6ia"/>
                 <constraint firstAttribute="bottom" secondItem="dUh-gh-e0C" secondAttribute="bottom" id="CuU-W7-Dq1"/>
+                <constraint firstItem="PSF-BC-gRK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GI1-CH-eCO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PSF-BC-gRK" secondAttribute="trailing" id="OPN-KB-TSe"/>
                 <constraint firstItem="dUh-gh-e0C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T1G-RC-Zez"/>
                 <constraint firstItem="6Ua-KN-Ct1" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="250" id="ZT3-mr-7gB"/>
                 <constraint firstItem="6Ua-KN-Ct1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="nJG-Kq-hoz"/>
