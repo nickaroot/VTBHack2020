@@ -79,7 +79,6 @@ class DazzleCarouselView: UIView {
             
             scrollView.setNeedsLayout()
             scrollView.layoutIfNeeded()
-            print("CAROUSEL")
         }
         
         let contentSize = CGFloat(itemsCount + 1) * spaceBetweenViews +
@@ -121,7 +120,6 @@ extension DazzleCarouselView: UIScrollViewDelegate {
         let currentPosition = scrollView.contentOffset.x
         let rightCorner = visibleWidth + currentPosition
         
-        print("velocity: \(velocity)")
         if velocity.x >= 0 {
             // Листаем вправо
             if let view = items.last(where: { view in
