@@ -32,6 +32,9 @@
 		F84F7D952531C888005F5220 /* MainTabWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D942531C888005F5220 /* MainTabWorker.swift */; };
 		F84F7DA12531E1E8005F5220 /* ImageSlideshow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DA02531E1E8005F5220 /* ImageSlideshow.framework */; };
 		F84F7DA22531E1E8005F5220 /* ImageSlideshow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DA02531E1E8005F5220 /* ImageSlideshow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F84F7DA92531E865005F5220 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DA72531E865005F5220 /* CarCell.swift */; };
+		F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7DA82531E865005F5220 /* CarCell.xib */; };
+		F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -83,6 +86,9 @@
 		F84F7D902531C5AC005F5220 /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
 		F84F7D942531C888005F5220 /* MainTabWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWorker.swift; sourceTree = "<group>"; };
 		F84F7DA02531E1E8005F5220 /* ImageSlideshow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageSlideshow.framework; path = Carthage/Build/iOS/ImageSlideshow.framework; sourceTree = "<group>"; };
+		F84F7DA72531E865005F5220 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		F84F7DA82531E865005F5220 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
+		F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +116,6 @@
 			children = (
 				B1756698F6CDB3E9C78CE533 /* CatalogueTabRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -149,7 +154,6 @@
 			children = (
 				3C724684E515452B0CD2139C /* CatalogueTabContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -158,7 +162,6 @@
 			children = (
 				90467C6DA707979273B91D16 /* CatalogueTabInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -210,7 +213,6 @@
 			children = (
 				BFC3491EBE4CF122C2DD2A60 /* CatalogueTabPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -225,10 +227,10 @@
 		D1D06B99ADB27611917518BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F84F7DA62531E84A005F5220 /* Cells */,
 				D9C8EFE9A06734E3B9A14505 /* CatalogueTabViewController.swift */,
 				18EBCDC806D2DD9005D9BC0B /* CatalogueTabViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -269,7 +271,6 @@
 				016AC4FB7C7AF0CDB7607FCB /* Router */,
 				3C1069B7715A8C3A5BF2E71E /* Contract */,
 			);
-			name = CatalogueTab;
 			path = CatalogueTab;
 			sourceTree = "<group>";
 		};
@@ -309,10 +310,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F84F7DA62531E84A005F5220 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F84F7DA72531E865005F5220 /* CarCell.swift */,
+				F84F7DA82531E865005F5220 /* CarCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F8A21696253078480002ED02 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F8A21697253078520002ED02 /* SpeechRecognitionService.swift */,
+				F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -425,6 +436,7 @@
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
+				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
 				FD6340B61F0F9B569F008CCD /* CatalogueTabViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,11 +476,13 @@
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
 				F84F7D8B2531C1A0005F5220 /* StringExtension.swift in Sources */,
 				F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */,
+				F84F7DA92531E865005F5220 /* CarCell.swift in Sources */,
 				FF7A26F7F5C88E1A47425032 /* TabBarModulePresenter.swift in Sources */,
 				657EA069C54925BF535260F9 /* TabBarModuleInteractor.swift in Sources */,
 				F84F7D952531C888005F5220 /* MainTabWorker.swift in Sources */,
 				F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */,
 				8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */,
+				F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
 				42F8EAE4C768CC915ADE2768 /* MainTabPresenter.swift in Sources */,
