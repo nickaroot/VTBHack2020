@@ -9,15 +9,21 @@
 import Foundation
 
 protocol CalculatorViewProtocol: class {
-    // TODO: Declare view methods
+    func update()
+    func dimView()
+    func undimView()
 }
 
 protocol CalculatorInteractorProtocol: class {
     func closeClicked()
+    func calculateClicked(with datasource: CalculatorViewModel)
+    func applyForLoanClicked()
 }
 
 protocol CalculatorPresenterProtocol: class {
-    // TODO: Declare presenter methods
+    func updateView()
+    func updateStarted()
+    func updateFinished()
 }
 
 protocol CalculatorRouterProtocol: class {

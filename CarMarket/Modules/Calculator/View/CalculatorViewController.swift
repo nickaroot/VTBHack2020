@@ -15,7 +15,9 @@ class CalculatorViewController: UIViewController {
     // MARK: Properties
     var interactor: CalculatorInteractorProtocol!
     let datasource = CalculatorViewModel()
-    let cellId = "CalculatorCellID"
+    var isCalculated = false
+    
+    var dimmingView: UIView?
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -26,7 +28,12 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateClicked(_ sender: Any) {
-        
+        if isCalculated {
+            interactor.applyForLoanClicked()
+        } else {
+            interactor.calculateClicked(with: datasource)
+            isCalculated = !isCalculated
+        }
     }
     
     @IBAction func closeClicked(_ sender: Any) {
@@ -44,11 +51,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func configureTableView() {
-        let nibs: [UINib: String] = [
-            .init(nibName: "CalculatorSliderCell", bundle: nil): cellId
-        ]
-        
-        nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
+        _ = datasource.nibs.map { calculatorTableView.register($0.key, forCellReuseIdentifier: $0.value) }
         
         
         calculatorTableView.dataSource = self
@@ -57,7 +60,44 @@ class CalculatorViewController: UIViewController {
 }
 
 extension CalculatorViewController: CalculatorViewProtocol {
+    func dimView() {
+        dimmingView = UIView(frame: view.bounds)
+        dimmingView?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        
+        let animatingView = UIActivityIndicatorView(style: .large)
+        dimmingView?.addSubview(animatingView)
+        
+        animatingView.center = dimmingView!.center
+        
+        animatingView.centerXAnchor.constraint(equalTo: dimmingView!.centerXAnchor).isActive = true
+        animatingView.centerYAnchor.constraint(equalTo: dimmingView!.centerYAnchor).isActive = true
+        
+        animatingView.startAnimating()
+        
+        
+        view.addSubview(dimmingView!)
+        
+        
+        UIView.animate(withDuration: 0.15) {
+            self.dimmingView?.layoutSubviews()
+            self.view.layoutSubviews()
+        }
+    }
     
+    func undimView() {
+        self.dimmingView?.removeFromSuperview()
+        UIView.animate(withDuration: 0.15) {
+            self.view.layoutSubviews()
+        }
+    }
+    
+    func update() {
+        if isCalculated {
+            calculateButton.setTitle("Оформить заявку", for: .normal)
+        }
+        
+        calculatorTableView.reloadSections(IndexSet(integersIn: 0 ..< calculatorTableView.numberOfSections), with: .automatic)
+    }
 }
 
 extension CalculatorViewController: UITableViewDataSource {
@@ -66,12 +106,13 @@ extension CalculatorViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CalculatorBaseCell else {
+        let cellDatasource = datasource.cellDatasources[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellDatasource.cellId, for: indexPath) as? CalculatorBaseCell else {
             return UITableViewCell()
         }
         
         cell.selectionStyle = .none
-        cell.datasource = datasource.cellDatasources[indexPath.row]
+        cell.datasource = cellDatasource
         
         return cell
     }
