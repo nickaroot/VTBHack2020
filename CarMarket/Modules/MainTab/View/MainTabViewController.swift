@@ -15,10 +15,16 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var parameterSearchView: UIView!
     @IBOutlet weak var photoSearchView: UIView!
     @IBOutlet weak var articlesCarousel: DazzleCarouselView!
+    @IBOutlet weak var featuresCarousel: UICollectionView!
     
     // MARK: Properties
+    let featureNib = UINib(nibName: "FeatureCell", bundle: nil)
+    let featureReuseId = "FeatureCellID"
+    
     var interactor: MainTabInteractorProtocol!
-    let dataForBigCarousel: [PhotoTextCardDatasource] = [(#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года"), (#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года"), (#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года")]
+    
+    var articlesCarouselData: [PhotoTextCardDatasource] = []
+    var featureCarouselData: [FeatureCellDatasource] = []
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -26,6 +32,7 @@ class MainTabViewController: UIViewController {
         
         configureUI()
         configureGestures()
+        prepareCollections()
         
         interactor.viewIsReady()
     }
@@ -36,6 +43,17 @@ class MainTabViewController: UIViewController {
         scrollView.showsHorizontalScrollIndicator = false
         
         articlesCarousel.backgroundColor = .clear
+        
+        featuresCarousel.backgroundColor = .clear
+        
+    }
+    
+    private func prepareCollections() {
+        featuresCarousel.register(featureNib, forCellWithReuseIdentifier: featureReuseId)
+        
+        featuresCarousel.dataSource = self
+        featuresCarousel.delegate = self
+        
         articlesCarousel.datasource = self
         articlesCarousel.delegate = self
     }
@@ -57,26 +75,64 @@ class MainTabViewController: UIViewController {
 }
 
 extension MainTabViewController: MainTabViewProtocol {
-
+    func updateArticles(with articles: [PhotoTextCardDatasource]) {
+        articlesCarouselData = articles
+        articlesCarousel.reloadData()
+    }
+    
+    func updateFeatures(with features: [FeatureCellDatasource]) {
+        featureCarouselData = features
+        featuresCarousel.reloadData()
+    }
 }
 
 extension MainTabViewController: DazzleCarouselViewDatasource {
     func numberOfViewsToShow() -> Int {
-        return dataForBigCarousel.count
+        return articlesCarouselData.count
     }
     
     func view(at index: Int) -> UIView {
         let viewToShow = PhotoTextCard()
-        viewToShow.datasource = dataForBigCarousel[index]
+        viewToShow.datasource = articlesCarouselData[index]
         
         return viewToShow
     }
     
-    
 }
 
 extension MainTabViewController: DazzleCarouselViewDelegate {
+    func carouselViewTapped(at index: Int) {
+        interactor.selectedArticle(with: articlesCarouselData[index].id)
+    }
+    
     func carouselPageChanged(to index: Int) {
         // do nothing...
+    }
+}
+
+extension MainTabViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return featureCarouselData.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: featureReuseId, for: indexPath) as? FeatureCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.datasource = featureCarouselData[indexPath.row]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        interactor.selectedFeature(featureCarouselData[indexPath.row].id)
+    }
+
+}
+
+extension MainTabViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 110)
     }
 }

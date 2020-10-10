@@ -9,20 +9,27 @@
 import Foundation
 
 protocol MainTabViewProtocol: class {
-    // TODO: Declare view methods
+    func updateArticles(with articles: [PhotoTextCardDatasource])
+    func updateFeatures(with features: [FeatureCellDatasource])
 }
 
 protocol MainTabInteractorProtocol: class {
     func viewIsReady()
     func parameterSearchClicked()
     func photoSearchClicked()
+    func selectedFeature(_ feature: FeatureIdentifier)
+    func selectedArticle(with id: String)
 }
 
 protocol MainTabPresenterProtocol: class {
-    // TODO: Declare presenter methods
+    func articlesFetched(_ articles: [PhotoTextCardDatasource])
+    func featuresFetched(_ features: [FeatureCellDatasource])
 }
 
 protocol MainTabRouterProtocol: class {
     func showParameterSearch()
     func showPhotoSearch()
+    func showErrorAlert(with message: String)
+    func showFeature(_ feature: FeatureIdentifier)
+    func showArticle(_ id: String)
 }

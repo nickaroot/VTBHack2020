@@ -7,7 +7,11 @@
 
 import UIKit
 
-typealias PhotoTextCardDatasource = (photo: UIImage, text: String?)
+struct PhotoTextCardDatasource {
+    let id: String
+    let photo: UIImage
+    let text: String?
+}
 class PhotoTextCard: UIView {
     @IBOutlet var view: UIView!
     @IBOutlet weak var photoView: UIImageView!

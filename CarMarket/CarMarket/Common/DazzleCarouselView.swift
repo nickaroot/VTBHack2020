@@ -15,6 +15,7 @@ protocol DazzleCarouselViewDatasource: class {
 
 protocol DazzleCarouselViewDelegate: class {
     func carouselPageChanged(to index: Int)
+    func carouselViewTapped(at index: Int)
 }
 
 class DazzleCarouselView: UIView {

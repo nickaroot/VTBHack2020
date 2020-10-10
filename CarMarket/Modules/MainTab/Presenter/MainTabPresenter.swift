@@ -11,5 +11,13 @@ class MainTabPresenter {
 }
 
 extension MainTabPresenter: MainTabPresenterProtocol {
+    func articlesFetched(_ articles: [PhotoTextCardDatasource]) {
+        view?.updateArticles(with: articles)
+    }
+    
+    func featuresFetched(_ features: [FeatureCellDatasource]) {
+        view?.updateFeatures(with: features)
+    }
+    
 
 }

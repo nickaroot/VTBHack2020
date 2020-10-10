@@ -22,6 +22,9 @@
 		F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */; };
 		F84F7D862531C172005F5220 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D882531C172005F5220 /* Localizable.strings */; };
 		F84F7D8B2531C1A0005F5220 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D8A2531C1A0005F5220 /* StringExtension.swift */; };
+		F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D8F2531C5AC005F5220 /* FeatureCell.swift */; };
+		F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D902531C5AC005F5220 /* FeatureCell.xib */; };
+		F84F7D952531C888005F5220 /* MainTabWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D942531C888005F5220 /* MainTabWorker.swift */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 		F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextCard.swift; sourceTree = "<group>"; };
 		F84F7D872531C172005F5220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F84F7D8A2531C1A0005F5220 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F84F7D8F2531C5AC005F5220 /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
+		F84F7D902531C5AC005F5220 /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
+		F84F7D942531C888005F5220 /* MainTabWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWorker.swift; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		1B6780D8727798C9D9DEC7AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F84F7D8E2531C595005F5220 /* Cells */,
 				48731CC43A58E6FBD6140BDA /* MainTabViewController.swift */,
 				420513016BD53E6E2F040D24 /* MainTabViewController.xib */,
 			);
@@ -195,6 +202,15 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		F84F7D8E2531C595005F5220 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F84F7D8F2531C5AC005F5220 /* FeatureCell.swift */,
+				F84F7D902531C5AC005F5220 /* FeatureCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F8A21696253078480002ED02 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				6A5E95CDB78E2C2AF54A02D1 /* MainTabInteractor.swift */,
+				F84F7D942531C888005F5220 /* MainTabWorker.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -304,6 +321,7 @@
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
+				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
 			);
@@ -324,6 +342,8 @@
 				F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */,
 				FF7A26F7F5C88E1A47425032 /* TabBarModulePresenter.swift in Sources */,
 				657EA069C54925BF535260F9 /* TabBarModuleInteractor.swift in Sources */,
+				F84F7D952531C888005F5220 /* MainTabWorker.swift in Sources */,
+				F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */,
 				8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
