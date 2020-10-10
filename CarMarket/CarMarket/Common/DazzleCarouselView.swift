@@ -66,6 +66,11 @@ class DazzleCarouselView: UIView {
         let viewWidth = bounds.width - (spaceBetweenViews * 2) - 4 // Магическая четвёрка
         for index in 0 ..< itemsCount {
             let view = datasource.view(at: index)
+            
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedView(sender:)))
+            gestureRecognizer.accessibilityLabel = String(index) // Ещё немного хаков
+            view.addGestureRecognizer(gestureRecognizer)
+            
             items.append(view)
             
             let viewOrigin = CGPoint(x: startX, y: 8)
@@ -112,6 +117,12 @@ class DazzleCarouselView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         scrollView.delegate = self
+    }
+    
+    @objc private func tappedView(sender: UITapGestureRecognizer) {
+        if let indexString = sender.accessibilityLabel, let index = Int(indexString) {
+            delegate?.carouselViewTapped(at: index)
+        }
     }
 }
 
