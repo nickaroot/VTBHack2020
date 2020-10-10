@@ -24,8 +24,10 @@ class CatalogueWorker {
             ])
         ]
         
-        Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in
-            completion(fakeData, nil)
+        DispatchQueue.main.async {
+            Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) { _ in
+                completion(fakeData, nil)
+            }
         }
     }
 }

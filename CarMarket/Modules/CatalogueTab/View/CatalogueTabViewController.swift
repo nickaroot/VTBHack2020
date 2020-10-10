@@ -16,6 +16,7 @@ class CatalogueTabViewController: UIViewController {
     // MARK: Properties
     var interactor: CatalogueTabInteractorProtocol!
     var cars: [CarCellDatasource] = []
+    var timer: Timer?
     
     let carNib = UINib(nibName: "CarCell", bundle: nil)
     let carCellId = "carCellID"
@@ -26,6 +27,7 @@ class CatalogueTabViewController: UIViewController {
         
         configureUI()
         configureTableView()
+        startAnimatingOffersLabel()
         
         interactor.viewIsReady()
     }
@@ -44,12 +46,25 @@ class CatalogueTabViewController: UIViewController {
         carsTableView.dataSource = self
         carsTableView.delegate = self
     }
+    
+    private func startAnimatingOffersLabel() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
+            DispatchQueue.main.async {
+                self.offersCountLabel.text = "{count} предложений".replacingOccurrences(of: "{count}", with: String(Int.random(in: 100...1000)))
+            }
+        }
+    }
+    
+    private func stopAnimatingOffersLabel() {
+        timer?.invalidate()
+    }
 }
 
 extension CatalogueTabViewController: CatalogueTabViewProtocol {
     func updateOffers(_ data: [CarCellDatasource]) {
+        stopAnimatingOffersLabel()
         cars = data
-        offersCountLabel.text = offersCountLabel.text?.replacingOccurrences(of: "{count}", with: String(cars.count))
+        offersCountLabel.text = "{count} предложений".replacingOccurrences(of: "{count}", with: String(cars.count))
         carsTableView.reloadData()
     }
 }
