@@ -22,10 +22,22 @@ class MainTabWorker {
     
     static func fetchFeatures(completion: @escaping (_ features: [FeatureCellDatasource]?, _ error: String?) -> Void) {
         let fakeData: [FeatureCellDatasource] = [
-            FeatureCellDatasource(id: .calc, backgroundColor: .systemPink, image: #imageLiteral(resourceName: "CalculatorFeature"), text: "Кредитный калькулятор"),
-            FeatureCellDatasource(id: .vr, backgroundColor: .systemBlue, image: #imageLiteral(resourceName: "VRFeature"), text: "VR каталог"),
-            FeatureCellDatasource(id: .bot, backgroundColor: .systemOrange, image: #imageLiteral(resourceName: "BotFeature"), text: "Телеграм-бот")
+            FeatureCellDatasource(id: .telegram, backgroundColor: .white, image: #imageLiteral(resourceName: "TelegramStory"), text: "Телеграм-бот"),
+            FeatureCellDatasource(id: .firstAuto, backgroundColor: .white, image: #imageLiteral(resourceName: "FirstAutoStory"), text: "Первое авто"),
+            FeatureCellDatasource(id: .newAuto, backgroundColor: .white, image: #imageLiteral(resourceName: "NewStory"), text: "Новинки сезона"),
+            FeatureCellDatasource(id: .bank, backgroundColor: .white, image: #imageLiteral(resourceName: "BankStory"), text: "Предложения банка")
         ]
+        Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in
+            completion(fakeData, nil)
+        }
+    }
+    
+    static func fetchVideos(completion: @escaping (_ features: [VideoCellDatasource]?, _ error: String?) -> Void) {
+        let fakeData: [VideoCellDatasource] = [
+            VideoCellDatasource(id: UUID.init().uuidString, backgroundImage: #imageLiteral(resourceName: "PoloVideo"), text: "Видеообзор нового volkswagen polo"),
+            VideoCellDatasource(id: UUID.init().uuidString, backgroundImage: #imageLiteral(resourceName: "ToyotaVideo"), text: "Эксплуатация Toyota Fortuner. Подводим итоги.")
+        ]
+        
         Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in
             completion(fakeData, nil)
         }

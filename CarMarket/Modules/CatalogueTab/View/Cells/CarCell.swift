@@ -61,6 +61,8 @@ class CarCell: UITableViewCell {
             return KingfisherSource(urlString: url)
         }.compactMap { $0 }
         
-        carPhotos.setImageInputs(imageSources)
+        DispatchQueue.main.async {
+            self.carPhotos.setImageInputs(imageSources)
+        }
     }
 }

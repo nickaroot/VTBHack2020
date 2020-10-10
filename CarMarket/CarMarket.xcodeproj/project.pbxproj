@@ -37,6 +37,9 @@
 		F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */; };
 		F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */; };
 		F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DB12531F09D005F5220 /* Kingfisher.framework */; };
+		F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F68253204E4006C0995 /* UIViewExtension.swift */; };
+		F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6A253206FE006C0995 /* VideoCell.swift */; };
+		F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F6B253206FE006C0995 /* VideoCell.xib */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -93,6 +96,9 @@
 		F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
 		F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueWorker.swift; sourceTree = "<group>"; };
 		F84F7DB12531F09D005F5220 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F88E1F68253204E4006C0995 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F88E1F6A253206FE006C0995 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		F88E1F6B253206FE006C0995 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 			children = (
 				F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */,
 				F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */,
+				F88E1F68253204E4006C0995 /* UIViewExtension.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -304,6 +311,8 @@
 			children = (
 				F84F7D8F2531C5AC005F5220 /* FeatureCell.swift */,
 				F84F7D902531C5AC005F5220 /* FeatureCell.xib */,
+				F88E1F6A253206FE006C0995 /* VideoCell.swift */,
+				F88E1F6B253206FE006C0995 /* VideoCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
+				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
 				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
@@ -479,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */,
+				F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */,
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
@@ -493,6 +504,7 @@
 				F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
+				F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */,
 				42F8EAE4C768CC915ADE2768 /* MainTabPresenter.swift in Sources */,
 				839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */,
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,

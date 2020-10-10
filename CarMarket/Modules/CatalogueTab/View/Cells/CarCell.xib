@@ -25,7 +25,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kia Rio IV X-Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-aW-Wjh">
-                        <rect key="frame" x="36" y="200" width="119.5" height="20"/>
+                        <rect key="frame" x="16" y="200" width="119.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -41,17 +41,17 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLM-Fw-nph">
-                        <rect key="frame" x="265" y="198.5" width="23" height="23"/>
+                        <rect key="frame" x="266" y="199" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="BLM-Fw-nph" secondAttribute="height" multiplier="1:1" id="pWL-94-Bdg"/>
                         </constraints>
-                        <state key="normal" image="Favorite"/>
+                        <state key="normal" image="AR"/>
                         <connections>
                             <action selector="ARClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hL2-pm-Jsa"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-7O-NLX">
-                        <rect key="frame" x="36" y="232" width="44.5" height="21"/>
+                        <rect key="frame" x="16" y="232" width="44.5" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -76,8 +76,8 @@
                     <constraint firstAttribute="trailing" secondItem="p1s-YQ-4Qu" secondAttribute="trailing" constant="16" id="fN8-e7-yEO"/>
                     <constraint firstItem="BLM-Fw-nph" firstAttribute="centerY" secondItem="8Fo-aW-Wjh" secondAttribute="centerY" id="hj0-Nv-wb9"/>
                     <constraint firstItem="BLM-Fw-nph" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Fo-aW-Wjh" secondAttribute="trailing" constant="16" id="pO4-Qa-C4S"/>
-                    <constraint firstItem="8Fo-aW-Wjh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="sD5-wc-ADI"/>
-                    <constraint firstItem="CCm-7O-NLX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="x2k-ns-LLe"/>
+                    <constraint firstItem="8Fo-aW-Wjh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sD5-wc-ADI"/>
+                    <constraint firstItem="CCm-7O-NLX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="x2k-ns-LLe"/>
                     <constraint firstAttribute="trailing" secondItem="3ON-dL-Wek" secondAttribute="trailing" constant="16" id="yH9-bb-ypW"/>
                 </constraints>
             </tableViewCellContentView>
@@ -92,6 +92,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="AR" width="20" height="22"/>
         <image name="Favorite" width="23" height="22"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

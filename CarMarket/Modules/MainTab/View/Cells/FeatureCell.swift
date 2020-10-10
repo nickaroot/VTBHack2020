@@ -8,9 +8,10 @@
 import UIKit
 
 enum FeatureIdentifier: String {
-    case calc = "Calculator"
-    case vr = "VR"
-    case bot = "BOT"
+    case telegram
+    case firstAuto
+    case newAuto
+    case bank
 }
 
 struct FeatureCellDatasource {
@@ -35,8 +36,22 @@ class FeatureCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 8
-        // Initialization code
+        layer.cornerRadius = 8
+        imageView.layer.cornerRadius = 8
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        imageView.removeGradientLayer()
+        let c1 = UIColor(red: 11 / 255, green: 36 / 255, blue: 74 / 255, alpha: 0)
+        let c2 = UIColor(red: 11 / 255, green: 36 / 255, blue: 74 / 255, alpha: 0.8)
+        let gradientColors = [c1.cgColor, c2.cgColor]
+        
+        imageView.applyGradient(colors: gradientColors)
+        
+        layer.borderWidth = 2
+        layer.borderColor = UIColor(red: 58 / 255, green: 131 / 255, blue: 241 / 255, alpha: 1).cgColor
     }
 
     private func reloadData(with datasource: FeatureCellDatasource) {

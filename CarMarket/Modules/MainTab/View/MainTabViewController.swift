@@ -15,16 +15,23 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var parameterSearchView: UIView!
     @IBOutlet weak var photoSearchView: UIView!
     @IBOutlet weak var articlesCarousel: DazzleCarouselView!
-    @IBOutlet weak var featuresCarousel: UICollectionView!
+    @IBOutlet weak var storiesCarousel: UICollectionView!
+    @IBOutlet weak var videosCarousel: UICollectionView!
+    @IBOutlet weak var yaDriveView: UIImageView!
     
     // MARK: Properties
     let featureNib = UINib(nibName: "FeatureCell", bundle: nil)
-    let featureReuseId = "FeatureCellID"
+    let storyReuseId = "FeatureCellID"
+    
+    let videoNib = UINib(nibName: "VideoCell", bundle: nil)
+    let videoReuseId = "VideoCellID"
+    
     
     var interactor: MainTabInteractorProtocol!
     
-    var articlesCarouselData: [PhotoTextCardDatasource] = []
-    var featureCarouselData: [FeatureCellDatasource] = []
+    var articles: [PhotoTextCardDatasource] = []
+    var stories: [FeatureCellDatasource] = []
+    var videos: [VideoCellDatasource] = []
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -37,6 +44,11 @@ class MainTabViewController: UIViewController {
         interactor.viewIsReady()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        articlesCarousel.scrollToPage(with: 0)
+    }
+    
     private func configureUI() {
         navigationController?.navigationBar.isHidden = true
         scrollView.showsVerticalScrollIndicator = false
@@ -44,18 +56,25 @@ class MainTabViewController: UIViewController {
         
         articlesCarousel.backgroundColor = .clear
         
-        featuresCarousel.backgroundColor = .clear
+        storiesCarousel.backgroundColor = .clear
         
+        yaDriveView.layer.cornerRadius = 8
     }
     
     private func prepareCollections() {
-        featuresCarousel.register(featureNib, forCellWithReuseIdentifier: featureReuseId)
+        storiesCarousel.register(featureNib, forCellWithReuseIdentifier: storyReuseId)
+        videosCarousel.register(videoNib, forCellWithReuseIdentifier: videoReuseId)
         
-        featuresCarousel.dataSource = self
-        featuresCarousel.delegate = self
+        storiesCarousel.dataSource = self
+        storiesCarousel.delegate = self
+        storiesCarousel.tag = 0
         
         articlesCarousel.datasource = self
         articlesCarousel.delegate = self
+        
+        videosCarousel.dataSource = self
+        videosCarousel.delegate = self
+        videosCarousel.tag = 1
     }
     
     private func configureGestures() {
@@ -72,28 +91,36 @@ class MainTabViewController: UIViewController {
         interactor.photoSearchClicked()
     }
     
+    @IBAction func calculatorButtonClicked(_ sender: Any) {
+        interactor.calculatorClicked()
+    }
 }
 
 extension MainTabViewController: MainTabViewProtocol {
+    func updateVideos(with videos: [VideoCellDatasource]) {
+        self.videos = videos
+        videosCarousel.reloadData()
+    }
+    
     func updateArticles(with articles: [PhotoTextCardDatasource]) {
-        articlesCarouselData = articles
+        self.articles = articles
         articlesCarousel.reloadData()
     }
     
     func updateFeatures(with features: [FeatureCellDatasource]) {
-        featureCarouselData = features
-        featuresCarousel.reloadData()
+        stories = features
+        storiesCarousel.reloadData()
     }
 }
 
 extension MainTabViewController: DazzleCarouselViewDatasource {
     func numberOfViewsToShow() -> Int {
-        return articlesCarouselData.count
+        return articles.count
     }
     
     func view(at index: Int) -> UIView {
         let viewToShow = PhotoTextCard()
-        viewToShow.datasource = articlesCarouselData[index]
+        viewToShow.datasource = articles[index]
         
         return viewToShow
     }
@@ -102,7 +129,7 @@ extension MainTabViewController: DazzleCarouselViewDatasource {
 
 extension MainTabViewController: DazzleCarouselViewDelegate {
     func carouselViewTapped(at index: Int) {
-        interactor.selectedArticle(with: articlesCarouselData[index].id)
+        interactor.selectedArticle(with: articles[index].id)
     }
     
     func carouselPageChanged(to index: Int) {
@@ -112,27 +139,52 @@ extension MainTabViewController: DazzleCarouselViewDelegate {
 
 extension MainTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return featureCarouselData.count
+        return collectionView.tag == 0 ? stories.count : videos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: featureReuseId, for: indexPath) as? FeatureCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.datasource = featureCarouselData[indexPath.row]
-        
-        return cell
+        return getCell(forCollectionView: collectionView, indexPath: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        interactor.selectedFeature(featureCarouselData[indexPath.row].id)
+        switch collectionView.tag {
+        case 0:
+            interactor.selectedFeature(stories[indexPath.row].id)
+        default:
+            interactor.selectedVideo(with: videos[indexPath.row].id)
+        }
+        
+    }
+    
+    private func getCell(forCollectionView collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView.tag {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: storyReuseId, for: indexPath) as? FeatureCell else {
+                return UICollectionViewCell()
+            }
+            cell.datasource = stories[indexPath.row]
+            
+            return cell
+            
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoReuseId, for: indexPath) as? VideoCell else {
+                return UICollectionViewCell()
+            }
+            cell.datasource = videos[indexPath.row]
+            
+            return cell
+        }
     }
 
 }
 
 extension MainTabViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 110)
+        switch collectionView.tag {
+        case 0:
+            return CGSize(width: 85, height: 106)
+        default:
+            return CGSize(width: 181, height: 94)
+        }
     }
 }

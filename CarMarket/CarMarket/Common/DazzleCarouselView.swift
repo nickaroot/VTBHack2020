@@ -94,8 +94,8 @@ class DazzleCarouselView: UIView {
     }
     
     func scrollToPage(with index: Int) {
+        if !items.indices.contains(index) { return }
         let view = items[index]
-        if view == nil { return }
         let targetX = view.frame.minX - spaceBetweenViews / 2
         let targetY = scrollView.contentOffset.y
         scrollView.setContentOffset(CGPoint(x: targetX, y: targetY), animated: true)
