@@ -24,7 +24,9 @@
                         <viewLayoutGuide key="safeArea" id="aB3-JY-ytK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Sp3-3z-EUe"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Sp3-3z-EUe">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
             </viewControllers>
             <point key="canvasLocation" x="-388" y="139"/>
