@@ -69,6 +69,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellTitleLabel" destination="evB-Gb-Izu" id="E2I-8P-47f"/>
                 <outlet property="currentValueLabel" destination="boE-K4-EF0" id="cFR-d4-CdJ"/>
                 <outlet property="maxValueLabel" destination="3Jp-pp-Mbp" id="cQk-Hx-qCO"/>
                 <outlet property="minValueLabel" destination="VNB-n8-1cO" id="ToQ-0k-i3n"/>
