@@ -45,6 +45,10 @@
 		F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DB12531F09D005F5220 /* Kingfisher.framework */; };
 		F87B607A253236D000EB9536 /* CalculatorSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */; };
 		F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */; };
+		F87B607E2532391700EB9536 /* CalculatorSwitcherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B607C2532391700EB9536 /* CalculatorSwitcherCell.swift */; };
+		F87B607F2532391700EB9536 /* CalculatorSwitcherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87B607D2532391700EB9536 /* CalculatorSwitcherCell.xib */; };
+		F87B608225323DEB00EB9536 /* CalculatorEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87B608025323DEB00EB9536 /* CalculatorEmptyCell.swift */; };
+		F87B608325323DEB00EB9536 /* CalculatorEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87B608125323DEB00EB9536 /* CalculatorEmptyCell.xib */; };
 		F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F68253204E4006C0995 /* UIViewExtension.swift */; };
 		F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6A253206FE006C0995 /* VideoCell.swift */; };
 		F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F6B253206FE006C0995 /* VideoCell.xib */; };
@@ -116,6 +120,10 @@
 		F84F7DB12531F09D005F5220 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSeparatorCell.swift; sourceTree = "<group>"; };
 		F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSeparatorCell.xib; sourceTree = "<group>"; };
+		F87B607C2532391700EB9536 /* CalculatorSwitcherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSwitcherCell.swift; sourceTree = "<group>"; };
+		F87B607D2532391700EB9536 /* CalculatorSwitcherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSwitcherCell.xib; sourceTree = "<group>"; };
+		F87B608025323DEB00EB9536 /* CalculatorEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEmptyCell.swift; sourceTree = "<group>"; };
+		F87B608125323DEB00EB9536 /* CalculatorEmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorEmptyCell.xib; sourceTree = "<group>"; };
 		F88E1F68253204E4006C0995 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F88E1F6A253206FE006C0995 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		F88E1F6B253206FE006C0995 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
@@ -431,6 +439,10 @@
 				F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */,
 				F87B6078253236D000EB9536 /* CalculatorSeparatorCell.swift */,
 				F87B6079253236D000EB9536 /* CalculatorSeparatorCell.xib */,
+				F87B607C2532391700EB9536 /* CalculatorSwitcherCell.swift */,
+				F87B607D2532391700EB9536 /* CalculatorSwitcherCell.xib */,
+				F87B608025323DEB00EB9536 /* CalculatorEmptyCell.swift */,
+				F87B608125323DEB00EB9536 /* CalculatorEmptyCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -551,6 +563,8 @@
 				F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
+				F87B608325323DEB00EB9536 /* CalculatorEmptyCell.xib in Resources */,
+				F87B607F2532391700EB9536 /* CalculatorSwitcherCell.xib in Resources */,
 				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
@@ -605,6 +619,7 @@
 				F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */,
 				8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */,
 				F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */,
+				F87B607E2532391700EB9536 /* CalculatorSwitcherCell.swift in Sources */,
 				F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
@@ -622,6 +637,7 @@
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
 				F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */,
+				F87B608225323DEB00EB9536 /* CalculatorEmptyCell.swift in Sources */,
 				22CEF88AC12D5C57A0FF7BF0 /* CalculatorViewController.swift in Sources */,
 				4792F67A23F636779B1D20A2 /* CalculatorPresenter.swift in Sources */,
 				6D111D06C2C661C523534D08 /* CalculatorInteractor.swift in Sources */,

@@ -7,12 +7,22 @@
 
 import UIKit
 
-struct CalculatorSliderCellDatasource: CalculatorCellDatasource {
+class CalculatorSliderCellDatasource: CalculatorCellDatasource {
+    init(type: CalculatorCellType, minValue: Int, maxValue: Int, currentValue: Int) {
+        self.type = type
+        self.minValue = minValue
+        self.maxValue = maxValue
+        self.currentValue = currentValue
+    }
+    
     var cellId: String = "sliderCellID"
     var type: CalculatorCellType
     let minValue: Int
     let maxValue: Int
     var currentValue: Int
+    var output: Any? {
+        return currentValue
+    }
 }
 
 enum CalculatorSliderDataType {
@@ -27,7 +37,6 @@ class CalculatorSliderCell: UITableViewCell, CalculatorBaseCell {
     @IBOutlet weak var maxValueLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
-    var type: CalculatorCellType?
     var dataType: CalculatorSliderDataType = .money
     var datasource: CalculatorCellDatasource? {
         didSet {

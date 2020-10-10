@@ -25,7 +25,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateClicked(_ sender: Any) {
-        
+        print(datasource.outputValues)
     }
     
     @IBAction func closeClicked(_ sender: Any) {
