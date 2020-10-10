@@ -58,7 +58,7 @@ class CalculatorSwitcherCell: UITableViewCell, CalculatorBaseCell {
     }
     
     @IBAction func switchValueChanged(_ sender: UISwitch) {
-        if var datasource = datasource as? CalculatorSwitcherCellDatasource {
+        if let datasource = datasource as? CalculatorSwitcherCellDatasource {
             datasource.state = sender.isOn
         }
     }

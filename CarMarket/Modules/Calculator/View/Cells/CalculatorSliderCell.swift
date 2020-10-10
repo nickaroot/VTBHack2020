@@ -104,9 +104,11 @@ class CalculatorSliderCell: UITableViewCell, CalculatorBaseCell {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let newValue = dataType == .money ? Int(round(sender.value / 1000) * 1000) : Int(sender.value)
-        if var datasource = datasource as? CalculatorSliderCellDatasource {
+        
+        if let datasource = datasource as? CalculatorSliderCellDatasource {
             datasource.currentValue = newValue
         }
+        
         currentValueLabel.text = formattedValue(withValue: newValue) ?? "\(newValue)"
     }
 }
