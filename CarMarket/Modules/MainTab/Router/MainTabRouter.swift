@@ -34,6 +34,22 @@ class MainTabRouter {
 
 
 extension MainTabRouter: MainTabRouterProtocol {
+    func showVideo(_ id: String) {
+        guard let transitionHandler = transitionHandler else { return }
+        
+        let alert = UIAlertController(title: "Видео", message: id, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
+            transitionHandler.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(alertAction)
+        
+        transitionHandler.present(alert, animated: true, completion: nil)
+    }
+    
+    func showCalculator() {
+        // TODO
+    }
+    
     func showArticle(_ id: String) {
         guard let transitionHandler = transitionHandler else { return }
         

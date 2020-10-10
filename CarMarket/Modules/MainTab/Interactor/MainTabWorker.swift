@@ -34,8 +34,8 @@ class MainTabWorker {
     
     static func fetchVideos(completion: @escaping (_ features: [VideoCellDatasource]?, _ error: String?) -> Void) {
         let fakeData: [VideoCellDatasource] = [
-            VideoCellDatasource(backgroundImage: #imageLiteral(resourceName: "PoloVideo"), text: "Видеообзор нового volkswagen polo"),
-            VideoCellDatasource(backgroundImage: #imageLiteral(resourceName: "ToyotaVideo"), text: "Эксплуатация Toyota Fortuner. Подводим итоги.")
+            VideoCellDatasource(id: UUID.init().uuidString, backgroundImage: #imageLiteral(resourceName: "PoloVideo"), text: "Видеообзор нового volkswagen polo"),
+            VideoCellDatasource(id: UUID.init().uuidString, backgroundImage: #imageLiteral(resourceName: "ToyotaVideo"), text: "Эксплуатация Toyota Fortuner. Подводим итоги.")
         ]
         
         Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in

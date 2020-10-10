@@ -8,6 +8,7 @@
 import UIKit
 
 struct VideoCellDatasource {
+    let id: String
     let backgroundImage: UIImage
     let text: String
 }

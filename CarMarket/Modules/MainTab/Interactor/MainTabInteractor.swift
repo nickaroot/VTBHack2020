@@ -46,6 +46,14 @@ class MainTabInteractor {
 }
 
 extension MainTabInteractor: MainTabInteractorProtocol {
+    func selectedVideo(with id: String) {
+        router?.showVideo(id)
+    }
+    
+    func calculatorClicked() {
+        router?.showCalculator()
+    }
+    
     func selectedArticle(with id: String) {
         router?.showArticle(id)
     }

@@ -91,6 +91,9 @@ class MainTabViewController: UIViewController {
         interactor.photoSearchClicked()
     }
     
+    @IBAction func calculatorButtonClicked(_ sender: Any) {
+        interactor.calculatorClicked()
+    }
 }
 
 extension MainTabViewController: MainTabViewProtocol {
@@ -148,8 +151,7 @@ extension MainTabViewController: UICollectionViewDataSource {
         case 0:
             interactor.selectedFeature(stories[indexPath.row].id)
         default:
-            // TODO
-            return
+            interactor.selectedVideo(with: videos[indexPath.row].id)
         }
         
     }

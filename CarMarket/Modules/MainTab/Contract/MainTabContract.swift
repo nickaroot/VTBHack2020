@@ -20,6 +20,8 @@ protocol MainTabInteractorProtocol: class {
     func photoSearchClicked()
     func selectedFeature(_ feature: FeatureIdentifier)
     func selectedArticle(with id: String)
+    func selectedVideo(with id: String)
+    func calculatorClicked()
 }
 
 protocol MainTabPresenterProtocol: class {
@@ -34,4 +36,6 @@ protocol MainTabRouterProtocol: class {
     func showErrorAlert(with message: String)
     func showFeature(_ feature: FeatureIdentifier)
     func showArticle(_ id: String)
+    func showVideo(_ id: String)
+    func showCalculator()
 }
