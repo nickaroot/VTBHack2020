@@ -14,6 +14,7 @@ protocol CatalogueTabViewProtocol: class {
 
 protocol CatalogueTabInteractorProtocol: class {
     func viewIsReady()
+    func carClicked()
 }
 
 protocol CatalogueTabPresenterProtocol: class {
@@ -22,4 +23,5 @@ protocol CatalogueTabPresenterProtocol: class {
 
 protocol CatalogueTabRouterProtocol: class {
     func showErrorAlert(with message: String)
+    func showCarDetails()
 }
