@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="279"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5IC-1e-ai8" customClass="ImageSlideshow">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5IC-1e-ai8" customClass="ImageSlideshow" customModule="ImageSlideshow">
                         <rect key="frame" x="16" y="4" width="311" height="180"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
