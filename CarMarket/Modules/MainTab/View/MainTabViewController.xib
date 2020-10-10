@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabViewController" customModule="CarMarket" customModuleProvider="target">
             <connections>
+                <outlet property="articlesCarousel" destination="N1k-eu-2cz" id="J2g-vL-zI3"/>
                 <outlet property="contentView" destination="6Ua-KN-Ct1" id="3Tk-av-4Qc"/>
                 <outlet property="parameterSearchView" destination="hdR-hb-Oaz" id="8Ch-20-bDr"/>
                 <outlet property="photoSearchView" destination="hpH-bF-fC8" id="X3Q-Vl-1Sy"/>
@@ -100,11 +101,19 @@
                                         <constraint firstAttribute="bottom" secondItem="V23-w2-x0W" secondAttribute="bottom" constant="22" id="iZn-G5-tcn"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1k-eu-2cz" customClass="DazzleCarouselView" customModule="CarMarket" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="234" width="375" height="180"/>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="180" id="Ead-GY-kN8"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="TdB-lI-DJv" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" constant="16" id="4iR-Ny-eui"/>
                                 <constraint firstItem="hpH-bF-fC8" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" id="B1D-09-x3G"/>
+                                <constraint firstItem="N1k-eu-2cz" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" id="BUp-2l-LrU"/>
                                 <constraint firstAttribute="trailing" secondItem="ghp-L1-Qca" secondAttribute="trailing" constant="21" id="DMg-M3-oCs"/>
                                 <constraint firstItem="o5E-bR-PIQ" firstAttribute="centerY" secondItem="eIB-rm-0jy" secondAttribute="centerY" constant="3" id="ElR-IP-QAW"/>
                                 <constraint firstItem="ghp-L1-Qca" firstAttribute="centerY" secondItem="o5E-bR-PIQ" secondAttribute="centerY" id="Iul-Xe-KEt"/>
@@ -112,7 +121,9 @@
                                 <constraint firstAttribute="trailing" secondItem="hpH-bF-fC8" secondAttribute="trailing" id="UKc-3S-tcg"/>
                                 <constraint firstItem="o5E-bR-PIQ" firstAttribute="leading" secondItem="eIB-rm-0jy" secondAttribute="trailing" constant="8" id="UrZ-Yi-8fE"/>
                                 <constraint firstItem="eIB-rm-0jy" firstAttribute="leading" secondItem="6Ua-KN-Ct1" secondAttribute="leading" constant="16" id="Yim-0R-IfO"/>
+                                <constraint firstItem="N1k-eu-2cz" firstAttribute="top" secondItem="hpH-bF-fC8" secondAttribute="bottom" constant="32" id="cir-Xa-FhE"/>
                                 <constraint firstAttribute="trailing" secondItem="TdB-lI-DJv" secondAttribute="trailing" constant="16" id="g7B-cZ-8WA"/>
+                                <constraint firstAttribute="trailing" secondItem="N1k-eu-2cz" secondAttribute="trailing" id="hdu-NQ-vH4"/>
                                 <constraint firstItem="eIB-rm-0jy" firstAttribute="top" secondItem="6Ua-KN-Ct1" secondAttribute="top" constant="13" id="htN-iu-Maq"/>
                                 <constraint firstAttribute="trailing" secondItem="hdR-hb-Oaz" secondAttribute="trailing" id="jS2-pq-L71"/>
                                 <constraint firstItem="ghp-L1-Qca" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o5E-bR-PIQ" secondAttribute="trailing" constant="16" id="rx5-vo-Qg2"/>
@@ -153,6 +164,9 @@
         <image name="Ringbell" width="20" height="24"/>
         <image name="АВТО" width="72" height="23"/>
         <image name="ВТБ" width="80" height="28"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

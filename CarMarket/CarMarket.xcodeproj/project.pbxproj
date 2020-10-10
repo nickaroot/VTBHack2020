@@ -17,6 +17,9 @@
 		839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E95CDB78E2C2AF54A02D1 /* MainTabInteractor.swift */; };
 		8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */; };
 		DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48731CC43A58E6FBD6140BDA /* MainTabViewController.swift */; };
+		F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */; };
+		F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */; };
+		F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -38,6 +41,9 @@
 		B3BE03DF47BCA777FA314C81 /* MainTabPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainTabPresenter.swift; sourceTree = "<group>"; };
 		C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleRouter.swift; sourceTree = "<group>"; };
 		D234A8B93D7BB27F719BCF03 /* MainTabRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainTabRouter.swift; sourceTree = "<group>"; };
+		F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DazzleCarouselView.swift; sourceTree = "<group>"; };
+		F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTextCard.xib; sourceTree = "<group>"; };
+		F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextCard.swift; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +74,6 @@
 				DEFBB1C5C0F9DCA8EC001934 /* Router */,
 				BBABC2649FEC2FE569EA9A9A /* Contract */,
 			);
-			name = MainTab;
 			path = MainTab;
 			sourceTree = "<group>";
 		};
@@ -77,7 +82,6 @@
 			children = (
 				50497B6A20F8868230B0FBC4 /* TabBarModulePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -87,7 +91,6 @@
 				48731CC43A58E6FBD6140BDA /* MainTabViewController.swift */,
 				420513016BD53E6E2F040D24 /* MainTabViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -97,7 +100,6 @@
 				84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */,
 				82D430FAAF52C882FDD94E0E /* TabBarModuleViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -106,7 +108,6 @@
 			children = (
 				0F0A79B3712B5F42FE792978 /* TabBarModuleInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -115,7 +116,6 @@
 			children = (
 				FC9148B3B1B3BF0FB6CF72BD /* TabBarModuleContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -124,7 +124,6 @@
 			children = (
 				B3BE03DF47BCA777FA314C81 /* MainTabPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -142,7 +141,6 @@
 			children = (
 				B2D04C0409B2BB94B821BF1F /* MainTabContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -155,7 +153,6 @@
 				E67A078CD2B185053B30E8D3 /* Router */,
 				8D4FD1996524EFB51239CAA0 /* Contract */,
 			);
-			name = TabBarModule;
 			path = TabBarModule;
 			sourceTree = "<group>";
 		};
@@ -164,7 +161,6 @@
 			children = (
 				D234A8B93D7BB27F719BCF03 /* MainTabRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -173,8 +169,25 @@
 			children = (
 				C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */,
 			);
-			name = Router;
 			path = Router;
+			sourceTree = "<group>";
+		};
+		F84F7D702531B889005F5220 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F84F7D752531B8E5005F5220 /* Reusable */,
+				F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F84F7D752531B8E5005F5220 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */,
+				F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		F8A21696253078480002ED02 /* Services */ = {
@@ -205,6 +218,7 @@
 		F8C5940125306EB3009FC2B7 /* CarMarket */ = {
 			isa = PBXGroup;
 			children = (
+				F84F7D702531B889005F5220 /* Common */,
 				F8A21696253078480002ED02 /* Services */,
 				F8C5940225306EB3009FC2B7 /* AppDelegate.swift */,
 				F8C5940425306EB3009FC2B7 /* SceneDelegate.swift */,
@@ -220,7 +234,6 @@
 			children = (
 				6A5E95CDB78E2C2AF54A02D1 /* MainTabInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -285,6 +298,7 @@
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
+				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */,
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
@@ -308,6 +323,7 @@
 				839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */,
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,
 				7EA3FD0A191DBA71AA9B8384 /* MainTabContract.swift in Sources */,
+				F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

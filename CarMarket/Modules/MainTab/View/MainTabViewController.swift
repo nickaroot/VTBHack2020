@@ -14,9 +14,11 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var parameterSearchView: UIView!
     @IBOutlet weak var photoSearchView: UIView!
+    @IBOutlet weak var articlesCarousel: DazzleCarouselView!
     
     // MARK: Properties
     var interactor: MainTabInteractorProtocol!
+    let dataForBigCarousel: [PhotoTextCardDatasource] = [(#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года"), (#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года"), (#imageLiteral(resourceName: "Image"), "Рейтинг лучших автомобилей класса С 2020 года")]
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -32,6 +34,10 @@ class MainTabViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
+        
+        articlesCarousel.backgroundColor = .clear
+        articlesCarousel.datasource = self
+        articlesCarousel.delegate = self
     }
     
     private func configureGestures() {
@@ -52,4 +58,25 @@ class MainTabViewController: UIViewController {
 
 extension MainTabViewController: MainTabViewProtocol {
 
+}
+
+extension MainTabViewController: DazzleCarouselViewDatasource {
+    func numberOfViewsToShow() -> Int {
+        return dataForBigCarousel.count
+    }
+    
+    func view(at index: Int) -> UIView {
+        let viewToShow = PhotoTextCard()
+        viewToShow.datasource = dataForBigCarousel[index]
+        
+        return viewToShow
+    }
+    
+    
+}
+
+extension MainTabViewController: DazzleCarouselViewDelegate {
+    func carouselPageChanged(to index: Int) {
+        // do nothing...
+    }
 }
