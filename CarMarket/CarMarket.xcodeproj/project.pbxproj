@@ -46,6 +46,10 @@
 		F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F68253204E4006C0995 /* UIViewExtension.swift */; };
 		F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6A253206FE006C0995 /* VideoCell.swift */; };
 		F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F6B253206FE006C0995 /* VideoCell.xib */; };
+		F88E1F6F25322489006C0995 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F6E25322489006C0995 /* UIColorExtension.swift */; };
+		F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F712532261D006C0995 /* CalculatorViewModel.swift */; };
+		F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */; };
+		F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -111,6 +115,10 @@
 		F88E1F68253204E4006C0995 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F88E1F6A253206FE006C0995 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		F88E1F6B253206FE006C0995 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		F88E1F6E25322489006C0995 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		F88E1F712532261D006C0995 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSliderCell.swift; sourceTree = "<group>"; };
+		F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorSliderCell.xib; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,23 +183,23 @@
 		297D63A1340FC14ECB357E32 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F88E1F7025322612006C0995 /* ViewModel */,
 				36911CACEB1C7E67547C6D4A /* View */,
 				47682D10FD6F75F582879C7B /* Presenter */,
 				9F5EC6F6593E96DF92026879 /* Interactor */,
 				9AD25BF5055A491FCC2FBEA1 /* Router */,
 				DBC643F458E2C80685907814 /* Contract */,
 			);
-			name = Calculator;
 			path = Calculator;
 			sourceTree = "<group>";
 		};
 		36911CACEB1C7E67547C6D4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F88E1F73253229B2006C0995 /* Cells */,
 				840790C2A26611A7D1F7AB95 /* CalculatorViewController.swift */,
 				5455C08A672B62E008686A3D /* CalculatorViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -208,7 +216,6 @@
 			children = (
 				3E8A03B0196C4222F173707A /* CalculatorPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -259,7 +266,6 @@
 			children = (
 				5A1AE0E5C8CFDEE3244451EF /* CalculatorRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -279,7 +285,6 @@
 			children = (
 				53E39174E18A4A3ED90A38BF /* CalculatorInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -326,7 +331,6 @@
 			children = (
 				BC19DDDA79E060248D6171F9 /* CalculatorContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -364,6 +368,7 @@
 				F84F7D752531B8E5005F5220 /* Reusable */,
 				F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */,
 				F84F7D8A2531C1A0005F5220 /* StringExtension.swift */,
+				F88E1F6E25322489006C0995 /* UIColorExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -403,6 +408,23 @@
 			children = (
 				F84F7DA72531E865005F5220 /* CarCell.swift */,
 				F84F7DA82531E865005F5220 /* CarCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F88E1F7025322612006C0995 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F88E1F712532261D006C0995 /* CalculatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F88E1F73253229B2006C0995 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F88E1F74253229C7006C0995 /* CalculatorSliderCell.swift */,
+				F88E1F75253229C7006C0995 /* CalculatorSliderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -520,6 +542,7 @@
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
+				F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
 				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
@@ -575,9 +598,11 @@
 				F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */,
 				8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */,
 				F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */,
+				F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
 				F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */,
+				F88E1F6F25322489006C0995 /* UIColorExtension.swift in Sources */,
 				42F8EAE4C768CC915ADE2768 /* MainTabPresenter.swift in Sources */,
 				839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */,
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,
@@ -594,6 +619,7 @@
 				6D111D06C2C661C523534D08 /* CalculatorInteractor.swift in Sources */,
 				776F72553AD0904E5677620F /* CalculatorRouter.swift in Sources */,
 				D869E581998363D62079F981 /* CalculatorContract.swift in Sources */,
+				F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

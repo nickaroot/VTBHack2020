@@ -21,7 +21,7 @@ class TabBarModuleViewController: UITabBarController {
     }
     
     private func configureUI() {
-        tabBar.barTintColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
+        tabBar.barTintColor = .VTBdarkBlue
         tabBar.unselectedItemTintColor = .white
     }
 }
