@@ -17,6 +17,8 @@ class PhotoTextCard: UIView {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     
+    static let nibName = "PhotoTextCard"
+    
     var datasource: PhotoTextCardDatasource? {
         didSet {
             if let datasource = datasource {
@@ -27,14 +29,14 @@ class PhotoTextCard: UIView {
     
     init() {
         super.init(frame: .zero)
-        Bundle.main.loadNibNamed("PhotoTextCard", owner: self, options: nil)
+        Bundle.main.loadNibNamed(PhotoTextCard.nibName, owner: self, options: nil)
         self.addSubview(self.view)
         setContentViewAnchors()
     }
     
     required init?(coder: NSCoder) {
         super.init(frame: .zero)
-        Bundle.main.loadNibNamed("PhotoTextCard", owner: self, options: nil)
+        Bundle.main.loadNibNamed(PhotoTextCard.nibName, owner: self, options: nil)
         self.addSubview(self.view)
         setContentViewAnchors()
     }

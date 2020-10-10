@@ -21,5 +21,5 @@ protocol CatalogueTabPresenterProtocol: class {
 }
 
 protocol CatalogueTabRouterProtocol: class {
-    // TODO: Declare router methods
+    func showErrorAlert(with message: String)
 }

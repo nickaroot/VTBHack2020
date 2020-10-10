@@ -15,9 +15,9 @@ class CatalogueTabInteractor {
             if let data = data {
                 self.presenter?.fetched(offers: data)
             } else if let error = error {
-                
+                self.router?.showErrorAlert(with: error)
             } else {
-                
+                self.router?.showErrorAlert(with: "common_error_unknown".localized())
             }
         }
     }

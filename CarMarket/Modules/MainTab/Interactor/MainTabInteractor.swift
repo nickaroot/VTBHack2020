@@ -18,7 +18,7 @@ class MainTabInteractor {
             } else if let error = error {
                 self.router?.showErrorAlert(with: error)
             } else {
-                self.router?.showErrorAlert(with: "Неизвестная ошибка")
+                self.router?.showErrorAlert(with: "common_error_unknown".localized())
             }
         }
         
@@ -28,7 +28,7 @@ class MainTabInteractor {
             } else if let error = error {
                 self.router?.showErrorAlert(with: error)
             } else {
-                self.router?.showErrorAlert(with: "Неизвестная ошибка")
+                self.router?.showErrorAlert(with: "common_error_unknown".localized())
             }
         }
     }

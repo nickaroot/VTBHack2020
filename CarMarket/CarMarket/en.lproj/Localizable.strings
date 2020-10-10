@@ -7,3 +7,8 @@
 */
 "MainTabTitle" = "Главная";
 "CatalogueTabTitle" = "Поиск";
+
+"common_OK" = "OK";
+
+"common_error_unknown" = "Неизвестная ошибка";
+"common_error_error" = "Ошибка";

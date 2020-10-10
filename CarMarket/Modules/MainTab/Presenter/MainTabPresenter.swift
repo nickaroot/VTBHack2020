@@ -18,6 +18,4 @@ extension MainTabPresenter: MainTabPresenterProtocol {
     func featuresFetched(_ features: [FeatureCellDatasource]) {
         view?.updateFeatures(with: features)
     }
-    
-
 }

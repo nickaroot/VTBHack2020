@@ -38,7 +38,7 @@ extension MainTabRouter: MainTabRouterProtocol {
         guard let transitionHandler = transitionHandler else { return }
         
         let alert = UIAlertController(title: "Статья", message: id, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
             transitionHandler.dismiss(animated: true, completion: nil)
         }
         alert.addAction(alertAction)
@@ -50,7 +50,7 @@ extension MainTabRouter: MainTabRouterProtocol {
         guard let transitionHandler = transitionHandler else { return }
         
         let alert = UIAlertController(title: "Фича", message: feature.rawValue, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
             transitionHandler.dismiss(animated: true, completion: nil)
         }
         alert.addAction(alertAction)
@@ -61,8 +61,8 @@ extension MainTabRouter: MainTabRouterProtocol {
     func showErrorAlert(with message: String) {
         guard let transitionHandler = transitionHandler else { return }
         
-        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let alert = UIAlertController(title: "common_error_error".localized(), message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
             transitionHandler.dismiss(animated: true, completion: nil)
         }
         alert.addAction(alertAction)
@@ -74,7 +74,7 @@ extension MainTabRouter: MainTabRouterProtocol {
         guard let transitionHandler = transitionHandler else { return }
         
         let alert = UIAlertController(title: "Поиск по параметрам", message: "ААААААААА", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
             transitionHandler.dismiss(animated: true, completion: nil)
         }
         alert.addAction(alertAction)
@@ -86,7 +86,7 @@ extension MainTabRouter: MainTabRouterProtocol {
         guard let transitionHandler = transitionHandler else { return }
         
         let alert = UIAlertController(title: "Поиск по фото", message: "ААААААААА", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
             transitionHandler.dismiss(animated: true, completion: nil)
         }
         alert.addAction(alertAction)
