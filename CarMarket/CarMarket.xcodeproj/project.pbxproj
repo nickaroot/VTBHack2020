@@ -35,6 +35,8 @@
 		F84F7DA92531E865005F5220 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DA72531E865005F5220 /* CarCell.swift */; };
 		F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7DA82531E865005F5220 /* CarCell.xib */; };
 		F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */; };
+		F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */; };
+		F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84F7DB12531F09D005F5220 /* Kingfisher.framework */; };
 		F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4A8EB3838325999768871 /* TabBarModuleViewController.swift */; };
 		F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A21697253078520002ED02 /* SpeechRecognitionService.swift */; };
 		F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5940225306EB3009FC2B7 /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 		F84F7DA72531E865005F5220 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		F84F7DA82531E865005F5220 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		F84F7DAB2531EDB6005F5220 /* KingfisherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
+		F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueWorker.swift; sourceTree = "<group>"; };
+		F84F7DB12531F09D005F5220 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F8A21697253078520002ED02 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		F8C593FF25306EB3009FC2B7 /* CarMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5940225306EB3009FC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */,
 				F84F7DA12531E1E8005F5220 /* ImageSlideshow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				90467C6DA707979273B91D16 /* CatalogueTabInteractor.swift */,
+				F84F7DAD2531EE7A005F5220 /* CatalogueWorker.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 		F84F7D992531DF94005F5220 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F84F7DB12531F09D005F5220 /* Kingfisher.framework */,
 				F84F7DA02531E1E8005F5220 /* ImageSlideshow.framework */,
 			);
 			name = Frameworks;
@@ -453,6 +460,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ImageSlideshow.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = Frameworks;
 			outputFileListPaths = (
@@ -495,6 +503,7 @@
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
+				F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

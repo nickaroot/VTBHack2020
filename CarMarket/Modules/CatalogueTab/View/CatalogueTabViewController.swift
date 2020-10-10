@@ -26,6 +26,8 @@ class CatalogueTabViewController: UIViewController {
         
         configureUI()
         configureTableView()
+        
+        interactor.viewIsReady()
     }
     
     @IBAction func sortButtonClicked(_ sender: UIButton) {
@@ -33,6 +35,7 @@ class CatalogueTabViewController: UIViewController {
     
     private func configureUI() {
         navigationController?.navigationBar.isHidden = true
+        carsTableView.showsVerticalScrollIndicator = false
     }
     
     private func configureTableView() {
@@ -44,19 +47,31 @@ class CatalogueTabViewController: UIViewController {
 }
 
 extension CatalogueTabViewController: CatalogueTabViewProtocol {
-
+    func updateOffers(_ data: [CarCellDatasource]) {
+        cars = data
+        offersCountLabel.text = offersCountLabel.text?.replacingOccurrences(of: "{count}", with: String(cars.count))
+        carsTableView.reloadData()
+    }
 }
 
 extension CatalogueTabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return cars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: carCellId, for: indexPath) as? CarCell else {
+            return UITableViewCell()
+        }
+        
+        cell.datasource = cars[indexPath.row]
+        
+        return cell
     }
 }
 
 extension CatalogueTabViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 280
+    }
 }

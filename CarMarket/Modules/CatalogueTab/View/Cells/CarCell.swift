@@ -59,6 +59,6 @@ class CarCell: UITableViewCell {
             return KingfisherSource(urlString: url)
         }.compactMap { $0 }
         
-        carPhotos.setImageInputs(imageSources)
+//        carPhotos.setImageInputs(imageSources)
     }
 }

@@ -7,10 +7,24 @@
 //
 
 class CatalogueTabInteractor {
-    weak var presenter: CatalogueTabPresenterProtocol?
-    weak var router: CatalogueTabRouterProtocol?
+    var presenter: CatalogueTabPresenterProtocol?
+    var router: CatalogueTabRouterProtocol?
+    
+    private func fetchOffers() {
+        CatalogueWorker.fetchOffers { data, error in
+            if let data = data {
+                self.presenter?.fetched(offers: data)
+            } else if let error = error {
+                
+            } else {
+                
+            }
+        }
+    }
 }
 
 extension CatalogueTabInteractor: CatalogueTabInteractorProtocol {
-
+    func viewIsReady() {
+        fetchOffers()
+    }
 }

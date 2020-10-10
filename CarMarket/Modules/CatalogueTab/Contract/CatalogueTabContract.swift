@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CatalogueTabViewProtocol: class {
-    // TODO: Declare view methods
+    func updateOffers(_ data: [CarCellDatasource])
 }
 
 protocol CatalogueTabInteractorProtocol: class {
@@ -17,7 +17,7 @@ protocol CatalogueTabInteractorProtocol: class {
 }
 
 protocol CatalogueTabPresenterProtocol: class {
-    // TODO: Declare presenter methods
+    func fetched(offers: [CarCellDatasource])
 }
 
 protocol CatalogueTabRouterProtocol: class {

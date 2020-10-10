@@ -11,5 +11,7 @@ class CatalogueTabPresenter {
 }
 
 extension CatalogueTabPresenter: CatalogueTabPresenterProtocol {
-
+    func fetched(offers: [CarCellDatasource]) {
+        view?.updateOffers(offers)
+    }
 }
