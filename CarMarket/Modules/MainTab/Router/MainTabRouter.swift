@@ -34,5 +34,13 @@ class MainTabRouter {
 
 
 extension MainTabRouter: MainTabRouterProtocol {
+    func showParameterSearch() {
+        // TODO: - ...
+    }
+    
+    func showPhotoSearch() {
+        // TODO: - ...
+    }
+    
 
 }

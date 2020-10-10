@@ -12,5 +12,15 @@ class MainTabInteractor {
 }
 
 extension MainTabInteractor: MainTabInteractorProtocol {
-
+    func parameterSearchClicked() {
+        router?.showParameterSearch()
+    }
+    
+    func photoSearchClicked() {
+        router?.showPhotoSearch()
+    }
+    
+    func viewIsReady() {
+        
+    }
 }

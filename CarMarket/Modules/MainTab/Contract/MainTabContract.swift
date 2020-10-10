@@ -13,7 +13,9 @@ protocol MainTabViewProtocol: class {
 }
 
 protocol MainTabInteractorProtocol: class {
-    // TODO: Declare interactor methods
+    func viewIsReady()
+    func parameterSearchClicked()
+    func photoSearchClicked()
 }
 
 protocol MainTabPresenterProtocol: class {
@@ -21,5 +23,6 @@ protocol MainTabPresenterProtocol: class {
 }
 
 protocol MainTabRouterProtocol: class {
-    // TODO: Declare router methods
+    func showParameterSearch()
+    func showPhotoSearch()
 }
