@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabViewController" customModule="CarMarket" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="t7R-D4-61u"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-gh-e0C">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ua-KN-Ct1" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6Ua-KN-Ct1" firstAttribute="leading" secondItem="dUh-gh-e0C" secondAttribute="leading" id="4hP-je-HWL"/>
+                        <constraint firstAttribute="trailing" secondItem="6Ua-KN-Ct1" secondAttribute="trailing" id="KSq-5y-EcS"/>
+                        <constraint firstItem="6Ua-KN-Ct1" firstAttribute="top" secondItem="dUh-gh-e0C" secondAttribute="top" id="Pc0-Zv-O9a"/>
+                        <constraint firstAttribute="bottom" secondItem="6Ua-KN-Ct1" secondAttribute="bottom" id="Zgz-t3-xQ4"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Hze-O3-1VV"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="nQa-gs-mHu"/>
+                </scrollView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dUh-gh-e0C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4hP-Q8-Iil"/>
+                <constraint firstAttribute="bottom" secondItem="dUh-gh-e0C" secondAttribute="bottom" id="CuU-W7-Dq1"/>
+                <constraint firstItem="dUh-gh-e0C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T1G-RC-Zez"/>
+                <constraint firstItem="6Ua-KN-Ct1" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="250" id="ZT3-mr-7gB"/>
+                <constraint firstItem="6Ua-KN-Ct1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="nJG-Kq-hoz"/>
+                <constraint firstAttribute="trailing" secondItem="dUh-gh-e0C" secondAttribute="trailing" id="vcs-W4-oEm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-250.40000000000001" y="259.97001499250376"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
