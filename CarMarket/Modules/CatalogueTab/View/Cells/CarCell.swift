@@ -33,7 +33,8 @@ class CarCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        carPhotos.layer.cornerRadius = 8
+        carPhotos.contentScaleMode = .scaleAspectFill
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -60,6 +61,6 @@ class CarCell: UITableViewCell {
             return KingfisherSource(urlString: url)
         }.compactMap { $0 }
         
-//        carPhotos.setImageInputs(imageSources)
+        carPhotos.setImageInputs(imageSources)
     }
 }
