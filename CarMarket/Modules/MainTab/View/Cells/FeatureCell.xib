@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="108"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BankStory" translatesAutoresizingMaskIntoConstraints="NO" id="gIa-xV-Oj8">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="108"/>
+                                <rect key="frame" x="4" y="4" width="142" height="100"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кредитный калькулятор" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-38-ruf">
                                 <rect key="frame" x="8" y="71" width="134" height="29"/>
@@ -31,13 +31,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gIa-xV-Oj8" firstAttribute="top" secondItem="o8d-Qu-4hq" secondAttribute="top" id="A2i-U5-rxv"/>
+                            <constraint firstItem="gIa-xV-Oj8" firstAttribute="top" secondItem="o8d-Qu-4hq" secondAttribute="top" constant="4" id="A2i-U5-rxv"/>
                             <constraint firstItem="jhk-38-ruf" firstAttribute="leading" secondItem="o8d-Qu-4hq" secondAttribute="leading" constant="8" id="VHH-Vc-hGy"/>
-                            <constraint firstAttribute="bottom" secondItem="gIa-xV-Oj8" secondAttribute="bottom" id="Xl7-45-hO6"/>
+                            <constraint firstAttribute="bottom" secondItem="gIa-xV-Oj8" secondAttribute="bottom" constant="4" id="Xl7-45-hO6"/>
                             <constraint firstAttribute="bottom" secondItem="jhk-38-ruf" secondAttribute="bottom" constant="8" id="jvB-7P-kvT"/>
-                            <constraint firstItem="gIa-xV-Oj8" firstAttribute="leading" secondItem="o8d-Qu-4hq" secondAttribute="leading" id="l07-3i-62Y"/>
+                            <constraint firstItem="gIa-xV-Oj8" firstAttribute="leading" secondItem="o8d-Qu-4hq" secondAttribute="leading" constant="4" id="l07-3i-62Y"/>
                             <constraint firstAttribute="trailing" secondItem="jhk-38-ruf" secondAttribute="trailing" constant="8" id="mB9-W8-eHm"/>
-                            <constraint firstAttribute="trailing" secondItem="gIa-xV-Oj8" secondAttribute="trailing" id="nmx-FW-TCo"/>
+                            <constraint firstAttribute="trailing" secondItem="gIa-xV-Oj8" secondAttribute="trailing" constant="4" id="nmx-FW-TCo"/>
                         </constraints>
                     </view>
                 </subviews>

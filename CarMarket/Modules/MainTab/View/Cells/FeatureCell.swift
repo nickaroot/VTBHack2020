@@ -37,6 +37,7 @@ class FeatureCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 8
+        imageView.layer.cornerRadius = 8
     }
     
     override func layoutSubviews() {
@@ -48,6 +49,9 @@ class FeatureCell: UICollectionViewCell {
         let gradientColors = [c1.cgColor, c2.cgColor]
         
         imageView.applyGradient(colors: gradientColors)
+        
+        layer.borderWidth = 2
+        layer.borderColor = UIColor(red: 58 / 255, green: 131 / 255, blue: 241 / 255, alpha: 1).cgColor
     }
 
     private func reloadData(with datasource: FeatureCellDatasource) {
