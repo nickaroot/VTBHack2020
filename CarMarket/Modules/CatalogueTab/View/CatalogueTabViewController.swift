@@ -86,10 +86,22 @@ extension CatalogueTabViewController: UITableViewDataSource {
         
         let car = cars[indexPath.row]
         
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+        
+        var carPrice = "768 000 ₽"
+        
+        if let carCost = car.minPrice,
+           let formattedCost = formatter.string(from: NSNumber(integerLiteral: carCost)) {
+            carPrice = "\(formattedCost) ₽"
+        }
+        
         cell.datasource = CarCellDatasource(
             id: "\(car.id)" ?? "\(car.carId)",
             carName: "\(car.brand?.title ?? car.brand?.titleRus ?? "") \(car.title ?? car.titleRus ?? "")",
-            carPrice: "\(car.minPrice ?? 768000) ₽",
+            carPrice: carPrice,
             loanPayment: "41 400 ₽",
             carPhotoURLs: car.photo != nil ? [car.photo!] : [],
             carModel: car
