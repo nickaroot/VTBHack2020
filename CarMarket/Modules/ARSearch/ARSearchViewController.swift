@@ -22,7 +22,10 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
     }
     
     private func configureUI() {
-        navigationController?.navigationBar.isHidden = false
+        title = "Поиск по фото"
+        
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = UIColor(red: 0.229, green: 0.514, blue: 0.946, alpha: 1)
         
         sceneView.delegate = self
         
@@ -30,6 +33,7 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
         sceneView.showsNodeCount = false
         
         let scene = Scene(size: self.view.frame.size)
+        
         sceneView.presentScene(scene)
     }
     
@@ -39,6 +43,8 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         
         sceneView.session.run(configuration)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,12 +57,18 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
             helpContent,
             isHideOnTapEnabled: true,
             isAutoHide: false)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         sceneView.session.pause()
+        
+        SwiftMessages.hideAll()
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

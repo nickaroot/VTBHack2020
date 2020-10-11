@@ -35,7 +35,7 @@ class Scene: SKScene {
                 successContent,
                 isHideOnTapEnabled: false,
                 isAutoHide: false) { _ in
-                debugPrint("Clicked!")
+                /// FIXME: Reveal Car Details
             }
         }
         

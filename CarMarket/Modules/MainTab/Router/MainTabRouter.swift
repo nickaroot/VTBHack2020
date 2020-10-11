@@ -106,6 +106,8 @@ extension MainTabRouter: MainTabRouterProtocol {
         
         let ARSearchVC = UIStoryboard(name: "ARSearch", bundle: nil).instantiateViewController(withIdentifier: "ARSearch")//ARSearchViewController(nibName: "ARSearchViewController", bundle: nil)
         
+        ARSearchVC.hidesBottomBarWhenPushed = true
+        
         transitionHandler.navigationController?.pushViewController(ARSearchVC, animated: true)
         
 //        guard let transitionHandler = transitionHandler else { return }

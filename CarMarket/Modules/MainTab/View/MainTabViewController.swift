@@ -59,6 +59,8 @@ class MainTabViewController: UIViewController {
         storiesCarousel.backgroundColor = .clear
         
         yaDriveView.layer.cornerRadius = 8
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem()
     }
     
     private func prepareCollections() {
