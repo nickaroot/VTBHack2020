@@ -15,7 +15,7 @@ class CatalogueTabViewController: UIViewController {
     
     // MARK: Properties
     var interactor: CatalogueTabInteractorProtocol!
-    var cars: [CarCellDatasource] = []
+    var cars: [CarModel] = []
     var timer: Timer?
     
     let carNib = UINib(nibName: "CarCell", bundle: nil)
@@ -66,10 +66,10 @@ class CatalogueTabViewController: UIViewController {
 }
 
 extension CatalogueTabViewController: CatalogueTabViewProtocol {
-    func updateOffers(_ data: [CarCellDatasource]) {
+    func updateOffers(_ data: [CarModel]) {
         stopAnimatingOffersLabel()
         cars = data
-        offersCountLabel.text = "{count} предложений".replacingOccurrences(of: "{count}", with: String(cars.count))
+        offersCountLabel.text = "\(cars.count) предложений"
         carsTableView.reloadData()
     }
 }
@@ -84,7 +84,30 @@ extension CatalogueTabViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.datasource = cars[indexPath.row]
+        let car = cars[indexPath.row]
+        
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+        
+        var carPrice = "768 000 ₽"
+        
+        if let carCost = car.minPrice,
+           let formattedCost = formatter.string(from: NSNumber(integerLiteral: carCost)) {
+            carPrice = "\(formattedCost) ₽"
+        }
+        
+        cell.datasource = CarCellDatasource(
+            id: "\(car.id)" ?? "\(car.carId)",
+            carName: "\(car.brand?.title ?? car.brand?.titleRus ?? "") \(car.title ?? car.titleRus ?? "")",
+            carPrice: carPrice,
+            loanPayment: "41 400 ₽",
+            carPhotoURLs: car.photo != nil ? [car.photo!] : [],
+            carModel: car
+        )
+        
+        cell.datasource?.navController = navigationController
         
         let selectionView = UIView()
         selectionView.backgroundColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
@@ -98,7 +121,7 @@ extension CatalogueTabViewController: UITableViewDataSource {
 extension CatalogueTabViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        interactor.carClicked()
+        interactor.carClicked(carModel: cars[indexPath.item])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Распознавание речи необходимо для обесппечения возможности голосового ввода</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Доступ к камере необходим для дополненной реальности</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -23,6 +23,12 @@ class CarDetailsViewController: UIViewController {
     @IBOutlet weak var wheelLabel: UILabel!
     @IBOutlet weak var taxLabel: UILabel!
     
+    var carModel: CarModel? {
+        didSet {
+            reloadData()
+        }
+    }
+    
     // MARK: Properties
     var interactor: CarDetailsInteractorProtocol!
 
@@ -65,16 +71,35 @@ class CarDetailsViewController: UIViewController {
     }
     
     private func reloadData() {
-        carNameLabel.text = "Kia Rio"
-        carPriceLabel.text = "768 000 ₽"
+        carNameLabel?.text = "Kia Rio"
+        carPriceLabel?.text = "768 000 ₽"
         
-        yaerLabel.text = "2019"
-        transmissionLabel.text = "Автоматическая"
-        bodyLabel.text = "Седан"
-        engineLabel.text = "2.0 л / 276 л. с. / Бензин"
-        taxLabel.text = "41 400 ₽"
-        wheelDriveLabel.text = "Полный"
-        wheelLabel.text = "Левый"
+        yaerLabel?.text = "2019"
+        transmissionLabel?.text = "Автоматическая"
+        bodyLabel?.text = "Седан"
+        engineLabel?.text = "2.0 л / 276 л. с. / Бензин"
+        taxLabel?.text = "41 400 ₽"
+        wheelDriveLabel?.text = "Полный"
+        wheelLabel?.text = "Левый"
+        
+        if let carTitle = carModel?.title,
+           let carBrand = carModel?.brand?.title {
+            carNameLabel?.text = "\(carBrand) \(carTitle)"
+        }
+        
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+        
+        if let carPrice = carModel?.minPrice,
+           let formattedPrice = formatter.string(from: NSNumber(integerLiteral: carPrice)) {
+            carPriceLabel?.text = "\(formattedPrice) ₽"
+        }
+        
+        if let carBody = carModel?.transportType?.title {
+            bodyLabel?.text = carBody
+        }
     }
     
     @objc private func backButtonClicked() {
@@ -104,12 +129,23 @@ extension CarDetailsViewController: CarDetailsViewProtocol {
 
 extension CarDetailsViewController: DazzleCarouselViewDatasource {
     func numberOfViewsToShow() -> Int {
+        if carModel?.photo != nil {
+            return 1
+        }
+        
         return 3
     }
     
     func view(at index: Int) -> UIView {
         let card = PhotoTextCard()
-        card.datasource = PhotoTextCardDatasource(id: UUID.init().uuidString, photo: #imageLiteral(resourceName: "CarPhoto"), text: nil)
+        
+        if let carPhotoUrl = carModel?.photo, let url = URL(string: carPhotoUrl),
+           let data = try? Data(contentsOf: url), let carPhoto = UIImage(data: data) {
+            card.datasource = PhotoTextCardDatasource(id: UUID.init().uuidString, photo: carPhoto, text: nil)
+        } else {
+            card.datasource = PhotoTextCardDatasource(id: UUID.init().uuidString, photo: #imageLiteral(resourceName: "CarPhoto"), text: nil)
+        }
+        
         return card
     }
 }

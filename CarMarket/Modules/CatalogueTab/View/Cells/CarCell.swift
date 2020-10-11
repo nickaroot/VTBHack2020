@@ -8,6 +8,7 @@
 import UIKit
 import ImageSlideshow
 import Kingfisher
+import QuickLook
 
 struct CarCellDatasource {
     let id: String
@@ -15,6 +16,9 @@ struct CarCellDatasource {
     let carPrice: String
     let loanPayment: String
     let carPhotoURLs: [String]
+    let carModel: CarModel
+    
+    weak var navController: UINavigationController!
 }
 
 class CarCell: UITableViewCell {
@@ -29,6 +33,13 @@ class CarCell: UITableViewCell {
                 reloadData(with: datasource)
             }
         }
+    }
+    
+    private func previewARContents() {
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        
+        datasource?.navController?.present(previewController, animated: true, completion: nil)
     }
     
     override func awakeFromNib() {
@@ -48,7 +59,7 @@ class CarCell: UITableViewCell {
     }
     
     @IBAction func ARClicked(_ sender: Any) {
-        
+        previewARContents()
     }
     
     private func reloadData(with datasource: CarCellDatasource) {
@@ -64,5 +75,29 @@ class CarCell: UITableViewCell {
         DispatchQueue.main.async {
             self.carPhotos.setImageInputs(imageSources)
         }
+    }
+}
+
+extension CarCell: QLPreviewControllerDataSource {
+    
+    /// Quick Look で表示するアイテム数
+    ///
+    /// - Parameter controller: controller
+    /// - Returns: Quick Look で表示するアイテム数
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        return 1
+    }
+    
+    /// Quick Look で表示するアイテムを返す
+    ///
+    /// - Parameters:
+    ///   - controller: controller
+    ///   - index: アイテムのindex値
+    /// - Returns: Quick Look で表示するアイテム
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        // Return the file URL to the .usdz file
+        let fileUrl = Bundle.main.url(forResource: "bmw_4_series_03_for_iOS_1", withExtension: "usdz")!
+        
+        return fileUrl as QLPreviewItem
     }
 }
