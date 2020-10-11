@@ -22,7 +22,7 @@ class Scene: SKScene {
         // Called before each frame is rendered
     }
     
-    class func success(title: String, count: Int, cost: Int?, sceneView: ARSKView, currentFrame: ARFrame) {
+    class func success(carModel: CarModel, title: String, count: Int, cost: Int?, sceneView: ARSKView, currentFrame: ARFrame) {
         let successContent = SwiftMessages.Content(
             body: "Найдено \(count) предложений о продаже",
             buttonText: "Перейти"
@@ -35,7 +35,12 @@ class Scene: SKScene {
                 successContent,
                 isHideOnTapEnabled: false,
                 isAutoHide: false) { _ in
-                /// FIXME: Reveal Car Details
+                
+                let module = CarDetailsRouter.setupModuleWithNib(carModel: carModel)
+                
+                module.hidesBottomBarWhenPushed = true
+                
+                ARBridge.shared.navigationController?.pushViewController(module, animated: true)
             }
         }
         
@@ -123,7 +128,7 @@ class Scene: SKScene {
                     let marketCount = marketCar.count ?? 0
                     let cost = marketCar.minPrice
                     
-                    Self.success(title: title, count: marketCount, cost: cost,
+                    Self.success(carModel: marketCar, title: title, count: marketCount, cost: cost,
                                  sceneView: sceneView, currentFrame: currentFrame)
                 }
             }

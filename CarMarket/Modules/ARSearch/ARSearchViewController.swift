@@ -18,6 +18,8 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ARBridge.shared.navigationController = navigationController
+        
         configureUI()
     }
     
@@ -67,8 +69,6 @@ class ARSearchViewController: UIViewController, ARSKViewDelegate {
         sceneView.session.pause()
         
         SwiftMessages.hideAll()
-        
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

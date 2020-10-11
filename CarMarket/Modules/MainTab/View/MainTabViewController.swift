@@ -49,6 +49,12 @@ class MainTabViewController: UIViewController {
         articlesCarousel.scrollToPage(with: 0)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     private func configureUI() {
         navigationController?.navigationBar.isHidden = true
         scrollView.showsVerticalScrollIndicator = false
