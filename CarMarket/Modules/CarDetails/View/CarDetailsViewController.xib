@@ -5,11 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarDetailsViewController" customModule="CarMarket" customModuleProvider="target">
             <connections>
+                <outlet property="carPhotoCarousel" destination="nL5-m4-7P1" id="IgY-XO-8y2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t7R-D4-61u"/>
             </connections>
         </placeholder>
@@ -17,9 +19,28 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-m4-7P1" customClass="DazzleCarouselView" customModule="CarMarket" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="24" width="375" height="180"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="b0G-Tm-puL"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nL5-m4-7P1" secondAttribute="trailing" id="5nM-vi-srQ"/>
+                <constraint firstItem="nL5-m4-7P1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fcC-Ci-yc8"/>
+                <constraint firstItem="nL5-m4-7P1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="gno-BV-2yp"/>
+            </constraints>
             <point key="canvasLocation" x="-284" y="154"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

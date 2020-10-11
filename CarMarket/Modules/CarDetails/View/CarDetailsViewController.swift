@@ -9,7 +9,8 @@
 import UIKit
 
 class CarDetailsViewController: UIViewController {
-
+    @IBOutlet weak var carPhotoCarousel: DazzleCarouselView!
+    
     // MARK: Properties
     var interactor: CarDetailsInteractorProtocol!
 
@@ -18,11 +19,16 @@ class CarDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
+        configureCollections()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func configureCollections() {
+        carPhotoCarousel.datasource = self
     }
     
     private func configureUI() {
@@ -56,4 +62,14 @@ class CarDetailsViewController: UIViewController {
 
 extension CarDetailsViewController: CarDetailsViewProtocol {
 
+}
+
+extension CarDetailsViewController: DazzleCarouselViewDatasource {
+    func numberOfViewsToShow() -> Int {
+        return 0
+    }
+    
+    func view(at index: Int) -> UIView {
+        return UIView()
+    }
 }
