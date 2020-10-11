@@ -27,4 +27,8 @@ extension CatalogueTabInteractor: CatalogueTabInteractorProtocol {
     func viewIsReady() {
         fetchOffers()
     }
+    
+    func carClicked() {
+        router?.showCarDetails()
+    }
 }
