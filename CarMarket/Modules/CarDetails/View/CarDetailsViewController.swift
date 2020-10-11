@@ -87,8 +87,14 @@ class CarDetailsViewController: UIViewController {
             carNameLabel?.text = "\(carBrand) \(carTitle)"
         }
         
-        if let carPrice = carModel?.minPrice {
-            carPriceLabel?.text = "\(carPrice)"
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = " "
+        
+        if let carPrice = carModel?.minPrice,
+           let formattedPrice = formatter.string(from: NSNumber(integerLiteral: carPrice)) {
+            carPriceLabel?.text = "\(formattedPrice) ₽"
         }
         
         if let carBody = carModel?.transportType?.title {
