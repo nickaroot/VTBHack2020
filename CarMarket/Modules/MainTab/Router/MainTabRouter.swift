@@ -104,13 +104,19 @@ extension MainTabRouter: MainTabRouterProtocol {
     func showPhotoSearch() {
         guard let transitionHandler = transitionHandler else { return }
         
-        let alert = UIAlertController(title: "Поиск по фото", message: "ААААААААА", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
-            transitionHandler.dismiss(animated: true, completion: nil)
-        }
-        alert.addAction(alertAction)
+        let ARSearchVC = ARSearchViewController(nibName: "ARSearchViewController", bundle: ARSearchViewController)
         
-        transitionHandler.present(alert, animated: true, completion: nil)
+        transitionHandler.navigationController?.pushViewController(ARSearchVC, animated: true)
+        
+//        guard let transitionHandler = transitionHandler else { return }
+//
+//        let alert = UIAlertController(title: "Поиск по фото", message: "ААААААААА", preferredStyle: .alert)
+//        let alertAction = UIAlertAction(title: "common_OK".localized(), style: .cancel) { _ in
+//            transitionHandler.dismiss(animated: true, completion: nil)
+//        }
+//        alert.addAction(alertAction)
+//
+//        transitionHandler.present(alert, animated: true, completion: nil)
     }
     
 

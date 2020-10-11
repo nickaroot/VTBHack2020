@@ -25,6 +25,28 @@
 		839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E95CDB78E2C2AF54A02D1 /* MainTabInteractor.swift */; };
 		8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */; };
 		9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C724684E515452B0CD2139C /* CatalogueTabContract.swift */; };
+		C390C1422532C95D008FAD6B /* ARSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C12B2532C95D008FAD6B /* ARSearchViewController.swift */; };
+		C390C1432532C95D008FAD6B /* CarRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C390C12C2532C95D008FAD6B /* CarRecognition.mlmodel */; };
+		C390C1442532C95D008FAD6B /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C390C12D2532C95D008FAD6B /* Scene.sks */; };
+		C390C1452532C95D008FAD6B /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C390C12E2532C95D008FAD6B /* Inceptionv3.mlmodel */; };
+		C390C1462532C95D008FAD6B /* UIColor+Highlighted.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1312532C95D008FAD6B /* UIColor+Highlighted.swift */; };
+		C390C1472532C95D008FAD6B /* UIColor+HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1322532C95D008FAD6B /* UIColor+HSB.swift */; };
+		C390C1482532C95D008FAD6B /* UIColor+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1332532C95D008FAD6B /* UIColor+Disabled.swift */; };
+		C390C1492532C95D008FAD6B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1342532C95D008FAD6B /* UIColor.swift */; };
+		C390C14A2532C95D008FAD6B /* UIColor+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1352532C95D008FAD6B /* UIColor+Rounded.swift */; };
+		C390C14B2532C95D008FAD6B /* SwiftMessages+BottomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1372532C95D008FAD6B /* SwiftMessages+BottomInfo.swift */; };
+		C390C14C2532C95D008FAD6B /* SwiftMessages+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1382532C95D008FAD6B /* SwiftMessages+Content.swift */; };
+		C390C14D2532C95D008FAD6B /* SwiftMessages+BottomSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1392532C95D008FAD6B /* SwiftMessages+BottomSuccess.swift */; };
+		C390C14E2532C95D008FAD6B /* SwiftMessages+BottomFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C13A2532C95D008FAD6B /* SwiftMessages+BottomFailure.swift */; };
+		C390C14F2532C95D008FAD6B /* RFTextAttributes+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C13C2532C95D008FAD6B /* RFTextAttributes+Attributes.swift */; };
+		C390C1502532C95D008FAD6B /* RFTextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C13D2532C95D008FAD6B /* RFTextAttributes.swift */; };
+		C390C1512532C95D008FAD6B /* RFTextAttributes+Highlighted.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C13E2532C95D008FAD6B /* RFTextAttributes+Highlighted.swift */; };
+		C390C1522532C95D008FAD6B /* RFTextAttributes+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C13F2532C95D008FAD6B /* RFTextAttributes+Disabled.swift */; };
+		C390C1532532C95D008FAD6B /* ARBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1402532C95D008FAD6B /* ARBridge.swift */; };
+		C390C1542532C95D008FAD6B /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390C1412532C95D008FAD6B /* Logic.swift */; };
+		C390C1572532CA65008FAD6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C390C1552532CA65008FAD6B /* Alamofire.framework */; };
+		C390C1592532CA66008FAD6B /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C390C1562532CA65008FAD6B /* SwiftMessages.framework */; };
+		C390C1622532D10F008FAD6B /* ARSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C390C1612532D10F008FAD6B /* ARSearch.storyboard */; };
 		C3BA480F2532953C006AF156 /* MarketplaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E62532953C006AF156 /* MarketplaceService.swift */; };
 		C3BA48102532953C006AF156 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E82532953C006AF156 /* CarModel.swift */; };
 		C3BA48112532953C006AF156 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E92532953C006AF156 /* TransportType.swift */; };
@@ -135,6 +157,28 @@
 		BC19DDDA79E060248D6171F9 /* CalculatorContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalculatorContract.swift; sourceTree = "<group>"; };
 		BFC3491EBE4CF122C2DD2A60 /* CatalogueTabPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogueTabPresenter.swift; sourceTree = "<group>"; };
 		C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleRouter.swift; sourceTree = "<group>"; };
+		C390C12B2532C95D008FAD6B /* ARSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSearchViewController.swift; sourceTree = "<group>"; };
+		C390C12C2532C95D008FAD6B /* CarRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CarRecognition.mlmodel; sourceTree = "<group>"; };
+		C390C12D2532C95D008FAD6B /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		C390C12E2532C95D008FAD6B /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		C390C1312532C95D008FAD6B /* UIColor+Highlighted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Highlighted.swift"; sourceTree = "<group>"; };
+		C390C1322532C95D008FAD6B /* UIColor+HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HSB.swift"; sourceTree = "<group>"; };
+		C390C1332532C95D008FAD6B /* UIColor+Disabled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Disabled.swift"; sourceTree = "<group>"; };
+		C390C1342532C95D008FAD6B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C390C1352532C95D008FAD6B /* UIColor+Rounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Rounded.swift"; sourceTree = "<group>"; };
+		C390C1372532C95D008FAD6B /* SwiftMessages+BottomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftMessages+BottomInfo.swift"; sourceTree = "<group>"; };
+		C390C1382532C95D008FAD6B /* SwiftMessages+Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftMessages+Content.swift"; sourceTree = "<group>"; };
+		C390C1392532C95D008FAD6B /* SwiftMessages+BottomSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftMessages+BottomSuccess.swift"; sourceTree = "<group>"; };
+		C390C13A2532C95D008FAD6B /* SwiftMessages+BottomFailure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftMessages+BottomFailure.swift"; sourceTree = "<group>"; };
+		C390C13C2532C95D008FAD6B /* RFTextAttributes+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RFTextAttributes+Attributes.swift"; sourceTree = "<group>"; };
+		C390C13D2532C95D008FAD6B /* RFTextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextAttributes.swift; sourceTree = "<group>"; };
+		C390C13E2532C95D008FAD6B /* RFTextAttributes+Highlighted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RFTextAttributes+Highlighted.swift"; sourceTree = "<group>"; };
+		C390C13F2532C95D008FAD6B /* RFTextAttributes+Disabled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RFTextAttributes+Disabled.swift"; sourceTree = "<group>"; };
+		C390C1402532C95D008FAD6B /* ARBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARBridge.swift; sourceTree = "<group>"; };
+		C390C1412532C95D008FAD6B /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		C390C1552532CA65008FAD6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C390C1562532CA65008FAD6B /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
+		C390C1612532D10F008FAD6B /* ARSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARSearch.storyboard; sourceTree = "<group>"; };
 		C3BA47E62532953C006AF156 /* MarketplaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceService.swift; sourceTree = "<group>"; };
 		C3BA47E82532953C006AF156 /* CarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		C3BA47E92532953C006AF156 /* TransportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
@@ -212,7 +256,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C390C1592532CA66008FAD6B /* SwiftMessages.framework in Frameworks */,
 				F84F7DB22531F09D005F5220 /* Kingfisher.framework in Frameworks */,
+				C390C1572532CA65008FAD6B /* Alamofire.framework in Frameworks */,
 				F84F7DA12531E1E8005F5220 /* ImageSlideshow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +396,7 @@
 		9B6B0A60354497021C69862D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C390C12A2532C95D008FAD6B /* ARSearch */,
 				D9845C17DD14A60052205C69 /* TabBarModule */,
 				0AD400B48E5E9C496EC130EB /* MainTab */,
 				EBF397730397135BD4D1D343 /* CatalogueTab */,
@@ -380,6 +427,65 @@
 				B2D04C0409B2BB94B821BF1F /* MainTabContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		C390C12A2532C95D008FAD6B /* ARSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C390C1612532D10F008FAD6B /* ARSearch.storyboard */,
+				C390C12B2532C95D008FAD6B /* ARSearchViewController.swift */,
+				C390C12C2532C95D008FAD6B /* CarRecognition.mlmodel */,
+				C390C12D2532C95D008FAD6B /* Scene.sks */,
+				C390C12E2532C95D008FAD6B /* Inceptionv3.mlmodel */,
+				C390C12F2532C95D008FAD6B /* Extensions */,
+				C390C1402532C95D008FAD6B /* ARBridge.swift */,
+				C390C1412532C95D008FAD6B /* Logic.swift */,
+			);
+			path = ARSearch;
+			sourceTree = "<group>";
+		};
+		C390C12F2532C95D008FAD6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C390C1302532C95D008FAD6B /* UIColor */,
+				C390C1362532C95D008FAD6B /* SwiftMessages */,
+				C390C13B2532C95D008FAD6B /* RFTextAttributes */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C390C1302532C95D008FAD6B /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C390C1312532C95D008FAD6B /* UIColor+Highlighted.swift */,
+				C390C1322532C95D008FAD6B /* UIColor+HSB.swift */,
+				C390C1332532C95D008FAD6B /* UIColor+Disabled.swift */,
+				C390C1342532C95D008FAD6B /* UIColor.swift */,
+				C390C1352532C95D008FAD6B /* UIColor+Rounded.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C390C1362532C95D008FAD6B /* SwiftMessages */ = {
+			isa = PBXGroup;
+			children = (
+				C390C1372532C95D008FAD6B /* SwiftMessages+BottomInfo.swift */,
+				C390C1382532C95D008FAD6B /* SwiftMessages+Content.swift */,
+				C390C1392532C95D008FAD6B /* SwiftMessages+BottomSuccess.swift */,
+				C390C13A2532C95D008FAD6B /* SwiftMessages+BottomFailure.swift */,
+			);
+			path = SwiftMessages;
+			sourceTree = "<group>";
+		};
+		C390C13B2532C95D008FAD6B /* RFTextAttributes */ = {
+			isa = PBXGroup;
+			children = (
+				C390C13C2532C95D008FAD6B /* RFTextAttributes+Attributes.swift */,
+				C390C13D2532C95D008FAD6B /* RFTextAttributes.swift */,
+				C390C13E2532C95D008FAD6B /* RFTextAttributes+Highlighted.swift */,
+				C390C13F2532C95D008FAD6B /* RFTextAttributes+Disabled.swift */,
+			);
+			path = RFTextAttributes;
 			sourceTree = "<group>";
 		};
 		C3BA47E42532953C006AF156 /* API */ = {
@@ -601,6 +707,8 @@
 		F84F7D992531DF94005F5220 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C390C1552532CA65008FAD6B /* Alamofire.framework */,
+				C390C1562532CA65008FAD6B /* SwiftMessages.framework */,
 				F84F7DB12531F09D005F5220 /* Kingfisher.framework */,
 				F84F7DA02531E1E8005F5220 /* ImageSlideshow.framework */,
 			);
@@ -756,6 +864,7 @@
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
 				F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */,
+				C390C1442532C95D008FAD6B /* Scene.sks in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
 				F84F7D922531C5AC005F5220 /* FeatureCell.xib in Resources */,
 				F87B608325323DEB00EB9536 /* CalculatorEmptyCell.xib in Resources */,
@@ -768,6 +877,7 @@
 				F87B60872532445900EB9536 /* CalculatorInfoCell.xib in Resources */,
 				FD6340B61F0F9B569F008CCD /* CatalogueTabViewController.xib in Resources */,
 				E5D5E0524CC3ABE071237469 /* CalculatorViewController.xib in Resources */,
+				C390C1622532D10F008FAD6B /* ARSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +895,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ImageSlideshow.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftMessages.framework",
 			);
 			name = Frameworks;
 			outputFileListPaths = (
@@ -806,14 +917,19 @@
 				F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */,
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
+				C390C14A2532C95D008FAD6B /* UIColor+Rounded.swift in Sources */,
 				C3BA48112532953C006AF156 /* TransportType.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
+				C390C14E2532C95D008FAD6B /* SwiftMessages+BottomFailure.swift in Sources */,
 				C3BA480F2532953C006AF156 /* MarketplaceService.swift in Sources */,
 				C3BA48222532953C006AF156 /* CalculateResponse.swift in Sources */,
+				C390C14F2532C95D008FAD6B /* RFTextAttributes+Attributes.swift in Sources */,
 				F84F7D8B2531C1A0005F5220 /* StringExtension.swift in Sources */,
 				C3BA48232532953C006AF156 /* GraphParameters.swift in Sources */,
 				C3BA48272532953C006AF156 /* Person.swift in Sources */,
 				F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */,
+				C390C14C2532C95D008FAD6B /* SwiftMessages+Content.swift in Sources */,
+				C390C1462532C95D008FAD6B /* UIColor+Highlighted.swift in Sources */,
 				C3BA48182532953C006AF156 /* CalculatorService.swift in Sources */,
 				C3BA48102532953C006AF156 /* CarModel.swift in Sources */,
 				F84F7DA92531E865005F5220 /* CarCell.swift in Sources */,
@@ -829,9 +945,12 @@
 				F87B607E2532391700EB9536 /* CalculatorSwitcherCell.swift in Sources */,
 				F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */,
 				C3BA481C2532953C006AF156 /* Language.swift in Sources */,
+				C390C1502532C95D008FAD6B /* RFTextAttributes.swift in Sources */,
+				C390C1512532C95D008FAD6B /* RFTextAttributes+Highlighted.swift in Sources */,
 				C3BA48202532953C006AF156 /* Field.swift in Sources */,
 				C3BA481A2532953C006AF156 /* SpecialCondition.swift in Sources */,
 				C3BA48192532953C006AF156 /* SettingsResponse.swift in Sources */,
+				C390C1422532C95D008FAD6B /* ARSearchViewController.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
 				F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */,
@@ -840,6 +959,8 @@
 				42F8EAE4C768CC915ADE2768 /* MainTabPresenter.swift in Sources */,
 				C3BA481E2532953C006AF156 /* CalcResult.swift in Sources */,
 				839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */,
+				C390C1452532C95D008FAD6B /* Inceptionv3.mlmodel in Sources */,
+				C390C1472532C95D008FAD6B /* UIColor+HSB.swift in Sources */,
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,
 				7EA3FD0A191DBA71AA9B8384 /* MainTabContract.swift in Sources */,
 				C3BA48162532953C006AF156 /* CarBrandOnly.swift in Sources */,
@@ -855,21 +976,29 @@
 				75402D9B16E9A2E27060A34B /* CatalogueTabViewController.swift in Sources */,
 				36F7044695186651F2C0DA83 /* CatalogueTabPresenter.swift in Sources */,
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,
+				C390C1482532C95D008FAD6B /* UIColor+Disabled.swift in Sources */,
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
+				C390C1532532C95D008FAD6B /* ARBridge.swift in Sources */,
 				C3BA48212532953C006AF156 /* CalculateParameters.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
+				C390C1522532C95D008FAD6B /* RFTextAttributes+Disabled.swift in Sources */,
+				C390C1492532C95D008FAD6B /* UIColor.swift in Sources */,
 				F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */,
 				F87B608225323DEB00EB9536 /* CalculatorEmptyCell.swift in Sources */,
 				22CEF88AC12D5C57A0FF7BF0 /* CalculatorViewController.swift in Sources */,
 				C3BA48142532953C006AF156 /* CarBody.swift in Sources */,
 				C3BA48292532953C006AF156 /* CustomerParty.swift in Sources */,
 				4792F67A23F636779B1D20A2 /* CalculatorPresenter.swift in Sources */,
+				C390C1542532C95D008FAD6B /* Logic.swift in Sources */,
 				6D111D06C2C661C523534D08 /* CalculatorInteractor.swift in Sources */,
 				C3BA48172532953C006AF156 /* CarModelModel.swift in Sources */,
 				C3BA48132532953C006AF156 /* Marketplace.swift in Sources */,
 				C3BA48122532953C006AF156 /* Country.swift in Sources */,
+				C390C14D2532C95D008FAD6B /* SwiftMessages+BottomSuccess.swift in Sources */,
 				776F72553AD0904E5677620F /* CalculatorRouter.swift in Sources */,
+				C390C14B2532C95D008FAD6B /* SwiftMessages+BottomInfo.swift in Sources */,
 				D869E581998363D62079F981 /* CalculatorContract.swift in Sources */,
+				C390C1432532C95D008FAD6B /* CarRecognition.mlmodel in Sources */,
 				C3BA482B2532953C006AF156 /* CarRecognitionService.swift in Sources */,
 				F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */,
 				C3BA481B2532953C006AF156 /* SettingsParameters.swift in Sources */,
