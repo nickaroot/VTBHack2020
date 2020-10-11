@@ -11,8 +11,8 @@ class CalculatorPresenter {
 }
 
 extension CalculatorPresenter: CalculatorPresenterProtocol {
-    func updateStarted() {
-        view?.dimView()
+    func updateStarted(withActivity: Bool) {
+        view?.dimView(withActivity: withActivity)
     }
     
     func updateFinished() {

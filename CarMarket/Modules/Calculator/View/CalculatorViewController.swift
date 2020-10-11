@@ -71,19 +71,22 @@ class CalculatorViewController: UIViewController {
 }
 
 extension CalculatorViewController: CalculatorViewProtocol {
-    func dimView() {
+    func dimView(withActivity: Bool) {
         dimmingView = UIView(frame: view.bounds)
         dimmingView?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         
-        let animatingView = UIActivityIndicatorView(style: .large)
-        dimmingView?.addSubview(animatingView)
+        if withActivity {
+            let animatingView = UIActivityIndicatorView(style: .large)
+            dimmingView?.addSubview(animatingView)
+            
+            animatingView.center = dimmingView!.center
+            
+            animatingView.centerXAnchor.constraint(equalTo: dimmingView!.centerXAnchor).isActive = true
+            animatingView.centerYAnchor.constraint(equalTo: dimmingView!.centerYAnchor).isActive = true
+            
+            animatingView.startAnimating()
+        }
         
-        animatingView.center = dimmingView!.center
-        
-        animatingView.centerXAnchor.constraint(equalTo: dimmingView!.centerXAnchor).isActive = true
-        animatingView.centerYAnchor.constraint(equalTo: dimmingView!.centerYAnchor).isActive = true
-        
-        animatingView.startAnimating()
         
         
         view.addSubview(dimmingView!)

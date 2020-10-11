@@ -51,23 +51,24 @@ extension CalculatorInteractor: CalculatorInteractorProtocol {
             vehicle_cost: reqCost ?? 0
         )
 
-        presenter?.updateStarted()
+        presenter?.updateStarted(withActivity: true)
         CarLoanService.getCarloan(with: params) { response, error in
             self.presenter?.updateFinished()
             
             if let response = response {
                 let decisionStatus = response.application?.decision_report?.application_status
+                self.presenter?.updateStarted(withActivity: false)
                 self.router?.showApplicationDecision(with: decisionStatus)
             } else if error != nil {
-                
+                self.router?.showApplicationError()
             } else {
-                
+                self.router?.showApplicationError()
             }
         }
     }
     
     func calculateClicked(with datasource: CalculatorViewModel) {
-        presenter?.updateStarted()
+        presenter?.updateStarted(withActivity: true)
         
         let clientTypes = [
             "ac43d7e4-cd8c-4f6f-b18a-5ccbc1356f75"

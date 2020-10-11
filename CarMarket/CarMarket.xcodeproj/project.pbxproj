@@ -69,6 +69,8 @@
 		F8033DB22532EEAC004BF7DE /* CalculatorTextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */; };
 		F8033DB52532F105004BF7DE /* CalculatorCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */; };
 		F8033DB62532F105004BF7DE /* CalculatorCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */; };
+		F8033DC525330555004BF7DE /* UnifiedModalRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */; };
+		F8033DC625330555004BF7DE /* UnifiedModalRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */; };
 		F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */; };
 		F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */; };
 		F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */; };
@@ -188,6 +190,8 @@
 		F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorTextInputCell.xib; sourceTree = "<group>"; };
 		F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCarCell.swift; sourceTree = "<group>"; };
 		F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCarCell.xib; sourceTree = "<group>"; };
+		F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedModalRequestVC.xib; sourceTree = "<group>"; };
+		F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnifiedModalRequestVC.swift; sourceTree = "<group>"; };
 		F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DazzleCarouselView.swift; sourceTree = "<group>"; };
 		F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTextCard.xib; sourceTree = "<group>"; };
 		F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextCard.swift; sourceTree = "<group>"; };
@@ -415,6 +419,8 @@
 		9B6B0A60354497021C69862D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */,
+				F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */,
 				D9845C17DD14A60052205C69 /* TabBarModule */,
 				0AD400B48E5E9C496EC130EB /* MainTab */,
 				EBF397730397135BD4D1D343 /* CatalogueTab */,
@@ -640,9 +646,17 @@
 			path = CatalogueTab;
 			sourceTree = "<group>";
 		};
+		F8033DB925330014004BF7DE /* ModalAlert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModalAlert;
+			sourceTree = "<group>";
+		};
 		F84F7D702531B889005F5220 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F8033DB925330014004BF7DE /* ModalAlert */,
 				F84F7D752531B8E5005F5220 /* Reusable */,
 				F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */,
 				F84F7D8A2531C1A0005F5220 /* StringExtension.swift */,
@@ -843,6 +857,7 @@
 				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
+				F8033DC525330555004BF7DE /* UnifiedModalRequestVC.xib in Resources */,
 				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
 				F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */,
 				F87B60872532445900EB9536 /* CalculatorInfoCell.xib in Resources */,
@@ -940,6 +955,7 @@
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
 				C3BA48212532953C006AF156 /* CalculateParameters.swift in Sources */,
+				F8033DC625330555004BF7DE /* UnifiedModalRequestVC.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
 				F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */,
 				F87B608225323DEB00EB9536 /* CalculatorEmptyCell.swift in Sources */,
