@@ -9,7 +9,7 @@ import UIKit
 
 struct CalculatorInfoCellDatasource: CalculatorCellDatasource {
     var type: CalculatorCellType
-    let value: Int
+    let value: Int?
     var cellId: String = "CalculatorInfoCellID"
     var output: Any? = nil
     
@@ -66,7 +66,8 @@ class CalculatorInfoCell: UITableViewCell, CalculatorBaseCell {
         valueCell.text = formattedValue(from: datasource.value) ?? "Unknown"
     }
     
-    private func formattedValue(from value: Int) -> String? {
+    private func formattedValue(from value: Int?) -> String? {
+        guard let value = value else { return nil }
         if dataType == .money {
             let formatter = NumberFormatter()
             let locale = Locale(identifier: "ru-Ru")

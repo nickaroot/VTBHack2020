@@ -56,7 +56,7 @@ class CalculatorViewModel {
     var cellDatasources: [CalculatorCellDatasource] = [
         CalculatorSliderCellDatasource(type: .slider(.price), minValue: 10_000, maxValue: 3_000_000, currentValue: 1_500_000),
         CalculatorSliderCellDatasource(type: .slider(.income), minValue: 10_000, maxValue: 1_000_000, currentValue: 500_000),
-        CalculatorSliderCellDatasource(type: .slider(.length), minValue: 6, maxValue: 120, currentValue: 60),
+        CalculatorSliderCellDatasource(type: .slider(.length), minValue: 1, maxValue: 7, currentValue: 3),
         CalculatorSeparatorCellDatasource(),
         CalculatorSwitcherCellDatasource(type: .switcher(.kasko), state: true, additionalSum: 32_000),
         CalculatorSwitcherCellDatasource(type: .switcher(.card), state: true),
@@ -77,7 +77,7 @@ class CalculatorViewModel {
     var hasCard = true
     var hasInsurance = true
     
-    func update(with calculationResults: (Int, Int, Int)) {
+    func update(with calculationResults: (Int?, Int?, Int?)) {
         cellDatasources = [
             CalculatorInfoCellDatasource(type: .info(.monthlyPayment), value: calculationResults.0),
             CalculatorInfoCellDatasource(type: .info(.interestRate), value: calculationResults.1),

@@ -97,7 +97,7 @@ class CalculatorSliderCell: UITableViewCell, CalculatorBaseCell {
             formatter.numberStyle = .currency
             return formatter.string(from: NSNumber(integerLiteral: value))
         } else {
-            return "\(value) месяцев"
+            return "\(value) год"
         }
     }
     
