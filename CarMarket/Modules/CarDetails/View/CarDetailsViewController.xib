@@ -17,6 +17,7 @@
                 <outlet property="carPriceLabel" destination="D4P-Oa-KN0" id="Kpf-WS-ijk"/>
                 <outlet property="engineLabel" destination="yTR-Vw-zbP" id="FOa-f4-Yvg"/>
                 <outlet property="tabLabel" destination="YVI-DE-Fsi" id="HHR-Pb-TX2"/>
+                <outlet property="taxLabel" destination="YVI-DE-Fsi" id="fyA-In-qIs"/>
                 <outlet property="transmissionLabel" destination="z6a-Bl-Sjz" id="8gr-gl-YlR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t7R-D4-61u"/>
                 <outlet property="wheelDriveLabel" destination="Trf-cb-Rzq" id="LOm-Aj-bhw"/>
@@ -61,6 +62,9 @@
                                         <constraint firstAttribute="height" constant="48" id="A2i-Kf-2AG"/>
                                     </constraints>
                                     <state key="normal" image="MonthlyPayment"/>
+                                    <connections>
+                                        <action selector="loanButtonClicked:" destination="-1" eventType="touchUpInside" id="tOi-NB-3af"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Характеристики" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-Fo-ezF">
                                     <rect key="frame" x="16" y="416" width="343" height="22"/>
@@ -242,6 +246,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udE-tQ-pC8">
                     <rect key="frame" x="299" y="886" width="60" height="60"/>
                     <state key="normal" image="CalculatorButton"/>
+                    <connections>
+                        <action selector="calcButtonClicked:" destination="-1" eventType="touchUpInside" id="gK1-vr-DIW"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

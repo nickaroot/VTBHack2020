@@ -34,5 +34,12 @@ class CarDetailsRouter {
 
 
 extension CarDetailsRouter: CarDetailsRouterProtocol {
-
+    func close() {
+        transitionHandler?.navigationController?.popViewController(animated: true)
+    }
+    
+    func showCalculator() {
+        let module = CalculatorRouter.setupModuleWithNib()
+        transitionHandler?.present(module, animated: true, completion: nil)
+    }
 }

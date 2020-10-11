@@ -21,6 +21,7 @@ class CarDetailsViewController: UIViewController {
     @IBOutlet weak var tabLabel: UILabel!
     @IBOutlet weak var wheelDriveLabel: UILabel!
     @IBOutlet weak var wheelLabel: UILabel!
+    @IBOutlet weak var taxLabel: UILabel!
     
     // MARK: Properties
     var interactor: CarDetailsInteractorProtocol!
@@ -31,6 +32,8 @@ class CarDetailsViewController: UIViewController {
         
         configureUI()
         configureCollections()
+        
+        reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,8 +64,21 @@ class CarDetailsViewController: UIViewController {
         navigationItem.rightBarButtonItems = [favoriteButton, shareButton]
     }
     
-    @objc private func backButtonClicked() {
+    private func reloadData() {
+        carNameLabel.text = "Kia Rio"
+        carPriceLabel.text = "768 000 ₽"
         
+        yaerLabel.text = "2019"
+        transmissionLabel.text = "Автоматическая"
+        bodyLabel.text = "Седан"
+        engineLabel.text = "2.0 л / 276 л. с. / Бензин"
+        taxLabel.text = "41 400 ₽"
+        wheelDriveLabel.text = "Полный"
+        wheelLabel.text = "Левый"
+    }
+    
+    @objc private func backButtonClicked() {
+        interactor.backButtonClicked()
     }
     
     @objc private func shareButtonClicked() {
@@ -71,6 +87,14 @@ class CarDetailsViewController: UIViewController {
     
     @objc private func favoriteButtonClicked() {
         
+    }
+    
+    @IBAction func loanButtonClicked(_ sender: Any) {
+        interactor.calculatorButtonClicked()
+    }
+    
+    @IBAction func calcButtonClicked(_ sender: Any) {
+        interactor.calculatorButtonClicked()
     }
 }
 

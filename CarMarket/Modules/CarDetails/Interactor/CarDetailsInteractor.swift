@@ -7,10 +7,16 @@
 //
 
 class CarDetailsInteractor {
-    weak var presenter: CarDetailsPresenterProtocol?
-    weak var router: CarDetailsRouterProtocol?
+    var presenter: CarDetailsPresenterProtocol?
+    var router: CarDetailsRouterProtocol?
 }
 
 extension CarDetailsInteractor: CarDetailsInteractorProtocol {
-
+    func backButtonClicked() {
+        router?.close()
+    }
+    
+    func calculatorButtonClicked() {
+        router?.showCalculator()
+    }
 }

@@ -13,7 +13,8 @@ protocol CarDetailsViewProtocol: class {
 }
 
 protocol CarDetailsInteractorProtocol: class {
-    // TODO: Declare interactor methods
+    func calculatorButtonClicked()
+    func backButtonClicked()
 }
 
 protocol CarDetailsPresenterProtocol: class {
@@ -21,5 +22,6 @@ protocol CarDetailsPresenterProtocol: class {
 }
 
 protocol CarDetailsRouterProtocol: class {
-    // TODO: Declare router methods
+    func showCalculator()
+    func close()
 }
