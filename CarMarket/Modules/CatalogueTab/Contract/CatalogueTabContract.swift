@@ -9,19 +9,19 @@
 import Foundation
 
 protocol CatalogueTabViewProtocol: class {
-    func updateOffers(_ data: [CarCellDatasource])
+    func updateOffers(_ data: [CarModel])
 }
 
 protocol CatalogueTabInteractorProtocol: class {
     func viewIsReady()
-    func carClicked()
+    func carClicked(carModel: CarModel)
 }
 
 protocol CatalogueTabPresenterProtocol: class {
-    func fetched(offers: [CarCellDatasource])
+    func fetched(offers: [CarModel])
 }
 
 protocol CatalogueTabRouterProtocol: class {
     func showErrorAlert(with message: String)
-    func showCarDetails()
+    func showCarDetails(carModel: CarModel)
 }
