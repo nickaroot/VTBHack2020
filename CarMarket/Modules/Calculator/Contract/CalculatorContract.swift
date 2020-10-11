@@ -17,7 +17,8 @@ protocol CalculatorViewProtocol: class {
 protocol CalculatorInteractorProtocol: class {
     func closeClicked()
     func calculateClicked(with datasource: CalculatorViewModel)
-    func applyForLoanClicked()
+    func applyForLoanClicked(with datasource: CalculatorViewModel)
+    func applicationDone()
 }
 
 protocol CalculatorPresenterProtocol: class {

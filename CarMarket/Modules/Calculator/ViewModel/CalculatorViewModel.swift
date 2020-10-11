@@ -15,6 +15,7 @@ enum CalculatorCellType {
     case empty
     
     case textInput(_ type: CalculatorTextInputType)
+    case car(_ type: CarCellModel)
 }
 
 enum CalculatorTextInputType {
@@ -57,24 +58,25 @@ protocol CalculatorBaseCell: UITableViewCell {
 }
 
 class CalculatorViewModel {
+    static let testCar = CarCellModel(
+        photo: #imageLiteral(resourceName: "PoloVideo"),
+        name: "BWM",
+        price: 2_500_000,
+        monthlyPayment: 25_000,
+        rate: 2,
+        loanSum: 1_250_000
+    )
     let nibs: [UINib: String] = [
         .init(nibName: "CalculatorSliderCell", bundle: nil): "sliderCellID",
         .init(nibName: "CalculatorSeparatorCell", bundle: nil): "separatorCellID",
         .init(nibName: "CalculatorSwitcherCell", bundle: nil): "CalculatorSwitcherCellId",
         .init(nibName: "CalculatorEmptyCell", bundle: nil): "CalculatorEmptyCellID",
         .init(nibName: "CalculatorInfoCell", bundle: nil): "CalculatorInfoCellID",
-        .init(nibName: "CalculatorTextInputCell", bundle: nil): "CalculatorTextInputCellID"
+        .init(nibName: "CalculatorTextInputCell", bundle: nil): "CalculatorTextInputCellID",
+        .init(nibName: "CalculatorCarCell", bundle: nil): "CalculatorCarCellID"
     ]
     
     var cellDatasources: [CalculatorCellDatasource] = [
-        CalculatorTextInputCellDatasource(.textInput(.email)),
-        CalculatorTextInputCellDatasource(.textInput(.income)),
-        CalculatorTextInputCellDatasource(.textInput(.birthDate)),
-        CalculatorTextInputCellDatasource(.textInput(.birthPlace)),
-        CalculatorTextInputCellDatasource(.textInput(.secondName)),
-        CalculatorTextInputCellDatasource(.textInput(.name)),
-        CalculatorTextInputCellDatasource(.textInput(.patronymic)),
-    ]/*[
         CalculatorSliderCellDatasource(type: .slider(.price), minValue: 10_000, maxValue: 3_000_000, currentValue: 1_500_000),
         CalculatorSliderCellDatasource(type: .slider(.income), minValue: 10_000, maxValue: 1_000_000, currentValue: 500_000),
         CalculatorSliderCellDatasource(type: .slider(.length), minValue: 1, maxValue: 7, currentValue: 3),
@@ -85,9 +87,10 @@ class CalculatorViewModel {
         CalculatorSwitcherCellDatasource(type: .switcher(.insurance), state: true),
         CalculatorEmptyCellDatasource(),
         CalculatorEmptyCellDatasource()
-    ]*/
+    ]
     
     let cellsForLoanApplication: [CalculatorCellDatasource] = [
+        CalculatorCarCellDatasource(.car(testCar)),
         CalculatorTextInputCellDatasource(.textInput(.email)),
         CalculatorTextInputCellDatasource(.textInput(.income)),
         CalculatorTextInputCellDatasource(.textInput(.birthDate)),
@@ -95,6 +98,8 @@ class CalculatorViewModel {
         CalculatorTextInputCellDatasource(.textInput(.secondName)),
         CalculatorTextInputCellDatasource(.textInput(.name)),
         CalculatorTextInputCellDatasource(.textInput(.patronymic)),
+        CalculatorEmptyCellDatasource(),
+        CalculatorEmptyCellDatasource()
     ]
     
     var outputValues: [Any] {
@@ -114,5 +119,9 @@ class CalculatorViewModel {
             CalculatorInfoCellDatasource(type: .info(.interestRate), value: calculationResults.1),
             CalculatorInfoCellDatasource(type: .info(.loanSum), value: calculationResults.2)
         ]
+    }
+    
+    func updateForApplication() {
+        cellDatasources = cellsForLoanApplication
     }
 }

@@ -14,6 +14,10 @@ class CalculatorInteractor {
 }
 
 extension CalculatorInteractor: CalculatorInteractorProtocol {
+    func applicationDone() {
+        router?.closeModule()
+    }
+    
     func calculateClicked(with datasource: CalculatorViewModel) {
         presenter?.updateStarted()
         
@@ -66,8 +70,9 @@ extension CalculatorInteractor: CalculatorInteractorProtocol {
         }
     }
     
-    func applyForLoanClicked() {
-        router?.closeModule()
+    func applyForLoanClicked(with datasource: CalculatorViewModel) {
+        datasource.updateForApplication()
+        presenter?.updateView()
     }
     
     func closeClicked() {

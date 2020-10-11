@@ -67,6 +67,8 @@
 		E7C25872555C01A98859EA71 /* CarDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B082262E26EF64C37DEC5 /* CarDetailsInteractor.swift */; };
 		F8033DB12532EEAC004BF7DE /* CalculatorTextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */; };
 		F8033DB22532EEAC004BF7DE /* CalculatorTextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */; };
+		F8033DB52532F105004BF7DE /* CalculatorCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */; };
+		F8033DB62532F105004BF7DE /* CalculatorCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */; };
 		F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */; };
 		F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */; };
 		F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */; };
@@ -184,6 +186,8 @@
 		DF95FCD09A60197DC3AE6400 /* CarDetailsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarDetailsRouter.swift; sourceTree = "<group>"; };
 		F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextInputCell.swift; sourceTree = "<group>"; };
 		F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorTextInputCell.xib; sourceTree = "<group>"; };
+		F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCarCell.swift; sourceTree = "<group>"; };
+		F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCarCell.xib; sourceTree = "<group>"; };
 		F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DazzleCarouselView.swift; sourceTree = "<group>"; };
 		F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTextCard.xib; sourceTree = "<group>"; };
 		F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextCard.swift; sourceTree = "<group>"; };
@@ -709,6 +713,8 @@
 				F87B60852532445900EB9536 /* CalculatorInfoCell.xib */,
 				F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */,
 				F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */,
+				F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */,
+				F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8033DB62532F105004BF7DE /* CalculatorCarCell.xib in Resources */,
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
@@ -906,6 +913,7 @@
 				C3BA48202532953C006AF156 /* Field.swift in Sources */,
 				C3BA481A2532953C006AF156 /* SpecialCondition.swift in Sources */,
 				C3BA48192532953C006AF156 /* SettingsResponse.swift in Sources */,
+				F8033DB52532F105004BF7DE /* CalculatorCarCell.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
 				F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */,

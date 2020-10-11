@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum CalculatorState {
+    case calculation
+    case application
+    case done
+}
+
 class CalculatorViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var calculatorTableView: UITableView!
@@ -15,7 +21,8 @@ class CalculatorViewController: UIViewController {
     // MARK: Properties
     var interactor: CalculatorInteractorProtocol!
     let datasource = CalculatorViewModel()
-    var isCalculated = false
+//    var isCalculated = false
+    var state: CalculatorState = .calculation
     
     var dimmingView: UIView?
 
@@ -28,11 +35,15 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateClicked(_ sender: Any) {
-        if isCalculated {
-            interactor.applyForLoanClicked()
-        } else {
+        switch state {
+        case .application:
+            state = .done
+            interactor.applyForLoanClicked(with: datasource)
+        case .calculation:
+            state = .application
             interactor.calculateClicked(with: datasource)
-            isCalculated = !isCalculated
+        case .done:
+            interactor.applicationDone()
         }
     }
     
@@ -92,8 +103,13 @@ extension CalculatorViewController: CalculatorViewProtocol {
     }
     
     func update() {
-        if isCalculated {
+        switch state {
+        case .calculation:
+            calculateButton.setTitle("Рассчитать", for: .normal)
+        case .application:
             calculateButton.setTitle("Оформить заявку", for: .normal)
+        case .done:
+            calculateButton.setTitle("Отправить заявку", for: .normal)
         }
         
         calculatorTableView.reloadSections(IndexSet(integersIn: 0 ..< calculatorTableView.numberOfSections), with: .automatic)
