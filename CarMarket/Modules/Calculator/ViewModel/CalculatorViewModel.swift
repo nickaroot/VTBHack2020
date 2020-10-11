@@ -13,6 +13,18 @@ enum CalculatorCellType {
     case separator
     case info(_ type: CalculatorPropertyType)
     case empty
+    
+    case textInput(_ type: CalculatorTextInputType)
+}
+
+enum CalculatorTextInputType {
+    case email
+    case income
+    case birthDate
+    case birthPlace
+    case secondName
+    case name
+    case patronymic
 }
 
 // Можно разнести на 3 разных enum, но не до того
@@ -50,10 +62,19 @@ class CalculatorViewModel {
         .init(nibName: "CalculatorSeparatorCell", bundle: nil): "separatorCellID",
         .init(nibName: "CalculatorSwitcherCell", bundle: nil): "CalculatorSwitcherCellId",
         .init(nibName: "CalculatorEmptyCell", bundle: nil): "CalculatorEmptyCellID",
-        .init(nibName: "CalculatorInfoCell", bundle: nil): "CalculatorInfoCellID"
+        .init(nibName: "CalculatorInfoCell", bundle: nil): "CalculatorInfoCellID",
+        .init(nibName: "CalculatorTextInputCell", bundle: nil): "CalculatorTextInputCellID"
     ]
     
     var cellDatasources: [CalculatorCellDatasource] = [
+        CalculatorTextInputCellDatasource(.textInput(.email)),
+        CalculatorTextInputCellDatasource(.textInput(.income)),
+        CalculatorTextInputCellDatasource(.textInput(.birthDate)),
+        CalculatorTextInputCellDatasource(.textInput(.birthPlace)),
+        CalculatorTextInputCellDatasource(.textInput(.secondName)),
+        CalculatorTextInputCellDatasource(.textInput(.name)),
+        CalculatorTextInputCellDatasource(.textInput(.patronymic)),
+    ]/*[
         CalculatorSliderCellDatasource(type: .slider(.price), minValue: 10_000, maxValue: 3_000_000, currentValue: 1_500_000),
         CalculatorSliderCellDatasource(type: .slider(.income), minValue: 10_000, maxValue: 1_000_000, currentValue: 500_000),
         CalculatorSliderCellDatasource(type: .slider(.length), minValue: 1, maxValue: 7, currentValue: 3),
@@ -64,6 +85,16 @@ class CalculatorViewModel {
         CalculatorSwitcherCellDatasource(type: .switcher(.insurance), state: true),
         CalculatorEmptyCellDatasource(),
         CalculatorEmptyCellDatasource()
+    ]*/
+    
+    let cellsForLoanApplication: [CalculatorCellDatasource] = [
+        CalculatorTextInputCellDatasource(.textInput(.email)),
+        CalculatorTextInputCellDatasource(.textInput(.income)),
+        CalculatorTextInputCellDatasource(.textInput(.birthDate)),
+        CalculatorTextInputCellDatasource(.textInput(.birthPlace)),
+        CalculatorTextInputCellDatasource(.textInput(.secondName)),
+        CalculatorTextInputCellDatasource(.textInput(.name)),
+        CalculatorTextInputCellDatasource(.textInput(.patronymic)),
     ]
     
     var outputValues: [Any] {
