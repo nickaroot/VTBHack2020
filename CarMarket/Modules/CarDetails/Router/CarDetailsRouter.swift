@@ -11,7 +11,7 @@ import UIKit
 class CarDetailsRouter {
     var transitionHandler: UIViewController?
 
-    static func setupModuleWithNib() -> CarDetailsViewController {
+    static func setupModuleWithNib(carModel: CarModel? = nil) -> CarDetailsViewController {
         let viewController = CarDetailsViewController(nibName: "CarDetailsViewController", bundle: nil)
 
         let presenter = CarDetailsPresenter()
@@ -27,6 +27,8 @@ class CarDetailsRouter {
         interactor.router = router
 
         presenter.view = viewController
+        
+        viewController.carModel = carModel
    
         return viewController
     }

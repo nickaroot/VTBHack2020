@@ -17,6 +17,8 @@ class ARBridge {
     
     var marketplace: Marketplace?
     
+    weak var navigationController: UINavigationController!
+    
     init() {
         MarketplaceService.getMarketplace { [weak self] (marketplace, error) in
             guard error == nil, let marketplace = marketplace else { return }
