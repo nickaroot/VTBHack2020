@@ -52,6 +52,7 @@
 		C390C1572532CA65008FAD6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C390C1552532CA65008FAD6B /* Alamofire.framework */; };
 		C390C1592532CA66008FAD6B /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C390C1562532CA65008FAD6B /* SwiftMessages.framework */; };
 		C390C1622532D10F008FAD6B /* ARSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C390C1612532D10F008FAD6B /* ARSearch.storyboard */; };
+		C390C16B2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C390C16A2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz */; };
 		C3BA480F2532953C006AF156 /* MarketplaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E62532953C006AF156 /* MarketplaceService.swift */; };
 		C3BA48102532953C006AF156 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E82532953C006AF156 /* CarModel.swift */; };
 		C3BA48112532953C006AF156 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E92532953C006AF156 /* TransportType.swift */; };
@@ -190,6 +191,7 @@
 		C390C1552532CA65008FAD6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		C390C1562532CA65008FAD6B /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
 		C390C1612532D10F008FAD6B /* ARSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARSearch.storyboard; sourceTree = "<group>"; };
+		C390C16A2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = bmw_4_series_03_for_iOS_1.usdz; path = ../../../../Downloads/bmw_4_series_03_for_iOS_1.usdz; sourceTree = "<group>"; };
 		C3BA47E62532953C006AF156 /* MarketplaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceService.swift; sourceTree = "<group>"; };
 		C3BA47E82532953C006AF156 /* CarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		C3BA47E92532953C006AF156 /* TransportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
@@ -334,7 +336,6 @@
 			children = (
 				102B082262E26EF64C37DEC5 /* CarDetailsInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -344,7 +345,6 @@
 				4E0DCE8FF0BD3C38566A5731 /* CarDetailsViewController.swift */,
 				625492C7807ECBE17A58A2C8 /* CarDetailsViewController.xib */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -379,7 +379,6 @@
 			children = (
 				DF95FCD09A60197DC3AE6400 /* CarDetailsRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -397,7 +396,6 @@
 			children = (
 				29F183179615302CB72F707E /* CarDetailsPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -419,7 +417,6 @@
 				4EF6A469A366B5281B7DFE8B /* Router */,
 				B33FD91746561078E968A215 /* Contract */,
 			);
-			name = CarDetails;
 			path = CarDetails;
 			sourceTree = "<group>";
 		};
@@ -489,7 +486,6 @@
 			children = (
 				913A1FCE7B6C0549AE41982D /* CarDetailsContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -851,6 +847,7 @@
 		F8C5940125306EB3009FC2B7 /* CarMarket */ = {
 			isa = PBXGroup;
 			children = (
+				C390C16A2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz */,
 				F84F7D882531C172005F5220 /* Localizable.strings */,
 				C3BA47E42532953C006AF156 /* API */,
 				F84F7D702531B889005F5220 /* Common */,
@@ -943,6 +940,7 @@
 				F87B607F2532391700EB9536 /* CalculatorSwitcherCell.xib in Resources */,
 				F88E1F6D253206FE006C0995 /* VideoCell.xib in Resources */,
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
+				C390C16B2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
 				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
 				F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */,
