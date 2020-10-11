@@ -32,6 +32,25 @@ class CarDetailsViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.tintColor = .VTBlightBlue
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        let backBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "BackNavBar"), style: .plain, target: self, action: #selector(backButtonClicked))
+        navigationItem.leftBarButtonItem = backBarButton
+        
+        let shareButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Share"), style: .plain, target: self, action: #selector(shareButtonClicked))
+        let favoriteButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Star Outline"), style: .plain, target: self, action: #selector(favoriteButtonClicked))
+        navigationItem.rightBarButtonItems = [favoriteButton, shareButton]
+    }
+    
+    @objc private func backButtonClicked() {
+        
+    }
+    
+    @objc private func shareButtonClicked() {
+        
+    }
+    
+    @objc private func favoriteButtonClicked() {
+        
     }
 }
 
