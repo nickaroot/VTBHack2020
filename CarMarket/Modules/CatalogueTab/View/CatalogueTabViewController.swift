@@ -32,6 +32,11 @@ class CatalogueTabViewController: UIViewController {
         interactor.viewIsReady()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func sortButtonClicked(_ sender: UIButton) {
     }
     

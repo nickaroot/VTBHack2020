@@ -16,6 +16,20 @@ class CarDetailsViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    private func configureUI() {
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationItem.hidesBackButton = true
+        navigationController?.hidesBottomBarWhenPushed = true
+        navigationController?.navigationBar.backgroundColor = .clear
     }
 }
 
