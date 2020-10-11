@@ -25,6 +25,37 @@
 		839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E95CDB78E2C2AF54A02D1 /* MainTabInteractor.swift */; };
 		8C525C8AAF28EF54A0EE137C /* TabBarModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */; };
 		9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C724684E515452B0CD2139C /* CatalogueTabContract.swift */; };
+		C3BA480F2532953C006AF156 /* MarketplaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E62532953C006AF156 /* MarketplaceService.swift */; };
+		C3BA48102532953C006AF156 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E82532953C006AF156 /* CarModel.swift */; };
+		C3BA48112532953C006AF156 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47E92532953C006AF156 /* TransportType.swift */; };
+		C3BA48122532953C006AF156 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47EA2532953C006AF156 /* Country.swift */; };
+		C3BA48132532953C006AF156 /* Marketplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47EB2532953C006AF156 /* Marketplace.swift */; };
+		C3BA48142532953C006AF156 /* CarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47EC2532953C006AF156 /* CarBody.swift */; };
+		C3BA48152532953C006AF156 /* CarBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47ED2532953C006AF156 /* CarBrand.swift */; };
+		C3BA48162532953C006AF156 /* CarBrandOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47EE2532953C006AF156 /* CarBrandOnly.swift */; };
+		C3BA48172532953C006AF156 /* CarModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47EF2532953C006AF156 /* CarModelModel.swift */; };
+		C3BA48182532953C006AF156 /* CalculatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F12532953C006AF156 /* CalculatorService.swift */; };
+		C3BA48192532953C006AF156 /* SettingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F42532953C006AF156 /* SettingsResponse.swift */; };
+		C3BA481A2532953C006AF156 /* SpecialCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F52532953C006AF156 /* SpecialCondition.swift */; };
+		C3BA481B2532953C006AF156 /* SettingsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F62532953C006AF156 /* SettingsParameters.swift */; };
+		C3BA481C2532953C006AF156 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F72532953C006AF156 /* Language.swift */; };
+		C3BA481D2532953C006AF156 /* ProgramResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47F92532953C006AF156 /* ProgramResponse.swift */; };
+		C3BA481E2532953C006AF156 /* CalcResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47FA2532953C006AF156 /* CalcResult.swift */; };
+		C3BA481F2532953C006AF156 /* Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47FB2532953C006AF156 /* Ranges.swift */; };
+		C3BA48202532953C006AF156 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47FC2532953C006AF156 /* Field.swift */; };
+		C3BA48212532953C006AF156 /* CalculateParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47FD2532953C006AF156 /* CalculateParameters.swift */; };
+		C3BA48222532953C006AF156 /* CalculateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA47FE2532953C006AF156 /* CalculateResponse.swift */; };
+		C3BA48232532953C006AF156 /* GraphParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48002532953C006AF156 /* GraphParameters.swift */; };
+		C3BA48242532953C006AF156 /* GraphResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48012532953C006AF156 /* GraphResponse.swift */; };
+		C3BA48252532953C006AF156 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48022532953C006AF156 /* Payment.swift */; };
+		C3BA48262532953C006AF156 /* CarLoanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48042532953C006AF156 /* CarLoanService.swift */; };
+		C3BA48272532953C006AF156 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48062532953C006AF156 /* Person.swift */; };
+		C3BA48282532953C006AF156 /* CarLoanParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48072532953C006AF156 /* CarLoanParameters.swift */; };
+		C3BA48292532953C006AF156 /* CustomerParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48082532953C006AF156 /* CustomerParty.swift */; };
+		C3BA482A2532953C006AF156 /* CarLoanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA48092532953C006AF156 /* CarLoanResponse.swift */; };
+		C3BA482B2532953C006AF156 /* CarRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA480B2532953C006AF156 /* CarRecognitionService.swift */; };
+		C3BA482C2532953C006AF156 /* CarRecognitionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA480D2532953C006AF156 /* CarRecognitionResponse.swift */; };
+		C3BA482D2532953C006AF156 /* CarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BA480E2532953C006AF156 /* CarImage.swift */; };
 		D869E581998363D62079F981 /* CalculatorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19DDDA79E060248D6171F9 /* CalculatorContract.swift */; };
 		DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48731CC43A58E6FBD6140BDA /* MainTabViewController.swift */; };
 		E5D5E0524CC3ABE071237469 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5455C08A672B62E008686A3D /* CalculatorViewController.xib */; };
@@ -104,6 +135,37 @@
 		BC19DDDA79E060248D6171F9 /* CalculatorContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalculatorContract.swift; sourceTree = "<group>"; };
 		BFC3491EBE4CF122C2DD2A60 /* CatalogueTabPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogueTabPresenter.swift; sourceTree = "<group>"; };
 		C139392AF07BAA2F6845515D /* TabBarModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarModuleRouter.swift; sourceTree = "<group>"; };
+		C3BA47E62532953C006AF156 /* MarketplaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceService.swift; sourceTree = "<group>"; };
+		C3BA47E82532953C006AF156 /* CarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		C3BA47E92532953C006AF156 /* TransportType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
+		C3BA47EA2532953C006AF156 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		C3BA47EB2532953C006AF156 /* Marketplace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marketplace.swift; sourceTree = "<group>"; };
+		C3BA47EC2532953C006AF156 /* CarBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBody.swift; sourceTree = "<group>"; };
+		C3BA47ED2532953C006AF156 /* CarBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBrand.swift; sourceTree = "<group>"; };
+		C3BA47EE2532953C006AF156 /* CarBrandOnly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarBrandOnly.swift; sourceTree = "<group>"; };
+		C3BA47EF2532953C006AF156 /* CarModelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelModel.swift; sourceTree = "<group>"; };
+		C3BA47F12532953C006AF156 /* CalculatorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorService.swift; sourceTree = "<group>"; };
+		C3BA47F42532953C006AF156 /* SettingsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsResponse.swift; sourceTree = "<group>"; };
+		C3BA47F52532953C006AF156 /* SpecialCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialCondition.swift; sourceTree = "<group>"; };
+		C3BA47F62532953C006AF156 /* SettingsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsParameters.swift; sourceTree = "<group>"; };
+		C3BA47F72532953C006AF156 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		C3BA47F92532953C006AF156 /* ProgramResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramResponse.swift; sourceTree = "<group>"; };
+		C3BA47FA2532953C006AF156 /* CalcResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcResult.swift; sourceTree = "<group>"; };
+		C3BA47FB2532953C006AF156 /* Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranges.swift; sourceTree = "<group>"; };
+		C3BA47FC2532953C006AF156 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		C3BA47FD2532953C006AF156 /* CalculateParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateParameters.swift; sourceTree = "<group>"; };
+		C3BA47FE2532953C006AF156 /* CalculateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateResponse.swift; sourceTree = "<group>"; };
+		C3BA48002532953C006AF156 /* GraphParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphParameters.swift; sourceTree = "<group>"; };
+		C3BA48012532953C006AF156 /* GraphResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphResponse.swift; sourceTree = "<group>"; };
+		C3BA48022532953C006AF156 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		C3BA48042532953C006AF156 /* CarLoanService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarLoanService.swift; sourceTree = "<group>"; };
+		C3BA48062532953C006AF156 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C3BA48072532953C006AF156 /* CarLoanParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarLoanParameters.swift; sourceTree = "<group>"; };
+		C3BA48082532953C006AF156 /* CustomerParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerParty.swift; sourceTree = "<group>"; };
+		C3BA48092532953C006AF156 /* CarLoanResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarLoanResponse.swift; sourceTree = "<group>"; };
+		C3BA480B2532953C006AF156 /* CarRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRecognitionService.swift; sourceTree = "<group>"; };
+		C3BA480D2532953C006AF156 /* CarRecognitionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRecognitionResponse.swift; sourceTree = "<group>"; };
+		C3BA480E2532953C006AF156 /* CarImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarImage.swift; sourceTree = "<group>"; };
 		D234A8B93D7BB27F719BCF03 /* MainTabRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainTabRouter.swift; sourceTree = "<group>"; };
 		D9C8EFE9A06734E3B9A14505 /* CatalogueTabViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogueTabViewController.swift; sourceTree = "<group>"; };
 		F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DazzleCarouselView.swift; sourceTree = "<group>"; };
@@ -320,6 +382,132 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
+		C3BA47E42532953C006AF156 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47E52532953C006AF156 /* MarketplaceAPI */,
+				C3BA47F02532953C006AF156 /* CalculatorAPI */,
+				C3BA48032532953C006AF156 /* CarLoanAPI */,
+				C3BA480A2532953C006AF156 /* CarRecognitionAPI */,
+			);
+			path = API;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3BA47E52532953C006AF156 /* MarketplaceAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47E62532953C006AF156 /* MarketplaceService.swift */,
+				C3BA47E72532953C006AF156 /* Entities */,
+			);
+			path = MarketplaceAPI;
+			sourceTree = "<group>";
+		};
+		C3BA47E72532953C006AF156 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47E82532953C006AF156 /* CarModel.swift */,
+				C3BA47E92532953C006AF156 /* TransportType.swift */,
+				C3BA47EA2532953C006AF156 /* Country.swift */,
+				C3BA47EB2532953C006AF156 /* Marketplace.swift */,
+				C3BA47EC2532953C006AF156 /* CarBody.swift */,
+				C3BA47ED2532953C006AF156 /* CarBrand.swift */,
+				C3BA47EE2532953C006AF156 /* CarBrandOnly.swift */,
+				C3BA47EF2532953C006AF156 /* CarModelModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C3BA47F02532953C006AF156 /* CalculatorAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47F12532953C006AF156 /* CalculatorService.swift */,
+				C3BA47F22532953C006AF156 /* Entities */,
+			);
+			path = CalculatorAPI;
+			sourceTree = "<group>";
+		};
+		C3BA47F22532953C006AF156 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47F32532953C006AF156 /* Settings */,
+				C3BA47F72532953C006AF156 /* Language.swift */,
+				C3BA47F82532953C006AF156 /* Calculate */,
+				C3BA47FF2532953C006AF156 /* Graph */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C3BA47F32532953C006AF156 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47F42532953C006AF156 /* SettingsResponse.swift */,
+				C3BA47F52532953C006AF156 /* SpecialCondition.swift */,
+				C3BA47F62532953C006AF156 /* SettingsParameters.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C3BA47F82532953C006AF156 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA47F92532953C006AF156 /* ProgramResponse.swift */,
+				C3BA47FA2532953C006AF156 /* CalcResult.swift */,
+				C3BA47FB2532953C006AF156 /* Ranges.swift */,
+				C3BA47FC2532953C006AF156 /* Field.swift */,
+				C3BA47FD2532953C006AF156 /* CalculateParameters.swift */,
+				C3BA47FE2532953C006AF156 /* CalculateResponse.swift */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+		C3BA47FF2532953C006AF156 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA48002532953C006AF156 /* GraphParameters.swift */,
+				C3BA48012532953C006AF156 /* GraphResponse.swift */,
+				C3BA48022532953C006AF156 /* Payment.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		C3BA48032532953C006AF156 /* CarLoanAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA48042532953C006AF156 /* CarLoanService.swift */,
+				C3BA48052532953C006AF156 /* Entities */,
+			);
+			path = CarLoanAPI;
+			sourceTree = "<group>";
+		};
+		C3BA48052532953C006AF156 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA48062532953C006AF156 /* Person.swift */,
+				C3BA48072532953C006AF156 /* CarLoanParameters.swift */,
+				C3BA48082532953C006AF156 /* CustomerParty.swift */,
+				C3BA48092532953C006AF156 /* CarLoanResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C3BA480A2532953C006AF156 /* CarRecognitionAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA480B2532953C006AF156 /* CarRecognitionService.swift */,
+				C3BA480C2532953C006AF156 /* Entities */,
+			);
+			path = CarRecognitionAPI;
+			sourceTree = "<group>";
+		};
+		C3BA480C2532953C006AF156 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C3BA480D2532953C006AF156 /* CarRecognitionResponse.swift */,
+				C3BA480E2532953C006AF156 /* CarImage.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		D1D06B99ADB27611917518BD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				F84F7D882531C172005F5220 /* Localizable.strings */,
+				C3BA47E42532953C006AF156 /* API */,
 				F84F7D702531B889005F5220 /* Common */,
 				F8A21696253078480002ED02 /* Services */,
 				F8C5940225306EB3009FC2B7 /* AppDelegate.swift */,
@@ -595,6 +784,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ImageSlideshow.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = Frameworks;
 			outputFileListPaths = (
@@ -616,11 +806,21 @@
 				F88E1F6C253206FE006C0995 /* VideoCell.swift in Sources */,
 				F8C5940325306EB3009FC2B7 /* AppDelegate.swift in Sources */,
 				F8C5940525306EB3009FC2B7 /* SceneDelegate.swift in Sources */,
+				C3BA48112532953C006AF156 /* TransportType.swift in Sources */,
 				F8A21698253078520002ED02 /* SpeechRecognitionService.swift in Sources */,
+				C3BA480F2532953C006AF156 /* MarketplaceService.swift in Sources */,
+				C3BA48222532953C006AF156 /* CalculateResponse.swift in Sources */,
 				F84F7D8B2531C1A0005F5220 /* StringExtension.swift in Sources */,
+				C3BA48232532953C006AF156 /* GraphParameters.swift in Sources */,
+				C3BA48272532953C006AF156 /* Person.swift in Sources */,
 				F8915D3E094D7EAFDA397AE2 /* TabBarModuleViewController.swift in Sources */,
+				C3BA48182532953C006AF156 /* CalculatorService.swift in Sources */,
+				C3BA48102532953C006AF156 /* CarModel.swift in Sources */,
 				F84F7DA92531E865005F5220 /* CarCell.swift in Sources */,
 				FF7A26F7F5C88E1A47425032 /* TabBarModulePresenter.swift in Sources */,
+				C3BA48242532953C006AF156 /* GraphResponse.swift in Sources */,
+				C3BA48252532953C006AF156 /* Payment.swift in Sources */,
+				C3BA48152532953C006AF156 /* CarBrand.swift in Sources */,
 				657EA069C54925BF535260F9 /* TabBarModuleInteractor.swift in Sources */,
 				F84F7D952531C888005F5220 /* MainTabWorker.swift in Sources */,
 				F84F7D912531C5AC005F5220 /* FeatureCell.swift in Sources */,
@@ -628,30 +828,51 @@
 				F84F7DAC2531EDB6005F5220 /* KingfisherSource.swift in Sources */,
 				F87B607E2532391700EB9536 /* CalculatorSwitcherCell.swift in Sources */,
 				F88E1F722532261D006C0995 /* CalculatorViewModel.swift in Sources */,
+				C3BA481C2532953C006AF156 /* Language.swift in Sources */,
+				C3BA48202532953C006AF156 /* Field.swift in Sources */,
+				C3BA481A2532953C006AF156 /* SpecialCondition.swift in Sources */,
+				C3BA48192532953C006AF156 /* SettingsResponse.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
 				F88E1F69253204E4006C0995 /* UIViewExtension.swift in Sources */,
+				C3BA48262532953C006AF156 /* CarLoanService.swift in Sources */,
 				F88E1F6F25322489006C0995 /* UIColorExtension.swift in Sources */,
 				42F8EAE4C768CC915ADE2768 /* MainTabPresenter.swift in Sources */,
+				C3BA481E2532953C006AF156 /* CalcResult.swift in Sources */,
 				839A580283F79329D70ADB5B /* MainTabInteractor.swift in Sources */,
 				75D76757ED1203C786699F62 /* MainTabRouter.swift in Sources */,
 				7EA3FD0A191DBA71AA9B8384 /* MainTabContract.swift in Sources */,
+				C3BA48162532953C006AF156 /* CarBrandOnly.swift in Sources */,
 				F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */,
+				C3BA48282532953C006AF156 /* CarLoanParameters.swift in Sources */,
+				C3BA482A2532953C006AF156 /* CarLoanResponse.swift in Sources */,
+				C3BA481F2532953C006AF156 /* Ranges.swift in Sources */,
+				C3BA482C2532953C006AF156 /* CarRecognitionResponse.swift in Sources */,
 				F87B60862532445900EB9536 /* CalculatorInfoCell.swift in Sources */,
+				C3BA482D2532953C006AF156 /* CarImage.swift in Sources */,
+				C3BA481D2532953C006AF156 /* ProgramResponse.swift in Sources */,
 				F87B607A253236D000EB9536 /* CalculatorSeparatorCell.swift in Sources */,
 				75402D9B16E9A2E27060A34B /* CatalogueTabViewController.swift in Sources */,
 				36F7044695186651F2C0DA83 /* CatalogueTabPresenter.swift in Sources */,
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
+				C3BA48212532953C006AF156 /* CalculateParameters.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
 				F84F7DAE2531EE7A005F5220 /* CatalogueWorker.swift in Sources */,
 				F87B608225323DEB00EB9536 /* CalculatorEmptyCell.swift in Sources */,
 				22CEF88AC12D5C57A0FF7BF0 /* CalculatorViewController.swift in Sources */,
+				C3BA48142532953C006AF156 /* CarBody.swift in Sources */,
+				C3BA48292532953C006AF156 /* CustomerParty.swift in Sources */,
 				4792F67A23F636779B1D20A2 /* CalculatorPresenter.swift in Sources */,
 				6D111D06C2C661C523534D08 /* CalculatorInteractor.swift in Sources */,
+				C3BA48172532953C006AF156 /* CarModelModel.swift in Sources */,
+				C3BA48132532953C006AF156 /* Marketplace.swift in Sources */,
+				C3BA48122532953C006AF156 /* Country.swift in Sources */,
 				776F72553AD0904E5677620F /* CalculatorRouter.swift in Sources */,
 				D869E581998363D62079F981 /* CalculatorContract.swift in Sources */,
+				C3BA482B2532953C006AF156 /* CarRecognitionService.swift in Sources */,
 				F88E1F76253229C7006C0995 /* CalculatorSliderCell.swift in Sources */,
+				C3BA481B2532953C006AF156 /* SettingsParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +1025,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CarMarket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -826,6 +1048,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CarMarket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
