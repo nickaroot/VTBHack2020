@@ -107,6 +107,8 @@ extension CatalogueTabViewController: UITableViewDataSource {
             carModel: car
         )
         
+        cell.datasource?.navController = navigationController
+        
         let selectionView = UIView()
         selectionView.backgroundColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
         
