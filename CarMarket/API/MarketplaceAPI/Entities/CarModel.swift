@@ -18,7 +18,7 @@ struct CarModel: Decodable {
     let hasSpecialPrice: Bool?
     let id: Int?
     let metallicPay: Int?
-    let minprice: Int?
+    let minPrice: Int?
     let model: CarModelModel?
     let ownTitle: String?
     let pearlPay: Int?
