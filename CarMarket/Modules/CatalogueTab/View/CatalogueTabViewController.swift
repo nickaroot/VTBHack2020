@@ -109,10 +109,10 @@ extension CatalogueTabViewController: UITableViewDataSource {
         
         cell.datasource?.navController = navigationController
         
-        let selectionView = UIView()
-        selectionView.backgroundColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
+//        let selectionView = UIView()
+//        selectionView.backgroundColor = UIColor(red: 0, green: 40 / 255, blue: 130 / 255, alpha: 1)
         
-        cell.selectedBackgroundView = selectionView
+//        cell.selectedBackgroundView = selectionView
         
         return cell
     }

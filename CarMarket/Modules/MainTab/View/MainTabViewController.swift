@@ -18,6 +18,7 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var storiesCarousel: UICollectionView!
     @IBOutlet weak var videosCarousel: UICollectionView!
     @IBOutlet weak var yaDriveView: UIImageView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: Properties
     let featureNib = UINib(nibName: "FeatureCell", bundle: nil)
@@ -67,6 +68,9 @@ class MainTabViewController: UIViewController {
         yaDriveView.layer.cornerRadius = 8
         
         navigationItem.backBarButtonItem = UIBarButtonItem()
+        
+        searchBar.backgroundImage = UIImage()
+        searchBar.layer.borderWidth = 0
     }
     
     private func prepareCollections() {
