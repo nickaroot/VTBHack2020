@@ -22,6 +22,7 @@ class CarDetailsViewController: UIViewController {
     @IBOutlet weak var wheelDriveLabel: UILabel!
     @IBOutlet weak var wheelLabel: UILabel!
     @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var carLoanAppl: UIImageView!
     
     var carModel: CarModel? {
         didSet {
@@ -52,6 +53,7 @@ class CarDetailsViewController: UIViewController {
     }
     
     private func configureUI() {
+        carLoanAppl.layer.cornerRadius = 8
         carPhotoCarousel.backgroundColor = .clear
         yandexImage.layer.cornerRadius = 16
         
