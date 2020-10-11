@@ -27,9 +27,11 @@ class CarDetailsViewController: UIViewController {
     
     private func configureUI() {
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationItem.hidesBackButton = true
+        navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.hidesBottomBarWhenPushed = true
-        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = .VTBlightBlue
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
