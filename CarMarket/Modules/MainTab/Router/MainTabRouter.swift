@@ -104,7 +104,7 @@ extension MainTabRouter: MainTabRouterProtocol {
     func showPhotoSearch() {
         guard let transitionHandler = transitionHandler else { return }
         
-        let ARSearchVC = ARSearchViewController(nibName: "ARSearchViewController", bundle: ARSearchViewController)
+        let ARSearchVC = UIStoryboard(name: "ARSearch", bundle: nil).instantiateViewController(withIdentifier: "ARSearch")//ARSearchViewController(nibName: "ARSearchViewController", bundle: nil)
         
         transitionHandler.navigationController?.pushViewController(ARSearchVC, animated: true)
         
