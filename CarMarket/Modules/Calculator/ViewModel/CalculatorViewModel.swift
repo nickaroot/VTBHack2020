@@ -91,13 +91,13 @@ class CalculatorViewModel {
     
     let cellsForLoanApplication: [CalculatorCellDatasource] = [
         CalculatorCarCellDatasource(.car(testCar)),
-        CalculatorTextInputCellDatasource(.textInput(.email)),
-        CalculatorTextInputCellDatasource(.textInput(.income)),
-        CalculatorTextInputCellDatasource(.textInput(.birthDate)),
-        CalculatorTextInputCellDatasource(.textInput(.birthPlace)),
-        CalculatorTextInputCellDatasource(.textInput(.secondName)),
-        CalculatorTextInputCellDatasource(.textInput(.name)),
-        CalculatorTextInputCellDatasource(.textInput(.patronymic)),
+        CalculatorTextInputCellDatasource(.textInput(.email)), // 0
+        CalculatorTextInputCellDatasource(.textInput(.income)), // 1
+        CalculatorTextInputCellDatasource(.textInput(.birthDate)), // 2
+        CalculatorTextInputCellDatasource(.textInput(.birthPlace)), // 3
+        CalculatorTextInputCellDatasource(.textInput(.secondName)), // 4
+        CalculatorTextInputCellDatasource(.textInput(.name)), // 5
+        CalculatorTextInputCellDatasource(.textInput(.patronymic)), // 6
         CalculatorEmptyCellDatasource(),
         CalculatorEmptyCellDatasource()
     ]
@@ -106,6 +106,8 @@ class CalculatorViewModel {
         return cellDatasources.map { $0.output }.compactMap { $0 }
     }
     
+    var calculation: CalcResult?
+    
     var price = 1_500_000
     var income = 500_000
     var length = 90
@@ -113,12 +115,14 @@ class CalculatorViewModel {
     var hasCard = true
     var hasInsurance = true
     
-    func update(with calculationResults: (Int?, Int?, Int?)) {
+    func update(with calculationResults: (Int?, Int?, Int?), andCalcRes: CalcResult?) {
         cellDatasources = [
             CalculatorInfoCellDatasource(type: .info(.monthlyPayment), value: calculationResults.0),
             CalculatorInfoCellDatasource(type: .info(.interestRate), value: calculationResults.1),
             CalculatorInfoCellDatasource(type: .info(.loanSum), value: calculationResults.2)
         ]
+        
+        calculation = andCalcRes
     }
     
     func updateForApplication() {

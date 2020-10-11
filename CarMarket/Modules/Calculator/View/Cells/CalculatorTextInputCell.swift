@@ -65,4 +65,10 @@ class CalculatorTextInputCell: UITableViewCell, CalculatorBaseCell {
             break
         }
     }
+    
+    @IBAction func editingChanged(_ sender: UITextField) {
+        if let datasource = datasource as? CalculatorTextInputCellDatasource {
+            datasource.value = sender.text ?? ""
+        }
+    }
 }

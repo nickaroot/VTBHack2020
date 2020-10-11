@@ -31,6 +31,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="editingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="1b0-bu-RJD"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>

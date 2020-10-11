@@ -34,6 +34,10 @@ class CalculatorRouter {
 
 
 extension CalculatorRouter: CalculatorRouterProtocol {
+    func showApplicationDecision(with: CarLoanResponse.Application.Decision.ApplicationStatus?) {
+        
+    }
+    
     func closeModule() {
         transitionHandler?.dismiss(animated: true, completion: nil)
     }

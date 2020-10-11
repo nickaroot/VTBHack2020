@@ -43,7 +43,7 @@ class CalculatorViewController: UIViewController {
             state = .application
             interactor.calculateClicked(with: datasource)
         case .done:
-            interactor.applicationDone()
+            interactor.applicationDone(with: datasource)
         }
     }
     

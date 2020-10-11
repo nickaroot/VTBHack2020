@@ -18,7 +18,7 @@ protocol CalculatorInteractorProtocol: class {
     func closeClicked()
     func calculateClicked(with datasource: CalculatorViewModel)
     func applyForLoanClicked(with datasource: CalculatorViewModel)
-    func applicationDone()
+    func applicationDone(with datasource: CalculatorViewModel)
 }
 
 protocol CalculatorPresenterProtocol: class {
@@ -29,4 +29,5 @@ protocol CalculatorPresenterProtocol: class {
 
 protocol CalculatorRouterProtocol: class {
     func closeModule()
+    func showApplicationDecision(with: CarLoanResponse.Application.Decision.ApplicationStatus?)
 }

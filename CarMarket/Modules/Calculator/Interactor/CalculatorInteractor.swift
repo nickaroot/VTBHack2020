@@ -11,11 +11,59 @@ import Foundation
 class CalculatorInteractor {
     var presenter: CalculatorPresenterProtocol?
     var router: CalculatorRouterProtocol?
+    
+    var incomeAmount: Decimal?
+    var reqAmount: Int?
+    var reqTerm: Int?
+    var reqCost: Int?
 }
 
 extension CalculatorInteractor: CalculatorInteractorProtocol {
-    func applicationDone() {
-        router?.closeModule()
+    func applicationDone(with datasource: CalculatorViewModel) {
+        let values = datasource.outputValues
+        let calculation = datasource.calculation
+        
+        let person = Person(
+            birth_date_time: (values[2] as? String) ?? "",
+            birth_place: (values[3] as? String) ?? "",
+            family_name: (values[4] as? String) ?? "",
+            first_name: (values[5] as? String) ?? "",
+            gender: .unknown,
+            middle_name: (values[6] as? String) ?? "",
+            nationality_country_code: "RU"
+        )
+        
+        let customerParty = CustomerParty(
+            email: (values[0] as? String) ?? "",
+            income_amount: incomeAmount ?? Decimal(integerLiteral: 0),
+            person: person,
+            phone: ""
+        )
+
+        let params = CarLoanParameters(
+            comment: "Empty",
+            customer_party: customerParty,
+            datetime: DateFormatter().string(from: Date()),
+            interest_rate: calculation?.contractRate ?? 0,
+            requested_amount: reqAmount ?? 0,
+            requested_term: reqTerm ?? 0,
+            trade_mark: "",
+            vehicle_cost: reqCost ?? 0
+        )
+
+        presenter?.updateStarted()
+        CarLoanService.getCarloan(with: params) { response, error in
+            self.presenter?.updateFinished()
+            
+            if let response = response {
+                let decisionStatus = response.application?.decision_report?.application_status
+                self.router?.showApplicationDecision(with: decisionStatus)
+            } else if error != nil {
+                
+            } else {
+                
+            }
+        }
     }
     
     func calculateClicked(with datasource: CalculatorViewModel) {
@@ -58,14 +106,20 @@ extension CalculatorInteractor: CalculatorInteractorProtocol {
                     let payment = result.payment,
                     let rate = result.contractRate,
                     let sum = result.loanAmount else {
-                    datasource.update(with: (nil, nil, nil))
+                    datasource.update(with: (nil, nil, nil), andCalcRes: nil)
                     return
                 }
-                datasource.update(with: (Int(payment as NSDecimalNumber), Int(rate as NSDecimalNumber), Int(sum as NSDecimalNumber)))
-            } else if let error = error {
-                datasource.update(with: (nil, nil, nil))
+                datasource.update(with: (Int(payment as NSDecimalNumber), Int(rate as NSDecimalNumber), Int(sum as NSDecimalNumber)), andCalcRes: result)
+                
+                self.incomeAmount = Decimal(integerLiteral: initialFee)
+                self.reqTerm = term
+                self.reqCost = cost
+                self.reqAmount = cost - initialFee
+                
+            } else if error != nil {
+                datasource.update(with: (nil, nil, nil), andCalcRes: nil)
             } else {
-                datasource.update(with: (nil, nil, nil))
+                datasource.update(with: (nil, nil, nil), andCalcRes: nil)
             }
         }
     }
