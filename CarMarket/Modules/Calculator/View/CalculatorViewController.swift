@@ -17,6 +17,7 @@ enum CalculatorState {
 class CalculatorViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var calculatorTableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: Properties
     var interactor: CalculatorInteractorProtocol!
@@ -112,6 +113,7 @@ extension CalculatorViewController: CalculatorViewProtocol {
         case .application:
             calculateButton.setTitle("Оформить заявку", for: .normal)
         case .done:
+            titleLabel.text = "Заявка на кредит"
             calculateButton.setTitle("Отправить заявку", for: .normal)
         }
         
