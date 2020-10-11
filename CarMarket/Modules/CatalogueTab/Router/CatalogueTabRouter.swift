@@ -34,9 +34,12 @@ class CatalogueTabRouter {
 
 
 extension CatalogueTabRouter: CatalogueTabRouterProtocol {
-    func showCarDetails() {
+    func showCarDetails(carModel: CarModel) {
         guard let transitionHandler = transitionHandler else { return }
         let module = CarDetailsRouter.setupModuleWithNib()
+        
+        module.carModel = carModel
+        
         module.hidesBottomBarWhenPushed = true
         
         transitionHandler.navigationController?.pushViewController(module, animated: true)

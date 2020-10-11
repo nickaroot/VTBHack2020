@@ -11,15 +11,30 @@ class CatalogueTabInteractor {
     var router: CatalogueTabRouterProtocol?
     
     private func fetchOffers() {
-        CatalogueWorker.fetchOffers { data, error in
-            if let data = data {
-                self.presenter?.fetched(offers: data)
+        MarketplaceService.getMarketplace { [weak self] (marketplace, error) in
+            if let marketplace = marketplace,
+               let offers = marketplace.list.flatMap({ list -> [CarModel] in
+                list.flatMap { carBrand -> [CarModel] in
+                    carBrand.models ?? []
+                }
+               }) {
+                self?.presenter?.fetched(offers: offers)
             } else if let error = error {
-                self.router?.showErrorAlert(with: error)
+                self?.router?.showErrorAlert(with: error.localizedDescription)
             } else {
-                self.router?.showErrorAlert(with: "common_error_unknown".localized())
+                self?.router?.showErrorAlert(with: "common_error_unknown".localized())
             }
         }
+        
+//        CatalogueWorker.fetchOffers { data, error in
+//            if let data = data {
+//                self.presenter?.fetched(offers: data)
+//            } else if let error = error {
+//                self.router?.showErrorAlert(with: error)
+//            } else {
+//                self.router?.showErrorAlert(with: "common_error_unknown".localized())
+//            }
+//        }
     }
 }
 
@@ -28,7 +43,7 @@ extension CatalogueTabInteractor: CatalogueTabInteractorProtocol {
         fetchOffers()
     }
     
-    func carClicked() {
-        router?.showCarDetails()
+    func carClicked(carModel: CarModel) {
+        router?.showCarDetails(carModel: carModel)
     }
 }

@@ -15,6 +15,7 @@ struct CarCellDatasource {
     let carPrice: String
     let loanPayment: String
     let carPhotoURLs: [String]
+    let carModel: CarModel
 }
 
 class CarCell: UITableViewCell {
