@@ -34,7 +34,25 @@ class CalculatorRouter {
 
 
 extension CalculatorRouter: CalculatorRouterProtocol {
+    func showApplicationError() {
+        let module = UnifiedModalRequestVC.makeWait(withDelegate: self)
+        transitionHandler?.present(module, animated: true, completion: nil)
+    }
+    
+    func showApplicationDecision(with: CarLoanResponse.Application.Decision.ApplicationStatus?) {
+        let module = UnifiedModalRequestVC.makeSucces(withDelegate: self)
+        transitionHandler?.present(module, animated: true, completion: nil)
+    }
+    
     func closeModule() {
         transitionHandler?.dismiss(animated: true, completion: nil)
     }
+}
+
+extension CalculatorRouter: UnifiedModalRequestVCDelegate {
+    func okClicked() {
+        transitionHandler?.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

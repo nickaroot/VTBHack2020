@@ -88,6 +88,12 @@
 		DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48731CC43A58E6FBD6140BDA /* MainTabViewController.swift */; };
 		E5D5E0524CC3ABE071237469 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5455C08A672B62E008686A3D /* CalculatorViewController.xib */; };
 		E7C25872555C01A98859EA71 /* CarDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B082262E26EF64C37DEC5 /* CarDetailsInteractor.swift */; };
+		F8033DB12532EEAC004BF7DE /* CalculatorTextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */; };
+		F8033DB22532EEAC004BF7DE /* CalculatorTextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */; };
+		F8033DB52532F105004BF7DE /* CalculatorCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */; };
+		F8033DB62532F105004BF7DE /* CalculatorCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */; };
+		F8033DC525330555004BF7DE /* UnifiedModalRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */; };
+		F8033DC625330555004BF7DE /* UnifiedModalRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */; };
 		F84F7D722531B8A6005F5220 /* DazzleCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */; };
 		F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */; };
 		F84F7D7F2531B93D005F5220 /* PhotoTextCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */; };
@@ -226,6 +232,12 @@
 		D234A8B93D7BB27F719BCF03 /* MainTabRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainTabRouter.swift; sourceTree = "<group>"; };
 		D9C8EFE9A06734E3B9A14505 /* CatalogueTabViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogueTabViewController.swift; sourceTree = "<group>"; };
 		DF95FCD09A60197DC3AE6400 /* CarDetailsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarDetailsRouter.swift; sourceTree = "<group>"; };
+		F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextInputCell.swift; sourceTree = "<group>"; };
+		F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorTextInputCell.xib; sourceTree = "<group>"; };
+		F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCarCell.swift; sourceTree = "<group>"; };
+		F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCarCell.xib; sourceTree = "<group>"; };
+		F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedModalRequestVC.xib; sourceTree = "<group>"; };
+		F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnifiedModalRequestVC.swift; sourceTree = "<group>"; };
 		F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DazzleCarouselView.swift; sourceTree = "<group>"; };
 		F84F7D7A2531B90F005F5220 /* PhotoTextCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTextCard.xib; sourceTree = "<group>"; };
 		F84F7D7E2531B93D005F5220 /* PhotoTextCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTextCard.swift; sourceTree = "<group>"; };
@@ -455,7 +467,11 @@
 		9B6B0A60354497021C69862D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+
+				F8033DC425330555004BF7DE /* UnifiedModalRequestVC.swift */,
+				F8033DC325330555004BF7DE /* UnifiedModalRequestVC.xib */,
 				C390C12A2532C95D008FAD6B /* ARSearch */,
+
 				D9845C17DD14A60052205C69 /* TabBarModule */,
 				0AD400B48E5E9C496EC130EB /* MainTab */,
 				EBF397730397135BD4D1D343 /* CatalogueTab */,
@@ -740,9 +756,17 @@
 			path = CatalogueTab;
 			sourceTree = "<group>";
 		};
+		F8033DB925330014004BF7DE /* ModalAlert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModalAlert;
+			sourceTree = "<group>";
+		};
 		F84F7D702531B889005F5220 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F8033DB925330014004BF7DE /* ModalAlert */,
 				F84F7D752531B8E5005F5220 /* Reusable */,
 				F84F7D712531B8A6005F5220 /* DazzleCarouselView.swift */,
 				F84F7D8A2531C1A0005F5220 /* StringExtension.swift */,
@@ -813,6 +837,10 @@
 				F87B608125323DEB00EB9536 /* CalculatorEmptyCell.xib */,
 				F87B60842532445900EB9536 /* CalculatorInfoCell.swift */,
 				F87B60852532445900EB9536 /* CalculatorInfoCell.xib */,
+				F8033DAF2532EEAC004BF7DE /* CalculatorTextInputCell.swift */,
+				F8033DB02532EEAC004BF7DE /* CalculatorTextInputCell.xib */,
+				F8033DB32532F105004BF7DE /* CalculatorCarCell.swift */,
+				F8033DB42532F105004BF7DE /* CalculatorCarCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -929,9 +957,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8033DB62532F105004BF7DE /* CalculatorCarCell.xib in Resources */,
 				F8C5940F25306EB4009FC2B7 /* LaunchScreen.storyboard in Resources */,
 				F84F7D862531C172005F5220 /* Localizable.strings in Resources */,
 				F8C5940C25306EB4009FC2B7 /* Assets.xcassets in Resources */,
+				F8033DB22532EEAC004BF7DE /* CalculatorTextInputCell.xib in Resources */,
 				F88E1F77253229C7006C0995 /* CalculatorSliderCell.xib in Resources */,
 				C390C1442532C95D008FAD6B /* Scene.sks in Resources */,
 				78571632B67B75B9BA23A344 /* TabBarModuleViewController.xib in Resources */,
@@ -942,6 +972,7 @@
 				58F2E80ABAABDBE717526E92 /* MainTabViewController.xib in Resources */,
 				C390C16B2532FC06008FAD6B /* bmw_4_series_03_for_iOS_1.usdz in Resources */,
 				F84F7D7B2531B90F005F5220 /* PhotoTextCard.xib in Resources */,
+				F8033DC525330555004BF7DE /* UnifiedModalRequestVC.xib in Resources */,
 				F84F7DAA2531E865005F5220 /* CarCell.xib in Resources */,
 				F87B607B253236D000EB9536 /* CalculatorSeparatorCell.xib in Resources */,
 				F87B60872532445900EB9536 /* CalculatorInfoCell.xib in Resources */,
@@ -1021,6 +1052,7 @@
 				C3BA48202532953C006AF156 /* Field.swift in Sources */,
 				C3BA481A2532953C006AF156 /* SpecialCondition.swift in Sources */,
 				C3BA48192532953C006AF156 /* SettingsResponse.swift in Sources */,
+				F8033DB52532F105004BF7DE /* CalculatorCarCell.swift in Sources */,
 				C390C1422532C95D008FAD6B /* ARSearchViewController.swift in Sources */,
 				07FED1523D01BAED7AE2F26A /* TabBarModuleContract.swift in Sources */,
 				DB3C84C1BB2721274B290AFE /* MainTabViewController.swift in Sources */,
@@ -1046,11 +1078,13 @@
 				F87B607A253236D000EB9536 /* CalculatorSeparatorCell.swift in Sources */,
 				75402D9B16E9A2E27060A34B /* CatalogueTabViewController.swift in Sources */,
 				36F7044695186651F2C0DA83 /* CatalogueTabPresenter.swift in Sources */,
+				F8033DB12532EEAC004BF7DE /* CalculatorTextInputCell.swift in Sources */,
 				57FEFD1F4612B1C165ACE7AB /* CatalogueTabInteractor.swift in Sources */,
 				C390C1482532C95D008FAD6B /* UIColor+Disabled.swift in Sources */,
 				366325ED10DDEE0C47572702 /* CatalogueTabRouter.swift in Sources */,
 				C390C1532532C95D008FAD6B /* ARBridge.swift in Sources */,
 				C3BA48212532953C006AF156 /* CalculateParameters.swift in Sources */,
+				F8033DC625330555004BF7DE /* UnifiedModalRequestVC.swift in Sources */,
 				9DC9874A632961DF11BE8720 /* CatalogueTabContract.swift in Sources */,
 				C390C1522532C95D008FAD6B /* RFTextAttributes+Disabled.swift in Sources */,
 				C390C1492532C95D008FAD6B /* UIColor.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,6 +13,7 @@
             <connections>
                 <outlet property="calculateButton" destination="SCQ-Vv-gXP" id="79T-Rg-RDZ"/>
                 <outlet property="calculatorTableView" destination="sBA-wD-LAn" id="upo-g6-Anh"/>
+                <outlet property="titleLabel" destination="VOy-yx-T6B" id="H1W-B1-xbH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="t7R-D4-61u"/>
             </connections>
         </placeholder>

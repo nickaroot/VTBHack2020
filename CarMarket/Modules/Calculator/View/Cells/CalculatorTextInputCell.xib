@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="CalculatorTextInputCell" customModule="CarMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceQ-HA-lMK">
+                        <rect key="frame" x="16" y="65" width="288" height="1"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="gBj-2Z-fIL"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kja-yl-gpp">
+                        <rect key="frame" x="16" y="40" width="288" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Kxv-yd-GLL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="editingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="1b0-bu-RJD"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kja-yl-gpp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EeR-uN-FQ5"/>
+                    <constraint firstItem="Kja-yl-gpp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="IbE-mP-lDF"/>
+                    <constraint firstItem="ceQ-HA-lMK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bNk-0M-Bsl"/>
+                    <constraint firstAttribute="trailing" secondItem="Kja-yl-gpp" secondAttribute="trailing" constant="16" id="gO6-lN-zOs"/>
+                    <constraint firstAttribute="trailing" secondItem="ceQ-HA-lMK" secondAttribute="trailing" constant="16" id="pmv-oC-5ID"/>
+                    <constraint firstAttribute="bottom" secondItem="ceQ-HA-lMK" secondAttribute="bottom" constant="7" id="u1x-Kp-mTY"/>
+                    <constraint firstItem="ceQ-HA-lMK" firstAttribute="top" secondItem="Kja-yl-gpp" secondAttribute="bottom" constant="5" id="ykz-hh-z8h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputField" destination="Kja-yl-gpp" id="jGD-dS-l0P"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="164.73214285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
